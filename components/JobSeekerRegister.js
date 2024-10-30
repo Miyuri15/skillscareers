@@ -4,20 +4,25 @@ import Button from "./Button";
 
 const JobSeekerRegister = () => (
   <form className="space-y-4 text-blue-900">
-    <label className="block">
-      <input
-        type="text"
-        className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
-        placeholder="First Name"
-      />
-    </label>
-    <label className="block">
-      <input
-        type="text"
-        className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
-        placeholder="Last Name"
-      />
-    </label>
+    {/* First Name and Last Name in parallel */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <label className="block">
+        <input
+          type="text"
+          className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+          placeholder="First Name"
+        />
+      </label>
+      <label className="block">
+        <input
+          type="text"
+          className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+          placeholder="Last Name"
+        />
+      </label>
+    </div>
+
+    {/* Remaining form fields */}
     <label className="block">
       <input
         type="email"

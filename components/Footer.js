@@ -111,7 +111,7 @@ const Footer = () => {
         {/* Social Icons and Payment Methods */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
           <div className="flex space-x-4">
-            <a href="#" className="hover:underline">
+            <a href="#" className="hover:underline ">
               <img src="/images/linkedin.png" alt="Linkedin" className="h-6" />
             </a>
             <a href="#" className="hover:underline">

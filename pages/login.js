@@ -1,6 +1,7 @@
 
 import React from "react";
 import Button from "../components/Button";
+import Link from "next/link";
 
 const Login = () => {
   return (
@@ -66,8 +67,8 @@ const Login = () => {
 
           <Button variant="primary">
             <span className="flex items-center justify-center ">
-              Login
-              <img
+            <Link href="/profile/124">Login </Link>
+            <img
                 src="/images/login-icon.png"
                 alt="Login"
                 className="h-5 w-5 ml-2"

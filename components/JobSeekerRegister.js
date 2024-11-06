@@ -1,6 +1,7 @@
 // components/JobSeekerRegister.js
 import React from "react";
 import Button from "./Button";
+import Link from "next/link";
 
 const JobSeekerRegister = () => (
   <form className="space-y-4 text-blue-900">
@@ -52,7 +53,7 @@ const JobSeekerRegister = () => (
       />
     </label>
     <Button variant="primary" className="w-full py-3 mt-4">
-      Register
+    <Link href="/login">Register </Link>
     </Button>
   </form>
 );

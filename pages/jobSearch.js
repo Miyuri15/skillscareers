@@ -29,6 +29,7 @@ export default function jobSearchPage() {
   return (
     <>
       <Header />
+      <div className="p-10">
       <div className="bg-[#e6e8f1] h-auto">
         <div className="flex flex-wrap justify-between items-center gap-4 mb-8 w-auto rounded-md">
           <input
@@ -60,7 +61,8 @@ export default function jobSearchPage() {
           <option>Job Type</option>
         </select>
       </div>{" "}
+      </div>
       <Footer />
     </>
-  );
+  ); 
 }

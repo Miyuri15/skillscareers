@@ -1,6 +1,6 @@
 import Image from "next/image";
 import localFont from "next/font/local";
-import Login from "./login";
+import Register from "./register";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,7 +16,7 @@ const geistMono = localFont({
 export default function Home() {
   return (
     <div>
-        <Login/>
+        <Register/>
     </div>
   );
 }

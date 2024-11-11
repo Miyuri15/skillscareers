@@ -1,5 +1,6 @@
 // pages/SearchResults.js
 import React, { useState } from 'react';
+import Link from 'next/link';
 import FeaturedJobCard from '../components/FeaturedJobCard';
 
 // Mock data - Add 40+ jobs for testing
@@ -49,7 +50,11 @@ export default function SearchResults() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
           {currentJobs.map((job) => (
-            <FeaturedJobCard key={job.id} job={job} />
+            <Link key={job.id} href={`/job/${job.id}`}>
+              
+                <FeaturedJobCard job={job} />
+              
+            </Link>
           ))}
         </div>
 

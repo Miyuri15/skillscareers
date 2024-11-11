@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import SearchResults from "@/components/SearchResults";
 
 export const countries = [
   { value: "", label: "Select the Country", code: "" },
@@ -61,6 +62,7 @@ export default function jobSearchPage() {
           <option>Job Type</option>
         </select>
       </div>{" "}
+      <SearchResults/>
       </div>
       <Footer />
     </>

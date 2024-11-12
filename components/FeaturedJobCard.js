@@ -27,7 +27,7 @@ export default function FeaturedJobCard(){
             </div>
             {/* Date on the top right */}
             <div className="absolute top-4 right-4">
-              <p className="text-gray-500">{job.date}</p>
+              <p className="text-gray-900">{job.date}</p>
             </div>
             
             <h3 className="text-xl font-bold text-blue-900 mt-12 mb-2">{job.title}</h3>

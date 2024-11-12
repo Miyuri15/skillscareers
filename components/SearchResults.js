@@ -42,9 +42,9 @@ export default function SearchResults() {
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-blue-900">Search Results</h2>
           <div className="flex space-x-4">
-            <button className="px-4 py-2 text-blue-600 font-semibold hover:underline">Creative</button>
-            <button className="px-4 py-2 text-blue-600 font-semibold hover:underline">IT/Software</button>
-            <button className="px-4 py-2 text-blue-600 font-semibold hover:underline">Finance</button>
+            <button className="px-4 py-2 bg-gray-200 text-blue-900 font-semibold hover:underline">Creative</button>
+            <button className="px-4 py-2 bg-gray-200 text-blue-900 font-semibold hover:underline">IT/Software</button>
+            <button className="px-4 py-2 bg-gray-200 text-blue-900 font-semibold hover:underline">Finance</button>
           </div>
         </div>
 

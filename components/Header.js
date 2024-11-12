@@ -5,7 +5,7 @@ import Button from "./Button";
 const Header = () => {
   return (
     <>
-      <header className="bg-white text-blue-950 py-1">
+      <header className="bg-white text-blue-950 p-3">
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/">
             <img src="/images/logo.png" alt="Logo" className="w-30 " />

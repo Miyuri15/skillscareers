@@ -31,6 +31,10 @@ export default function jobSearchPage() {
     <>
       <Header />
       <div className="p-10">
+      <div className="mt-20 mb-12">
+            <h2 className="text-4xl text-gray-400 font-bold">Find Your<span className="text-blue-900"> Perfect</span> Job.</h2>
+        </div>
+
       <div className="bg-[#e6e8f1] h-auto">
         <div className="flex flex-wrap justify-between items-center gap-4 mb-8 w-auto rounded-md">
           <input

@@ -5,10 +5,13 @@ import Footer from './Footer';
 import Image from 'next/image';
 import { FaArrowRight } from 'react-icons/fa';
 import SimilarJobs from './SimilarJobs';
-
+import { useState } from 'react';
+import JobApplicationForm from './JobApplicationForm';
+import Link from 'next/link';
 
 
 const SingleJobDetails = () => {
+  const [showApplicationForm, setShowApplicationForm] = useState(false);
 
     const jobs = [
         {
@@ -58,12 +61,14 @@ const SingleJobDetails = () => {
         </div>
 
 <div className="flex justify-between items-center">
-  <button className="px-4 py-2 mr-5 text-blue-950 border-2 border-blue-900 flex items-center space-x-2">
+<Link href='/jobSearch'>
+  <button className="px-5 py-2 mr-5 text-blue-950 border-2 border-blue-900 flex items-center space-x-2">
     <span>View Company Profile</span>
     <FaArrowRight className="text-blue-900" />
   </button>
+</Link>
   
-  <button className="px-4 py-2 bg-blue-950 text-white">
+  <button onClick={() => setShowApplicationForm(true)} className="px-4 py-2 bg-blue-950 text-white">
     Apply Now
   </button>
 </div>
@@ -127,6 +132,21 @@ const SingleJobDetails = () => {
 
       <SimilarJobs/>
     </div>
+            {/* Job Application Form Popup */}
+{showApplicationForm && (
+  <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+    <div className="relative bg-white shadow-lg rounded-lg p-6 w-full max-w-4xl">
+      <button
+        onClick={() => setShowApplicationForm(false)}
+        className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+      >
+        Close
+      </button>
+      <JobApplicationForm onClose={() => setShowApplicationForm(false)} />
+    </div>
+  </div>
+)}
+
     <Footer/>
     </>
   );

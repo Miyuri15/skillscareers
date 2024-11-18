@@ -19,7 +19,7 @@ const Login = () => {
         </div>
 
         {/* Content */}
-        <div className="flex flex-col items-start justify-end p-10 bg-black bg-opacity-30 text-white h-full w-full ">
+        <div className="flex flex-col items-start justify-end p-10 bg-black bg-opacity-10 text-white h-full w-full ">
           <h1 className="text-3xl font-bold mb-2 ">Login</h1>
           <h2 className="text-5xl font-bold mb-4 ">SKILLS CAREERS</h2>
           <p className="text-md leading-relaxed mb-10 ">
@@ -32,7 +32,6 @@ const Login = () => {
       {/* Right Side with Form */}
       <div className="flex flex-col justify-center md:w-2/5 p-8">
         <div className="flex flex-col items-center mb-4">
-          <img src="/images/logo.png" alt="Logo" className="w-30 mb-4" />
           <h2 className="text-2xl text-blue-900 font-semibold text-center mb-2 ">
             Welcome Back! Let's Get You Started.
           </h2>
@@ -67,7 +66,7 @@ const Login = () => {
 
           <Button variant="primary">
             <span className="flex items-center justify-center ">
-            <Link href="/profile/124">Login </Link>
+            <Link href="/userProfile/124">Login </Link>
             <img
                 src="/images/login-icon.png"
                 alt="Login"

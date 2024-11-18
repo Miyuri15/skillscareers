@@ -1,10 +1,9 @@
-// pages/SearchResults.js
 import React, { useState } from 'react';
 import Link from 'next/link';
 import FeaturedJobCard from '../components/FeaturedJobCard';
 
 // Mock data - Add 40+ jobs for testing
-const jobsData = Array.from({ length: 100 }, (_, i) => ({
+const jobsData = Array.from({ length: 8 }, (_, i) => ({
   id: i + 1,
   companyLogo: '/images/aerfin-logo.png',
   companyName: 'AerFin',
@@ -15,7 +14,7 @@ const jobsData = Array.from({ length: 100 }, (_, i) => ({
 
 const ITEMS_PER_PAGE = 20;
 
-export default function SearchResults() {
+export default function OpenJobs() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(jobsData.length / ITEMS_PER_PAGE);
@@ -37,9 +36,8 @@ export default function SearchResults() {
   };
 
   return (
-    <div className="py-6 min-h-screen relative">
-      <div className="p-5 mx-auto">
-        <div className=" flex justify-between items-center mb-6">
+      <div className="max-w-full mx-auto">
+        <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-blue-900">Search Results</h2>
           <div className="flex space-x-4">
             <button className="px-4 py-2 bg-gray-200 text-blue-900 font-semibold hover:underline">Creative</button>
@@ -47,7 +45,7 @@ export default function SearchResults() {
             <button className="px-4 py-2 bg-gray-200 text-blue-900 font-semibold hover:underline">Finance</button>
           </div>
         </div>
-</div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
           {currentJobs.map((job) => (
             <Link key={job.id} href={`/job/${job.id}`}>
@@ -77,7 +75,6 @@ export default function SearchResults() {
             Next
           </button>
         </div>
-     
-    </div>
+      </div>
   );
 }

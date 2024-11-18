@@ -129,7 +129,7 @@ export default function RecruiterListPage() {
 
   return (
     <>
-      <div className="p-5 bg-gray-50 min-h-screen">
+      <div className="p-5 min-h-screen relative">
         {/* Page Header */}
         <div className="flex flex-row mb-6 justify-between">
           <h2 className="text-3xl font-bold">Search Results</h2>

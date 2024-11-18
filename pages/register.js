@@ -31,7 +31,7 @@ const Register = () => {
       {/* Right Side with Form */}
       <div className="flex flex-col justify-center md:w-2/5 p-8">
         <div className="flex flex-col items-center mb-4">
-          <img src="/images/logo.png" alt="Logo" className="w-30 mb-4" />
+
           <h2 className="text-2xl text-blue-900 font-semibold text-center mb-2 ">
             Welcome Back! Let's Get You Started.
           </h2>

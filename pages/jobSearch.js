@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SearchResults from "@/components/SearchResults";
+import Image from "next/image";
 
 export const countries = [
   { value: "", label: "Select the Country", code: "" },
@@ -30,6 +31,24 @@ export default function jobSearchPage() {
   return (
     <>
       <Header />
+      <div className="relative">
+          <Image
+            src="/images/bgLineWide.jpg"
+            alt="line"
+            width={100}
+            height={30}
+            className="absolute top-0 right-0 w-fit h-[500px] object-cover z-0 opacity-5 items-end"
+          />
+
+          <Image
+            src="/images/bgLineThin.jpg"
+            alt="line"
+            width={200}
+            height={500}
+            className="absolute top-0 right-20 w-fit h-[500px] object-cover z-0 opacity-5 items-end"
+          />
+        </div>
+
       <div className="p-10">
       <div className="mt-20 mb-12">
             <h2 className="text-4xl text-gray-400 font-bold">Find Your<span className="text-blue-900"> Perfect</span> Job.</h2>

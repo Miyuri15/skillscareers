@@ -17,6 +17,7 @@ const ITEMS_PER_PAGE = 4;
 export default function SimilarJobs() {
   const [currentPage, setCurrentPage] = useState(1);
 
+
   const totalPages = Math.ceil(jobsData.length / ITEMS_PER_PAGE);
   const currentJobs = jobsData.slice(
     (currentPage - 1) * ITEMS_PER_PAGE,
@@ -37,9 +38,9 @@ export default function SimilarJobs() {
 
   return (
     <div className="mt-7 bg-gray-50 min-h-screen relative">
-      <div className="max-w-full mx-auto">
+      <div className=" p-2 max-w-full mx-auto">
         <div className="flex justify-between items-center mb-6 p-10">
-          <h2 className="mt-10 mb-5 text-2xl font-semibold text-blue-900">Similar Jobs</h2>
+          <h2 className="mt-10 ml-5 mb-5 text-2xl font-semibold text-blue-900">Similar Jobs</h2>
           <div className="flex space-x-4">
             <button className="px-4 py-2 text-blue-900 font-semibold hover:underline">View All</button>
           </div>
@@ -81,10 +82,12 @@ export default function SimilarJobs() {
           {Array.from({ length: totalPages }).map((_, index) => (
             <div
               key={index}
-              className={`w-3 h-3 rounded-full ${currentPage === index + 1 ? 'bg-blue-600' : 'bg-gray-300'}`}
+              className={`mb-4 w-3 h-3 rounded-full ${currentPage === index + 1 ? 'bg-blue-600' : 'bg-gray-300'}`}
             ></div>
           ))}
         </div>
+
+
       </div>
     </div>
   );

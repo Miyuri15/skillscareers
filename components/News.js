@@ -30,7 +30,7 @@ const newsData = [
 
 export default function News() {
   return (
-    <div className="p-10 bg-gray-50 min-h-screen">
+    <div className="p-20 bg-gray-50 min-h-screen">
       <div className="max-w-full mx-auto">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-blue-900">Latest News</h2>
@@ -39,11 +39,11 @@ export default function News() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main News Card */}
-          <div className="lg:col-span-2 bg-white shadow-md rounded-lg overflow-hidden">
+          <div className="p-5 lg:col-span-2 bg-white shadow-md rounded-lg overflow-hidden">
             <img
               src={newsData[0].image}
               alt={newsData[0].title}
-              className="w-full h-80 object-cover"
+              className="w-full h-100 object-cover"
             />
             <div className="p-6">
   <h3 className="text-lg font-semibold text-gray-800">{newsData[0].title}</h3>
@@ -66,7 +66,7 @@ export default function News() {
           {/* Smaller News Cards */}
           <div className="grid grid-cols-1 gap-6">
             {newsData.slice(1).map((news) => (
-              <div key={news.id} className="bg-white shadow-md rounded-lg overflow-hidden">
+              <div key={news.id} className="bg-white shadow-md rounded-lg overflow-hidden p-5">
                 <img
                   src={news.image}
                   alt={news.title}

@@ -51,17 +51,17 @@ export default function AboutUsPage() {
       >
         {/* Content */}
         <div className="flex flex-col items-start justify-end p-10 bg-black bg-opacity-30 text-white h-full w-full ">
-          <h1 className="text-3xl ml-3 font-bold mb-2 ">Empowering Careers,</h1>
-          <h2 className="text-3xl ml-3 font-bold mb-4 ">
+          <h1 className="text-4xl ml-3 font-bold mb-2 ">Empowering Careers,</h1>
+          <h2 className="text-4xl ml-3 font-bold mb-4 ">
             Connecting Talent With Opportunity.
           </h2>
         </div>
       </div>
 
       {/* Who we are */}
-      <div className="bg-blue-950 text-gray-100 py-12">
+      <div className="bg-blue-950 text-gray-100 p-10">
         <h3 className="text-2xl font-semibold p-6">Who We Are</h3>
-        <div className="flex flex-col md:flex-row justify-center gap-20 px-6  m-10">
+        <div className="flex flex-col md:flex-row justify-center gap-20 m-10">
           {/* Text Content */}
           <div className="md:w-1/2">
             <p className="leading-relaxed text-lg">
@@ -98,18 +98,25 @@ export default function AboutUsPage() {
               height={150}
               className="rounded-lg"
             />
+            <Image
+              src="/images/people3.jpg"
+              alt="Person 3"
+              width={150}
+              height={150}
+              className="rounded-lg"
+            />
           </div>
         </div>
       </div>
 
       {/* What We Offer */}
-      <div className="bg-blue-950 text-gray-100 py-12">
-        <h3 className="text-2xl font-semibold text-left mb-6 ml-6">
+      <div className="bg-blue-950 text-gray-100 p-20">
+        <h3 className="text-2xl font-semibold text-left mb-10 ml-6">
           What We Offer
         </h3>
-        <div className="flex flex-col md:flex-row justify-center gap-20 px-6">
+        <div className="flex flex-col md:flex-row justify-between gap-6 px-6">
           {/* Job Seekers Card */}
-          <div className="bg-white text-blue-950 rounded-lg shadow-md p-6 md:w-1/3">
+          <div className="bg-white text-blue-950 rounded-lg shadow-md p-6 md:w-1/2">
             <div className="flex items-center mb-4">
               <svg
                 className="w-8 h-8 text-blue-700"
@@ -131,7 +138,7 @@ export default function AboutUsPage() {
           </div>
 
           {/* Recruiters Card */}
-          <div className="bg-white text-blue-950 rounded-lg shadow-md p-6 md:w-1/3">
+          <div className="bg-white text-blue-950 rounded-lg shadow-md p-6 md:w-1/2">
             <div className="flex items-center mb-4">
               <svg
                 className="w-8 h-8 text-blue-700"
@@ -156,13 +163,13 @@ export default function AboutUsPage() {
       </div>
 
       {/* Why Choose Us */}
-      <div>
-        <section className="py-12 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">
+      <div className="p-10">
+        <section className="p-12 bg-gray-50">
+          <div className="mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-medium font-extrabold text-blue-900 text-left mb-8">
               Why Choose Us
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-20">
               {features.map((feature, index) => (
                 <div
                   key={index}
@@ -187,14 +194,14 @@ export default function AboutUsPage() {
       </div>
 
       {/* Vision & Mission */}
-      <div className="bg-blue-950 text-gray-100 py-12">
-        <h3 className="text-2xl font-semibold text-left mb-6 ml-6">
+      <div className="bg-blue-950 text-gray-100 p-20">
+        <h3 className="text-2xl font-semibold text-left mb-10 ml-6">
           {" "}
           Vision & Mission
         </h3>
-        <div className="flex flex-col md:flex-row justify-center gap-20 px-6">
+        <div className="flex flex-col md:flex-row justify-between gap-6 px-6">
           {/* Vision */}
-          <div className="bg-white text-blue-950 rounded-lg shadow-md p-6 md:w-1/3">
+          <div className="bg-white text-blue-950 rounded-lg shadow-md p-6 md:w-1/2">
             <div className="flex items-center mb-4">
               <svg
                 className="w-8 h-8 text-blue-700"
@@ -214,7 +221,7 @@ export default function AboutUsPage() {
           </div>
 
           {/* Mission*/}
-          <div className="bg-white text-blue-950 rounded-lg shadow-md p-6 md:w-1/3">
+          <div className="bg-white text-blue-950 rounded-lg shadow-md p-6 md:w-1/2">
             <div className="flex items-center mb-4">
               <svg
                 className="w-8 h-8 text-blue-700"
@@ -252,7 +259,7 @@ export default function AboutUsPage() {
     {/* Image */}
     <div className="md:w-1/2 w-full flex justify-center md:justify-start">
       <Image
-        src="/images/future.jpg"
+        src="/images/future.png"
         alt="Person 1"
         width={300}  
         height={300} 

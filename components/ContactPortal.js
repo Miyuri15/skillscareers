@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function ContactSection() {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between gap-6 mt-10 mx-5 mb-10">
+      <div className=" p-10 flex flex-col md:flex-row justify-between gap-20 mt-10 mx-10 mb-10">
         {/* Contact Form */}
         <div className="md:w-2/3">
           <h3 className="text-blue-900 text-l font-semibold mb-3">

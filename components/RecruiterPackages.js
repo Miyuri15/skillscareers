@@ -1,80 +1,70 @@
-import React from "react";
+import React from 'react';
 
 const packages = [
   {
-    title: "Basic Recruiter Package",
-    price: "29.99",
+    title: 'Basic Recruiter Package',
+    price: '29.99',
     features: [
-      "5 job postings per month",
-      "Access to basic candidate profiles",
-      "Payment gateway integration",
-      "Limited use of assessment templates",
+      '5 job postings per month',
+      'Access to basic candidate profiles',
+      'Payment gateway integration',
+      'Limited use of assessment templates',
     ],
-    buttonStyle: "bg-blue-900 text-white",
+    buttonStyle: 'bg-blue-900 text-white',
+    cardStyle: 'bg-gradient-to-b from-[#EDF0FF] to-[#CAD1F1] text-blue-900',
   },
   {
-    title: "Professional Recruiter Package",
-    price: "49.99",
+    title: 'Professional Recruiter Package',
+    price: '49.99',
     features: [
-      "20 job postings per month",
-      "Access to basic candidate profiles",
-      "Payment gateway integration",
-      "Limited use of assessment templates",
+      '20 job postings per month',
+      'Access to basic candidate profiles',
+      'Payment gateway integration',
+      'Limited use of assessment templates',
     ],
-    buttonStyle: "bg-white text-blue-900",
+    buttonStyle: 'bg-white text-blue-900 border-2 border-blue-900',
+    cardStyle: 'bg-gradient-to-b from-blue-900 to-[#0C002E] text-white',
     highlight: true,
   },
   {
-    title: "Enterprise Recruiter Package",
-    price: "99.99",
+    title: 'Enterprise Recruiter Package',
+    price: '99.99',
     features: [
-      "30 job postings per month",
-      "Access to basic candidate profiles",
-      "Payment gateway integration",
-      "Limited use of assessment templates",
+      '30 job postings per month',
+      'Access to basic candidate profiles',
+      'Payment gateway integration',
+      'Limited use of assessment templates',
     ],
-    buttonStyle: "bg-blue-900 text-white",
+    buttonStyle: 'bg-blue-900 text-white',
+    cardStyle: 'bg-gradient-to-b from-[#EDF0FF] to-[#CAD1F1] text-blue-900',
   },
 ];
 
 const Pricing = () => {
   return (
-    <div className="flex flex-col w-full items-center py-12 bg-gray-100">
-      <h2 className="text-2xl font-bold text-blue-900 mb-2">
-        Recruiter Packages
-      </h2>
-      <p className="text-blue-900 mb-8 text-center px-4 max-w-2xl">
-        Empower your hiring and assessment process with comprehensive tools
-        designed to meet your goals.
-      </p>
-      <div className="flex flex-col md:flex-row gap-8">
+    <div className="p-20 bg-gray-100">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-blue-900">Recruiter Packages</h2>
+        <p className="text-blue-900 mt-2 mb-6">
+          Empower your hiring and assessment process with comprehensive tools designed to meet your goals.
+        </p>
+      </div>
+      <div className="flex flex-col md:flex-row justify-center gap-6">
         {packages.map((pkg, index) => (
           <div
             key={index}
-            className={`flex flex-col items-center p-6 rounded-lg shadow-lg ${
-              pkg.highlight
-                ? "bg-gradient-to-b from-blue-900 to-[#0C002E] text-white"  // Gradient for the highlighted card
-                : "bg-gradient-to-b from-[#EDF0FF] to-[#CAD1F1] text-gray-900"  // Gradient for other cards
-            }`}
+            className={`flex flex-col p-6 rounded-lg shadow-md ${pkg.cardStyle} w-full md:w-1/3`}
           >
-            <h3 className="text-xl font-semibold mt-4 mb-2">{pkg.title}</h3>
-            <p className="text-3xl font-bold mt-4 mb-4">
-              ${pkg.price}
-              <span className="text-lg">/month</span>
-            </p>
-            <ul className="text-sm mt-6 mb-6 space-y-2">
+            <h3 className="text-xl font-semibold mb-2 text-center">{pkg.title}</h3>
+            <p className="text-4xl font-bold text-center my-6 mb-20">${pkg.price}</p>
+            <ul className="flex-1 mt-5 space-y-4  text-sm">
               {pkg.features.map((feature, idx) => (
-                <li key={idx} className="flex flex-col items-center">
-                  <span className="text-center mt-4 mb-2">{feature}</span>
-
-                  {/* Bottom Divider */}
-                  <hr className="w-full border-t border-gray-300 mt-2" />
+                <li key={idx} className="border-b border-gray-400 mt-5 mb-5 py-5">
+                  {feature}
                 </li>
               ))}
             </ul>
-            <button
-              className={`px-4 py-2 rounded-lg mt-8 font-semibold ${pkg.buttonStyle}`}
-            >
+            <button className={`mt-16 mb-10 py-2 w-full rounded-md ${pkg.buttonStyle}`}>
               Choose This Package
             </button>
           </div>

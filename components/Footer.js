@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../public/images/logowhite.png";
+import { FaCcAmex, FaCcDiscover, FaCcMastercard, FaCcVisa, FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -110,26 +111,19 @@ const Footer = () => {
 
         {/* Social Icons and Payment Methods */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
-          <div className="flex space-x-4">
-            <a href="#" className="hover:underline ">
-              <img src="/images/linkedin.png" alt="Linkedin" className="h-6" />
-            </a>
-            <a href="#" className="hover:underline">
-              <img src="/images/twitter.png" alt="Twitter" className="h-6" />
-            </a>
-            <a href="#" className="hover:underline">
-              <img src="/images/instagram.png" alt="Instagram" className="h-6" />
-            </a>
-            <a href="#" className="hover:underline">
-              <img src="/images/facebook.png" alt="Facebook" className="h-6" />
-            </a>
+        <div className="flex justify-end mt-4 mr-4 space-x-4 text-white">
+            <FaLinkedin size={24} className="cursor-pointer" />
+            <FaTwitter size={24} className="cursor-pointer" />
+            <FaInstagram size={24} className="cursor-pointer" />
+            <FaFacebook size={24} className="cursor-pointer" />
           </div>
           <p className="text-center">© 2024 Skills Careers. All rights reserved.</p>
-          <div className="flex space-x-4">
-            <img src="/images/visa.png" alt="Visa" className="h-6" />
-            <img src="/images/mastercard.png" alt="Mastercard" className="h-6" />
-            <img src="/images/amex.png" alt="Amex" className="h-6" />
-            <img src="/images/discover.png" alt="Discover" className="h-6" />
+          <div className="flex justify-end mt-4 mr-4 space-x-4 text-white">
+            
+          <FaCcVisa size={30} className="cursor-pointer" />
+          <FaCcMastercard size={30} className="cursor-pointer" />
+            <FaCcAmex size={30} className="cursor-pointer" />
+            <FaCcDiscover size={30} className="cursor-pointer" />
           </div>
         </div>
       </div>

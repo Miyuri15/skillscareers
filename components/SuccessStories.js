@@ -52,16 +52,16 @@ const SuccessStories = () => {
   };
 
   return (
-    <div className="py-12 bg-gray-100 text-gray-800">
+    <div className="py-20 bg-gray-100 text-gray-800">
       <div className="max-w-8xl mx-auto px-4">
         <div className="flex justify-between items-center mb-8 p-8">
-          <h2 className="text-2xl font-bold text-blue-900">Success Stories from Our Community</h2>
+          <h2 className=" ml-6 text-2xl font-bold text-blue-900">Success Stories from Our Community</h2>
           <a href="#" className="text-blue-900 hover:text-blue-700 font-semibold">
             View All
           </a>
         </div>
         
-        <div className="flex items-center">
+        <div className="flex items-center px-20">
           <button
             onClick={handlePrev}
             className="text-blue-900 hover:text-blue-700 p-2"
@@ -69,7 +69,7 @@ const SuccessStories = () => {
             <FaChevronLeft size={24} />
           </button>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mx-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mx-4 ">
             {testimonials.slice(currentIndex, currentIndex + 3).map((testimonial, index) => (
               <SuccessStoryCard key={index} testimonial={testimonial} />
             ))}
@@ -88,7 +88,7 @@ const SuccessStories = () => {
             <div
               key={index}
               onClick={() => setCurrentIndex(index * 3)}
-              className={`w-3 h-3 rounded-full ${index === Math.floor(currentIndex / 3) ? 'bg-blue-900' : 'bg-gray-300'} cursor-pointer`}
+              className={` mt-6 w-3 h-3 rounded-full ${index === Math.floor(currentIndex / 3) ? 'bg-blue-900' : 'bg-gray-300'} cursor-pointer`}
             />
           ))}
         </div>

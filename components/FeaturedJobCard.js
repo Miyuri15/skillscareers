@@ -1,6 +1,10 @@
 import Image from 'next/image';
+import JobApplicationForm from './JobApplicationForm';
+import { useState } from 'react';
 
 export default function FeaturedJobCard(){
+  const [showApplicationForm, setShowApplicationForm] = useState(false);
+
 
     const jobs = [
         {
@@ -18,9 +22,9 @@ export default function FeaturedJobCard(){
     
     return(
         <>
-              <div className="flex space-x-4 overflow-x-auto scrollbar-hide">
+              <div className="p-6  flex space-x-4 overflow-x-auto scrollbar-hide">
         {jobs.map((job) => (
-          <div key={job.id} className="bg-white p-6 rounded-lg shadow-md flex-shrink-0 w-72 relative">
+          <div key={job.id} className="bg-white p-8 rounded-lg shadow-md flex-shrink-0 w-72 relative">
             {/* Logo on the top left */}
             <div className="absolute top-10 left-4">
               <Image src={job.logo} alt={`${job.company} logo`} width={80} height={40} />
@@ -49,7 +53,7 @@ export default function FeaturedJobCard(){
 
             <p className="text-gray-600 mb-4">{job.description}</p>
             <div className="flex space-x-4">
-              <button className="bg-[#001571] text-white p-2 rounded-md font-semibold w-auto">
+              <button  onClick={() => setShowApplicationForm(true)} className="bg-[#001571] text-white p-2 rounded-md font-semibold w-auto">
                 Apply Now
               </button>
               <button className="border border-[#001571] text-[#001571] p-2 rounded-md font-semibold w-auto">
@@ -58,6 +62,22 @@ export default function FeaturedJobCard(){
             </div>
           </div>
         ))}
+
+                {/* Job Application Form Popup */}
+{showApplicationForm && (
+  <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+    <div className="relative bg-white shadow-lg rounded-lg p-6 w-full max-w-4xl">
+      <button
+        onClick={() => setShowApplicationForm(false)}
+        className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+      >
+        Close
+      </button>
+      <JobApplicationForm onClose={() => setShowApplicationForm(false)} />
+    </div>
+  </div>
+)}
+
       </div>
 
         </>

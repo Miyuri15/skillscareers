@@ -19,32 +19,31 @@ const CandidateProfile = () => {
   return (
     <>
       <Header />
-      <div className=" min-h-screen flex flex-col items-center justify-center p-4  ">
+      <div className="bg-gray-200 min-h-screen p-20 flex flex-col items-center justify-center ">
         {/* Profile Banner */}
-        <div className="w-full max-w-6xl bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="relative">
             {/* Background Image */}
             <Image
-              src="/images/profilebg.jpg"
+              src="/images/recruiterbg.png"
               alt="Background"
               width={1200}
               height={300}
               className="w-full h-48 object-cover"
             />
             {/* Profile Image */}
-            <div className="absolute top-24 left-1/4 transform -translate-x-1/2">
+            <div className="absolute transform -mt-16 ml-20 border-4 border-[#001571] p-1 bg-white rounded-full overflow-hidden w-[180px] h-[180px] flex items-center justify-center">
               <Image
-                src="/images/profiledp.jpg"
-                alt="Profile Picture"
-                width={120}
-                height={120}
-                className="w-40 h-40 rounded-full border-4 border-white shadow-lg"
+                src="/images/AerFin.png"
+                alt="Aerfin Technologies Logo"
+                width={160}
+                height={160}
               />
             </div>
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex justify-end mt-4 space-x-4 text-blue-900">
+          <div className="flex justify-end mt-4 mr-4 space-x-4 text-blue-900">
             <FaLinkedin size={24} className="cursor-pointer" />
             <FaTwitter size={24} className="cursor-pointer" />
             <FaInstagram size={24} className="cursor-pointer" />
@@ -54,7 +53,7 @@ const CandidateProfile = () => {
           </div>
 
           {/* Profile Info */}
-          <div className="p-6 pt-16 text-left">
+          <div className=" text-left m-20 pt-5">
             <h2 className="text-2xl font-semibold text-gray-800">
               Alan Fernando
             </h2>
@@ -75,8 +74,8 @@ const CandidateProfile = () => {
 
             {/* Bio Section */}
             <div className="mt-8 text-left">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                Bio Section
+              <h3 className="text-lg font-semibold text-blue-800 mb-2">
+                Personal Profile
               </h3>
               <p className="text-gray-600">
                 I am a dedicated and results-driven Senior UI/UX Designer with
@@ -102,20 +101,69 @@ const CandidateProfile = () => {
             </div>
           </div>
         </div>
-
-        <div className="w-full max-w-6xl space-y-8 mt-3 mb-4">
+        {/* Bio data */}
+        <div className="w-full space-y-8 mt-3 mb-4">
+          <div className="bg-white px-20 py-10 rounded-lg shadow-md">
+            <h2 className="text-lg font-bold text-blue-800 mb-4">Bio Data</h2>
+            <div className="grid grid-cols-2 gap-4 text-md">
+              <div className="space-y-2">
+                {" "}
+                {/* Added space-y-2 for vertical spacing */}
+                <p>
+                  <span className="font-semibold">Birthday:</span> 20 Aug 2000
+                </p>
+                <p>
+                  <span className="font-semibold">Nationality:</span> Sri Lankan
+                </p>
+                <p>
+                  <span className="font-semibold">Languages:</span> Sinhala,
+                  English, Tamil
+                </p>
+                <p>
+                  <span className="font-semibold">Address:</span> Mawathagama,
+                  Kurunegala
+                </p>
+              </div>
+              <div className="space-y-2">
+                {" "}
+                {/* Added space-y-2 for vertical spacing */}
+                <p>
+                  <span className="font-semibold">Age:</span> 26 Years
+                </p>
+                <p>
+                  <span className="font-semibold">Marital Status:</span>{" "}
+                  Unmarried
+                </p>
+                <p>
+                  <span className="font-semibold">Religion:</span> Christianity
+                </p>
+                <p>
+                  <span className="font-semibold">Ethnicity:</span> South Asian
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-full space-y-8 mt-3 mb-4">
           {/* Experience Section */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+          <div className="bg-white p-20 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold text-blue-800 mb-4">
               Experience
             </h2>
-            <div className="space-y-6">
+            <div>
               {/* Experience Item */}
-              <div className="flex justify-between">
+              <div className="my-10">
+                <div className="flex justify-between">
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-700">
+                      Senior UX/UI Designer – InnovateTech Solutions
+                    </h3>
+                  </div>
+                  <div className="flex items-center text-gray-500 text-right ml-4">
+                    <p>Jan 2023 - Jan 2024</p>
+                  </div>
+                </div>
                 <div>
-                  <h3 className="text-lg font-medium text-gray-700">
-                    Senior UX/UI Designer – InnovateTech Solutions
-                  </h3>
                   <p className="text-gray-500">Colombo, Sri Lanka</p>
                   <p className="text-gray-600 mt-2">
                     Led the design of multiple high-profile web and mobile
@@ -125,18 +173,22 @@ const CandidateProfile = () => {
                     seamless solutions. Conducted user research, created
                     wireframes, and built interactive prototypes.
                   </p>
-                </div>
-                <div className="text-gray-500 text-right">
-                  Jan 2023 - Jan 2024
                 </div>
               </div>
 
               {/* Repeat Experience Item */}
-              <div className="flex justify-between">
+              <div className="my-10">
+                <div className="flex justify-between">
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-700">
+                      Senior UX/UI Designer – InnovateTech Solutions
+                    </h3>
+                  </div>
+                  <div className="flex items-center text-gray-500 text-right ml-4">
+                    <p>Jan 2023 - Jan 2024</p>
+                  </div>
+                </div>
                 <div>
-                  <h3 className="text-lg font-medium text-gray-700">
-                    Senior UX/UI Designer – InnovateTech Solutions
-                  </h3>
                   <p className="text-gray-500">Colombo, Sri Lanka</p>
                   <p className="text-gray-600 mt-2">
                     Led the design of multiple high-profile web and mobile
@@ -146,17 +198,14 @@ const CandidateProfile = () => {
                     seamless solutions. Conducted user research, created
                     wireframes, and built interactive prototypes.
                   </p>
-                </div>
-                <div className="text-gray-500 text-right">
-                  Jan 2023 - Jan 2024
                 </div>
               </div>
             </div>
           </div>
 
           {/* Education Section */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+          <div className="bg-white p-20 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold text-blue-800 mb-4">
               Education
             </h2>
             <div className="space-y-6">
@@ -193,8 +242,8 @@ const CandidateProfile = () => {
           </div>
 
           {/* Licenses & Certifications Section */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+          <div className="bg-white p-20 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold text-blue-800 mb-4">
               Licenses & Certifications
             </h2>
             <div className="space-y-6">
@@ -222,8 +271,8 @@ const CandidateProfile = () => {
             </div>
           </div>
           {/* Skills Section */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">Skills</h2>
+          <div className="bg-white p-20 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold text-blue-800 mb-4">Skills</h2>
             <div className="flex flex-wrap gap-4">
               {[
                 "UX Design",
@@ -245,8 +294,8 @@ const CandidateProfile = () => {
             </div>
           </div>
           {/* Tools Section */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">Tools</h2>
+          <div className="bg-white p-20 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold text-blue-800 mb-4">Tools</h2>
             <div className="flex flex-wrap gap-4">
               {[
                 "Figma",
@@ -272,8 +321,8 @@ const CandidateProfile = () => {
             </div>
           </div>
           {/* Technologies Section */}
-          <div className="bg-white p-6 rounded-lg shadow-md ">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+          <div className="bg-white p-20 rounded-lg shadow-md ">
+            <h2 className="text-xl font-semibold text-blue-800 mb-4">
               Technologies
             </h2>
             <div className="flex flex-wrap gap-4">
@@ -297,7 +346,6 @@ const CandidateProfile = () => {
             </div>
           </div>
         </div>
-
       </div>
       <Footer />
     </>

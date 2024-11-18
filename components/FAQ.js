@@ -46,7 +46,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="p-10 bg-gray-50 min-h-screen">
+    <div className="p-20 bg-gray-50 min-h-screen">
       <div className="max-w-full mx-auto">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-blue-900">FAQs</h2>

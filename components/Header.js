@@ -5,7 +5,7 @@ import Button from "./Button";
 const Header = () => {
   return (
     <>
-      <header className="bg-white text-blue-950 p-3">
+      <header className="bg-white text-blue-950 py-3 px-14">
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/">
             <img src="/images/logo.png" alt="Logo" className="w-30 " />
@@ -13,13 +13,13 @@ const Header = () => {
           <div>
             <nav className="space-x-6 hidden md:flex font-semibold">
               <Link href="/landingPage">Home</Link>
-              <Link href="/explore">Explore Recruiters</Link>
+              <Link href="/recruiterProfile/123">Explore Recruiters</Link>
               <Link href="/about-us">About Us</Link>
               <Link href="/contact-us">Contact Us</Link>
             </nav>
           </div>
           <div>
-            <Link href="/join-as-recruiter">
+            <Link href="/register">
               <Button>
                 <p className="p-3">Join as Recruiter</p>
               </Button>
@@ -30,7 +30,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <hr className="border-t-4 border-blue-900 mb-8" />
+      <hr className="border-t-4 border-blue-900" />
     </>
   );
 };

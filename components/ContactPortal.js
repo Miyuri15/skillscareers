@@ -5,44 +5,44 @@ import Link from "next/link";
 export default function ContactSection() {
   return (
     <>
-      <div className=" p-10 flex flex-col md:flex-row justify-between gap-20 mt-10 mx-10 mb-10">
+      <div className="p-4 md:p-10 flex flex-col md:flex-row justify-between gap-8 md:gap-20 mt-8 mx-4 md:mx-10 mb-10">
         {/* Contact Form */}
-        <div className="md:w-2/3">
-          <h3 className="text-blue-900 text-l font-semibold mb-3">
+        <div className="w-full md:w-2/3">
+          <h3 className="text-blue-900 text-lg md:text-xl font-semibold mb-3">
             STILL YOU ARE IN TROUBLE? LET'S REACH US.
           </h3>
           <form>
             <label className="block">
               <input
                 type="text"
-                className="w-full p-3 border rounded-lg mt-6 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+                className="w-full p-3 border rounded-lg mt-4 md:mt-6 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
                 placeholder="Name"
               />
             </label>
             <label className="block">
               <input
                 type="email"
-                className="w-full p-3 border rounded-lg mt-6 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+                className="w-full p-3 border rounded-lg mt-4 md:mt-6 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
                 placeholder="Email"
               />
             </label>
             <label className="block">
               <input
                 type="text"
-                className="w-full p-3 border rounded-lg mt-6 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+                className="w-full p-3 border rounded-lg mt-4 md:mt-6 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
                 placeholder="Contact Number"
               />
             </label>
             <label className="block">
               <input
                 type="text"
-                className="w-full p-3 border rounded-lg mt-6 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+                className="w-full p-3 border rounded-lg mt-4 md:mt-6 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
                 placeholder="Subject"
               />
             </label>
-            <label className="block mb-10">
+            <label className="block mb-6 md:mb-10">
               <textarea
-                className="w-full p-3 border rounded-lg mt-6 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+                className="w-full p-3 border rounded-lg mt-4 md:mt-6 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
                 placeholder="Message"
                 rows={7}
               />
@@ -61,27 +61,27 @@ export default function ContactSection() {
         </div>
 
         {/* Images Section */}
-        <div className="md:w-1/2 flex flex-wrap justify-center md:justify-start gap-3">
-          <div className="flex gap-3">
+        <div className="w-full md:w-1/2 flex flex-wrap justify-center md:justify-start gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             <Image
               src="/images/people1.jpg"
               alt="Person 1"
-              width={200}
-              height={150}
+              width={180}
+              height={120}
               className="object-cover"
             />
             <Image
               src="/images/people2.jpg"
               alt="Person 2"
-              width={200}
-              height={150}
+              width={180}
+              height={120}
               className="object-cover"
             />
             <Image
               src="/images/people3.jpg"
               alt="Person 3"
-              width={200}
-              height={150}
+              width={180}
+              height={120}
               className="object-cover"
             />
           </div>

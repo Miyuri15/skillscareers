@@ -55,7 +55,16 @@ const RecruiterRegister = () => (
       />
     </label>
     <Button variant="primary" className="w-full py-3 mt-4">
+    <span className="flex items-center justify-center ">
+
       <Link href="/login">Register </Link>
+      <img
+                src="/images/arrow-up.png"
+                alt="Register"
+                className="h-5 w-5 ml-2"
+              />
+            </span>
+
     </Button>
   </form>
 );

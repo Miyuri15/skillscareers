@@ -3,8 +3,7 @@ import JobSeekerRegister from "@/components/JobSeekerRegister";
 import RecruiterRegister from "@/components/RecruiterRegister";
 
 const Register = () => {
-
-    const [isRecruiter, setIsRecruiter] = useState(false);
+  const [isRecruiter, setIsRecruiter] = useState(false);
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
       {/* Left Side with Image and Intro Text */}
@@ -31,43 +30,63 @@ const Register = () => {
       {/* Right Side with Form */}
       <div className="flex flex-col justify-center md:w-2/5 p-8">
         <div className="flex flex-col items-center mb-4">
-
-          <h2 className="text-2xl text-blue-900 font-semibold text-center mb-2 ">
-            Welcome Back! Let's Get You Started.
-          </h2>
-          <p className="text-blue-900 text-center text-m mt-4 mb-4 ">
-            Log in to access your account and continue your career journey or
-            recruitment process.
-          </p>
+          <p className="text-blue-900 text-center text-md font-semibold  mb-4 ">
+          Create your free account to explore job listings, connect with recruiters, and take the next step in your career.          </p>
         </div>
 
         <div className="flex flex-col justify-center p-8">
-        {/* Job Seeker / Recruiter Selection */}
-        <div className="flex space-x-4 mb-6">
-          <button
-            onClick={() => setIsRecruiter(false)}
-            className={`p-4 w-full rounded-lg ${
-              !isRecruiter ? "bg-blue-900 text-white" : "bg-gray-200 text-blue-900"
-            }`}
-          >
-            Job Seeker
-          </button>
-          <button
-            onClick={() => setIsRecruiter(true)}
-            className={`p-4 w-full rounded-lg ${
-              isRecruiter ? "bg-blue-900 text-white" : "bg-gray-200 text-blue-900"
-            }`}
-          >
-            Recruiter
-          </button>
+          {/* Job Seeker / Recruiter Selection */}
+          <div className="flex space-x-4 mb-6">
+            <button
+              onClick={() => setIsRecruiter(false)}
+              className={` w-full rounded-lg ${
+                !isRecruiter
+                  ? "bg-blue-900 text-white"
+                  : "bg-gray-200 text-blue-900"
+              }`}
+            >
+              <span className="flex items-center justify-center ">
+                <img
+                  src="/images/tag-user.png"
+                  alt="Login"
+                  className="h-6 w-6 mr-5 "
+                />
+                Job Seeker
+                <img
+                  src="/images/Livello_1.png"
+                  alt="Login"
+                  className="h-6 w-6 ml-7"
+                />
+              </span>
+            </button>
+            <button
+              onClick={() => setIsRecruiter(true)}
+              className={`p-4 w-full rounded-lg ${
+                isRecruiter
+                  ? "bg-blue-900 text-white"
+                  : "bg-gray-200 text-blue-900"
+              }`}
+            >
+              <span className="flex items-center justify-center ">
+                <img
+                  src="/images/buliding.png"
+                  alt="register"
+                  className="h-6 w-6 mr-5 "
+                />
+                Recruiter
+                <img
+                  src="/images/Livello_1.png"
+                  alt="register"
+                  className="h-6 w-6 ml-7"
+                />
+              </span>
+            </button>
+          </div>
+          <h2 className="text-xl text-center text-blue-900 font-bold mb-6 p-4">
+          Join Skill Careers and Unlock New Opportunities!          </h2>
+          {/* Conditional Form Rendering */}
+          {isRecruiter ? <RecruiterRegister /> : <JobSeekerRegister />}
         </div>
-        <h2 className="text-xl text-center text-blue-900 font-bold mb-4">
-          Join Skill Careers and Connect with the Best Talent Today!
-        </h2>
-        {/* Conditional Form Rendering */}
-        {isRecruiter ? <RecruiterRegister /> : <JobSeekerRegister />}
-      </div>
-
       </div>
     </div>
   );

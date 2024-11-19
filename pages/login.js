@@ -68,7 +68,7 @@ const Login = () => {
             <span className="flex items-center justify-center ">
             <Link href="/userProfile/124">Login </Link>
             <img
-                src="/images/login-icon.png"
+                src="/images/arrow-up.png"
                 alt="Login"
                 className="h-5 w-5 ml-2"
               />

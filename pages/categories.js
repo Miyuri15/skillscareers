@@ -30,68 +30,91 @@ export default function Categories() {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-gray-100"> {/* Set minimum height for full screen */}
-        <div className="relative">
-          <Image
-            src="/images/bgLineWide.jpg"
-            alt="line"
-            width={100}
-            height={30}
-            className="absolute top-0 right-0 w-fit h-[500px] object-cover z-0 opacity-5 items-end"
-          />
+      <div className="relative">
+        <Image
+          src="/images/bgLineWide.jpg"
+          alt="line"
+          width={100}
+          height={30}
+          className="absolute top-0 right-0 w-fit h-[425px] object-cover z-0 opacity-5 items-end"
+        />
+        <Image
+          src="/images/bgLineThin.jpg"
+          alt="line"
+          width={200}
+          height={500}
+          className="absolute top-0 right-20 w-fit h-[425px] object-cover z-0 opacity-5 items-end"
+        />
+      </div>
 
-          <Image
-            src="/images/bgLineThin.jpg"
-            alt="line"
-            width={200}
-            height={500}
-            className="absolute top-0 right-20 w-fit h-[500px] object-cover z-0 opacity-5 items-end"
-          />
+      <div className="p-4 sm:p-6 md:p-10">
+        <div className="mt-20 mb-12">
+          <h2 className="text-3xl sm:text-4xl text-gray-400 font-bold">
+            Search for Job<span className="text-blue-900"> Categories</span>
+          </h2>
+          <p className="text-gray-500">
+            Explore the diverse range of job categories to find the perfect fit for your skills and interests.
+          </p>
         </div>
-
-        {/* Search Banner */}
-        <div className="p-10 relative">
-          <div className="mt-20 mb-12"></div>
-          <div className="bg-gray-300 h-auto mb-12 p-4 rounded-md">
-            <div className="flex flex-wrap justify-between items-center gap-4">
-              <input
-                type="text"
-                placeholder="Easily find the category you’re looking for..."
-                className="bg-gray-300 flex-grow px-4 py-6 focus:outline-none w-full rounded-md sm:w-auto font-semibold placeholder-[#5462A0]"
-              />
-              <button className="bg-[#001571] text-white px-14 py-5 rounded-md font-semibold w-full sm:w-auto">
-                Search
-              </button>
-            </div>
+        <div className="bg-[#e6e8f1] h-auto mb-12 p-4 rounded-md">
+          <div className="flex flex-wrap justify-between items-center gap-4">
+            <input
+              type="text"
+              placeholder="Easily find the category you’re looking for..."
+              className="bg-gray-200 flex-grow px-4 py-6 focus:outline-none w-full sm:w-[60%] md:w-[45%] lg:w-[30%] rounded-md font-semibold placeholder-[#5462A0]"
+            />
+            <button className="bg-[#001571] text-white px-4 py-5 rounded-md font-semibold w-full sm:w-auto">
+              Search
+            </button>
           </div>
         </div>
+      </div>
 
-        {/* Categories */}
-        <div className="p-10 mb-10 relative">
-          {[...Array(5)].map((_, rowIndex) => (
-            <div
-              key={`${currentPage}-${rowIndex}`}
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-6"
+      <div className="bg-gray-200 p-4 sm:p-6 md:p-10 mb-10">
+        {[...Array(5)].map((_, rowIndex) => (
+          <div key={`${currentPage}-${rowIndex}`} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-6">
+            {shuffleArray([...categories]).map((category) => (
+              <div
+                key={category.id}
+                className="text-center border p-5 rounded-lg bg-gray-50 hover:shadow-lg transition-shadow aspect-square flex flex-col justify-center"
+              >
+                <Image src={category.icon} alt={category.label} width={50} height={50} className="mx-auto mb-4" />
+                <p className="text-blue-900 font-semibold">{category.label}</p>
+              </div>
+            ))}
+          </div>
+        ))}
+
+        {/* Pagination section */}
+        <div className="flex justify-center mt-10 sm:mt-12">
+          <div className="flex space-x-2">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`px-3 py-1 ${currentPage === 1 ? 'text-gray-400' : 'text-blue-500'} cursor-pointer`}
             >
-              {shuffleArray([...categories]).map((category) => (
-                <div
-                  key={category.id}
-                  className="text-center border p-5 rounded-lg bg-gray-50 hover:shadow-lg transition-shadow aspect-square flex flex-col justify-center"
-                >
-                  <Image
-                    src={category.icon}
-                    alt={category.label}
-                    width={50}
-                    height={20}
-                    className="mx-auto mb-4"
-                  />
-                  <p className="text-blue-900 font-semibold">{category.label}</p>
-                </div>
-              ))}
-            </div>
-          ))}
+              {"<"}
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i + 1}
+                onClick={() => handlePageChange(i + 1)}
+                className={`px-3 py-1 ${currentPage === i + 1 ? 'text-blue-900 font-bold' : 'text-gray-500'} cursor-pointer`}
+              >
+                {i + 1}
+              </button>
+            ))}
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`px-3 py-1 ${currentPage === totalPages ? 'text-gray-400' : 'text-blue-500'} cursor-pointer`}
+            >
+              {">"}
+            </button>
+          </div>
         </div>
       </div>
+
       <Footer />
     </>
   );

@@ -19,7 +19,7 @@ export default function LandingPage() {
             alt="line"
             width={100}
             height={30}
-            className="absolute top-0 right-0 w-fit h-[800px] object-cover z-0 opacity-5 items-end"
+            className="absolute top-0 right-0 w-fit h-[670px] object-cover z-0 opacity-5 items-end"
           />
 
           <Image
@@ -27,7 +27,7 @@ export default function LandingPage() {
             alt="line"
             width={200}
             height={500}
-            className="absolute top-0 right-40 w-fit h-[800px] object-cover z-0 opacity-5 items-end"
+            className="absolute top-0 right-40 w-fit h-[670px] object-cover z-0 opacity-5 items-end"
           />
         </div>
 

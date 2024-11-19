@@ -1,7 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../public/images/logowhite.png";
-import { FaCcAmex, FaCcDiscover, FaCcMastercard, FaCcVisa, FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  FaCcAmex,
+  FaCcDiscover,
+  FaCcMastercard,
+  FaCcVisa,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -88,22 +97,23 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Signup */}
-          <div className="md:ml-auto w-full md:w-auto text-center md:text-left">
-            <h3 className="font-semibold mb-4">Join Our Newsletter</h3>
-            <p className="mb-4">
-              Subscribe now for the latest updates on exclusive offers, new packages, and bulk discounts!
-            </p>
-            <div className="flex flex-col md:flex-row items-center">
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="px-4 py-2 mb-2 md:mb-0 md:mr-2 w-full md:w-auto rounded-lg border-none text-white bg-blue-700"
-              />
-              <button className="bg-white text-blue-800 px-4 py-2 rounded-lg w-full md:w-auto">
-                Submit Now
-              </button>
-            </div>
-          </div>
+          <div className="md:ml-auto w-full md:w-auto text-center md:text-right">
+  <h3 className="font-semibold mb-4">Join Our Newsletter</h3>
+  <p className="mb-4">
+  Subscribe now for the latest updates on exclusive offers,
+  <span className="block">new packages, and bulk discounts!</span>
+</p>
+  <div className="relative w-auto">
+    <input
+      type="email"
+      placeholder="Email Address"
+      className="px-4 py-2 w-full rounded-lg border-none text-white bg-blue-700 pr-32"
+    />
+    <button className="absolute top-0 right-0 bg-white text-blue-800 px-4 py-2 rounded-r-lg h-full">
+      Submit Now
+    </button>
+  </div>
+</div>
         </div>
 
         {/* Bold horizontal line */}
@@ -111,17 +121,18 @@ const Footer = () => {
 
         {/* Social Icons and Payment Methods */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
-        <div className="flex justify-end mt-4 mr-4 space-x-4 text-white">
+          <div className="flex justify-end mt-4 mr-4 space-x-4 text-white">
             <FaLinkedin size={24} className="cursor-pointer" />
             <FaTwitter size={24} className="cursor-pointer" />
             <FaInstagram size={24} className="cursor-pointer" />
             <FaFacebook size={24} className="cursor-pointer" />
           </div>
-          <p className="text-center">© 2024 Skills Careers. All rights reserved.</p>
+          <p className="text-center">
+            © 2024 Skills Careers. All rights reserved.
+          </p>
           <div className="flex justify-end mt-4 mr-4 space-x-4 text-white">
-            
-          <FaCcVisa size={30} className="cursor-pointer" />
-          <FaCcMastercard size={30} className="cursor-pointer" />
+            <FaCcVisa size={30} className="cursor-pointer" />
+            <FaCcMastercard size={30} className="cursor-pointer" />
             <FaCcAmex size={30} className="cursor-pointer" />
             <FaCcDiscover size={30} className="cursor-pointer" />
           </div>

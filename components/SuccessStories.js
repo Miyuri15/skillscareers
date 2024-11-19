@@ -52,24 +52,27 @@ const SuccessStories = () => {
   };
 
   return (
-    <div className="py-20 bg-gray-100 text-gray-800">
-      <div className="max-w-8xl mx-auto px-4">
-        <div className="flex justify-between items-center mb-8 p-8">
-          <h2 className=" ml-6 text-2xl font-bold text-blue-900">Success Stories from Our Community</h2>
-          <a href="#" className="text-blue-900 hover:text-blue-700 font-semibold">
+    <div className="p-10 bg-gray-100 text-gray-800">
+      <div className=" mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-6 md:mb-8 px-4 md:px-8">
+          <h2 className="text-xl md:text-2xl font-bold text-blue-900 text-center md:text-left">
+            Success Stories from Our Community
+          </h2>
+          <a href="#" className="text-blue-900 hover:text-blue-700 font-semibold mt-2 md:mt-0">
             View All
           </a>
         </div>
-        
-        <div className="flex items-center px-20">
+
+        <div className="flex items-center justify-between px-2 sm:px-4 md:px-8">
           <button
             onClick={handlePrev}
-            className="text-blue-900 hover:text-blue-700 p-2"
+            className="text-blue-900 hover:text-blue-700 p-2 md:p-3"
+            aria-label="Previous"
           >
             <FaChevronLeft size={24} />
           </button>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mx-4 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-2">
             {testimonials.slice(currentIndex, currentIndex + 3).map((testimonial, index) => (
               <SuccessStoryCard key={index} testimonial={testimonial} />
             ))}
@@ -77,18 +80,21 @@ const SuccessStories = () => {
 
           <button
             onClick={handleNext}
-            className="text-blue-900 hover:text-blue-700 p-2"
+            className="text-blue-900 hover:text-blue-700 p-2 md:p-3"
+            aria-label="Next"
           >
             <FaChevronRight size={24} />
           </button>
         </div>
-        
+
         <div className="flex justify-center mt-4 space-x-2">
           {Array(Math.ceil(testimonials.length / 3)).fill().map((_, index) => (
             <div
               key={index}
               onClick={() => setCurrentIndex(index * 3)}
-              className={` mt-6 w-3 h-3 rounded-full ${index === Math.floor(currentIndex / 3) ? 'bg-blue-900' : 'bg-gray-300'} cursor-pointer`}
+              className={`w-3 h-3 rounded-full ${
+                index === Math.floor(currentIndex / 3) ? 'bg-blue-900' : 'bg-gray-300'
+              } cursor-pointer`}
             />
           ))}
         </div>

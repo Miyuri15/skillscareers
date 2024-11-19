@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SearchResults from "@/components/SearchResults";
 import Image from "next/image";
+import { FaSearch } from "react-icons/fa";
 
 export const countries = [
   { value: "", label: "Select the Country", code: "" },
@@ -56,40 +57,77 @@ export default function jobSearchPage() {
           </h2>
         </div>
 
-        <div className="bg-[#e6e8f1] h-auto p-4 rounded-md">
-          <div className="flex flex-wrap justify-between items-center gap-4 mb-8">
-            <input
-              type="text"
-              placeholder="Search by job title, keywords, or company."
-              className="bg-gray-200 flex-grow px-4 py-6 focus:outline-none w-full sm:w-[60%] md:w-[45%] lg:w-[30%] rounded-md font-semibold placeholder-[#5462A0]"
-            />
-            <select className="bg-[#e6e8f1] border border-2 border-[#B0B6D3] text-[#5462A0] px-4 py-5 font-semibold rounded-md w-full sm:w-[60%] md:w-[45%] lg:w-[30%]">
-              {countries.map((country) => (
-                <option key={country.code}>{country.label}</option>
-              ))}
-            </select>
-            <button className="bg-[#001571] text-white px-4 py-5 rounded-md font-semibold w-full sm:w-auto md:w-auto">
-              Search
-            </button>
-          </div>
-        </div>
+        <div className="bg-[#e6e8f1]  mb-8 rounded-md p-4 relative">
+  <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+    {/* Text Input */}
+    <input
+      type="text"
+      placeholder="Search by job title, keywords, or company."
+      className="bg-gray-200 flex-grow px-4 py-3 focus:outline-none rounded-md font-semibold placeholder-[#5462A0] w-full sm:w-auto"
+    />
 
-        {/* Filters Section */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
-          <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg">
-            <option>Industry</option>
-          </select>
-          <select className="bg-[#001571] w-full text-white px-4 py-2 rounded-lg">
-            <option>Experience Level</option>
-          </select>
-          <select className="bg-[#001571] w-full text-white px-4 py-2 rounded-lg">
-            <option>Salary Range</option>
-          </select>
-          <select className="bg-[#001571] w-full text-white px-4 py-2 rounded-lg">
-            <option>Job Type</option>
+    {/* Countries Dropdown */}
+    <div className="flex flex-wrap justify-end items-center gap-4  w-full rounded-md">
+          <select className="w-full lg:w-auto bg-[#e6e8f1] border-2 border-[#B0B6D3] text-[#5462A0] px-4 py-3 lg:px-20 lg:py-5 font-semibold rounded-md">
+            {countries.map((country) => (
+              <option key={country.code}>{country.label}</option>
+            ))}
           </select>
         </div>
 
+    {/* Search Button */}
+    <button className="bg-[#001571] text-white px-6 py-3 rounded-md font-semibold w-full sm:w-auto">
+    <span className="flex items-center justify-center ">
+      <FaSearch className="m-2"/>
+                Search
+              </span>
+    </button>
+  </div>
+</div>
+
+{/* Filters Section */}
+<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+  <div className="relative">
+    <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg appearance-none">
+      <option>Industry</option>
+    </select>
+    <img 
+      src="/images/arrow-down.png" 
+      alt="Arrow Down" 
+      className="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
+    />
+  </div>
+  <div className="relative">
+    <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg appearance-none">
+      <option>Experience Level</option>
+    </select>
+    <img 
+      src="/images/arrow-down.png" 
+      alt="Arrow Down" 
+      className="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
+    />
+  </div>
+  <div className="relative">
+    <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg appearance-none">
+      <option>Salary Range</option>
+    </select>
+    <img 
+      src="/images/arrow-down.png" 
+      alt="Arrow Down" 
+      className="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
+    />
+  </div>
+  <div className="relative">
+    <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg appearance-none">
+      <option>Job Type</option>
+    </select>
+    <img 
+      src="/images/arrow-down.png" 
+      alt="Arrow Down" 
+      className="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
+    />
+  </div>
+</div>
         <SearchResults />
       </div>
 

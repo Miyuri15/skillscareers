@@ -34,19 +34,16 @@ const SingleJobDetails = () => {
           {jobs.map((job) => (
             <div className="flex items-center justify-between mb-8 mt-5" key={job.id}>
               {/* Left: Logo */}
-              <Image src={job.logo} alt="logo" width={80} height={40} />
+              <Image src={job.logo} alt="logo" width={120} height={40} />
 
               {/* Right: Date */}
               <p className="text-blue-950">{job.date}</p>
             </div>
           ))}
 
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-6">
+          <div className="flex flex-col md:flex-row justify-start items-center space-y-4 md:space-y-0 md:space-x-20">
             <div>
               <h1 className="text-2xl font-bold text-blue-900">{jobs[0].title}</h1>
-              <p className="text-gray-800 font-semibold mt-2">
-                {jobs[0].company} | {jobs[0].location}
-              </p>
             </div>
 
             <div className="flex flex-wrap space-x-2">
@@ -61,6 +58,12 @@ const SingleJobDetails = () => {
                 </span>
               ))}
             </div>
+          </div>
+          <div>
+          <p className="text-gray-800 font-semibold mt-2">
+                {jobs[0].company}   |   {jobs[0].location}
+              </p>
+
           </div>
 
           <div className="flex flex-col md:flex-row justify-end items-center space-y-4 md:space-y-0 md:space-x-6">

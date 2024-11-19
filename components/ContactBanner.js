@@ -15,7 +15,7 @@ export default function ContactBanner() {
       <div className="bg-blue-950 p-4">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
           {/* Email section */}
-          <div className="flex items-center space-x-2 text-gray-50">
+          <div className="flex items-center space-x-2 text-gray-50 ml-10">
             <FaMailBulk size={24} className="cursor-pointer" />
             <div className="flex flex-col">
               <div>Email</div>
@@ -42,7 +42,7 @@ export default function ContactBanner() {
           </div>
 
           {/* Social icons section */}
-          <div className="flex justify-center md:justify-end space-x-4 mt-4 md:mt-0">
+          <div className="flex justify-center text-white md:justify-end space-x-4 mt-4 md:mt-0 px-10">
             <FaLinkedin size={24} className="cursor-pointer" />
             <FaTwitter size={24} className="cursor-pointer" />
             <FaInstagram size={24} className="cursor-pointer" />

@@ -34,7 +34,7 @@ export default function News() {
       <div className="max-w-full mx-auto">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-blue-900">Latest News</h2>
-          <a href="#" className="text-blue-600 hover:underline">View All</a>
+          <a href="#" className="text-blue-900 font-bold hover:underline">View All</a>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -52,7 +52,11 @@ export default function News() {
   <div className="flex items-center justify-between mt-20">
     <a href="#" className="flex items-center p-2 bg-blue-950 text-white font-semibold rounded-md hover:bg-blue-800">
       Read Now
-      <FaArrowRight className="ml-2" />
+      <img
+                src="/images/arrow-up.png"
+                alt="Login"
+                className="h-5 w-5 ml-2"
+              />
     </a>
   </div>
   
@@ -78,7 +82,11 @@ export default function News() {
                   <div className="flex items-center justify-between mt-4">
                     <a href="#" className="flex items-center p-2 bg-blue-950 text-white font-semibold rounded-md hover:bg-blue-800">
                       Read Now
-                      <FaArrowRight className="ml-2" />
+                      <img
+                src="/images/arrow-up.png"
+                alt="Login"
+                className="h-5 w-5 ml-2"
+              />
                     </a>
                   </div>
                   <div className="mt-4">

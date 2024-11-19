@@ -76,7 +76,7 @@ export default function RecruiterProfile() {
           </div>
 
           {/* Social Media Icons */}
-          <div className="pr-4 sm:pr-10 flex justify-end mt-4 space-x-2 sm:space-x-4 text-blue-900">
+          <div className="pr-8 sm:pr-12 flex justify-end mt-4 space-x-2 sm:space-x-4 text-blue-900">
             <FaLinkedin size={20} className="cursor-pointer" />
             <FaTwitter size={20} className="cursor-pointer" />
             <FaInstagram size={20} className="cursor-pointer" />
@@ -86,7 +86,7 @@ export default function RecruiterProfile() {
           </div>
 
           {/* Profile Info */}
-          <div className="p-4 sm:p-10 text-left mt-12">
+          <div className="p-4 sm:p-10 text-left mt-20">
             {recruiters.map((recruiter) => (
               <div key={recruiter.id}>
                 <h3 className="text-lg sm:text-xl font-bold text-blue-900">

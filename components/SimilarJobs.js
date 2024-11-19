@@ -59,11 +59,13 @@ export default function SimilarJobs() {
 
           {/* Job Cards */}
           <div className="pl-10 pr-10 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
-            {currentJobs.map((job) => (
-              <Link key={job.id} href={`/job/${job.id}`}>
+          {currentJobs.map((job) => (
+            <Link key={job.id} href={`/job/${job.id}`}>
+              
                 <FeaturedJobCard job={job} />
-              </Link>
-            ))}
+              
+            </Link>
+          ))}
           </div>
 
           {/* Right Arrow */}

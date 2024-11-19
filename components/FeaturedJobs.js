@@ -1,10 +1,33 @@
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useRef, useState } from 'react';
 import FeaturedJobCard from './FeaturedJobCard';
+import Link from 'next/link';
+
+
+const jobsData = Array.from({ length: 20 }, (_, i) => ({
+  id: i + 1,
+  companyLogo: '/images/aerfin-logo.png',
+  companyName: 'AerFin',
+  title: 'Senior UX/UI Designer',
+  location: 'New York, NY',
+  datePosted: `0${(i % 9) + 1} Jan 2024`,
+}));
+
+const ITEMS_PER_PAGE = 4;
+
 
 export default function FeaturedJobs() {
   const scrollRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+
+
+  const totalPages = Math.ceil(jobsData.length / ITEMS_PER_PAGE);
+  const currentJobs = jobsData.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
 
   const handleScroll = (direction) => {
     const container = scrollRef.current;
@@ -27,10 +50,16 @@ export default function FeaturedJobs() {
 
   return (
     <div className="p-2 sm:p-4 md:p-6 relative">
-      <div className="flex justify-between items-center mb-4 md:mb-6">
+      <div className="p-10 flex justify-between items-center mb-4 md:mb-6">
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">Featured Jobs</h2>
-        <a href="#" className="text-blue-600 font-semibold text-sm sm:text-base">
+        <a href="#" className="text-blue-900 font-bold text-sm sm:text-base">
           View All
+          <img
+                src="/images/arrow-up.png"
+                alt="Login"
+                className="h-5 w-5 ml-2"
+              />
+
         </a>
       </div>
 
@@ -53,7 +82,13 @@ export default function FeaturedJobs() {
               key={index}
               className="flex-none w-[85%] sm:w-[48%] md:w-[24%] bg-white rounded-lg p-3 sm:p-4 shadow-none"
             >
-              <FeaturedJobCard />
+          {currentJobs.map((job) => (
+            <Link key={job.id} href={`/job/${job.id}`}>
+              
+                <FeaturedJobCard job={job} />
+              
+            </Link>
+          ))}
             </div>
           ))}
         </div>

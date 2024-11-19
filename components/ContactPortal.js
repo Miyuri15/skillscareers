@@ -47,43 +47,51 @@ export default function ContactSection() {
                 rows={7}
               />
             </label>
-            <Button variant="primary">
-              <span className="flex items-center justify-center">
+            <button className="bg-blue-900 text-gray-100 px-20 py-3 rounded-md">
+              <span className="flex items-start justify-center">
                 <Link href="/contact-us">Submit</Link>
                 <img
-                  src="/images/login-icon.png"
+                  src="/images/arrow.png"
                   alt="Login"
-                  className="h-5 w-5 ml-2"
+                  className="h-5 w-5 ml-5"
                 />
               </span>
-            </Button>
+            </button>
           </form>
         </div>
 
         {/* Images Section */}
         <div className="w-full md:w-1/2 flex flex-wrap justify-center md:justify-start gap-3">
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-1">
             <Image
-              src="/images/people1.jpg"
+              src="/images/ppl4.png"
               alt="Person 1"
-              width={180}
+              width={130}
               height={120}
               className="object-cover"
             />
             <Image
-              src="/images/people2.jpg"
+              src="/images/pp3.png"
               alt="Person 2"
-              width={180}
+              width={130}
               height={120}
               className="object-cover"
             />
             <Image
-              src="/images/people3.jpg"
+              src="/images/pp2.png"
               alt="Person 3"
-              width={180}
+              width={130}
               height={120}
               className="object-cover"
             />
+                        <Image
+              src="/images/ppl1.png"
+              alt="Person 2"
+              width={130}
+              height={120}
+              className="object-cover"
+            />
+
           </div>
         </div>
       </div>

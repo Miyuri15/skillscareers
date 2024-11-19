@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaSearch, FaChartLine, FaUserTie } from "react-icons/fa";
+import { FaSearch, FaChartLine, FaUserTie, FaSearchPlus, FaMedal, FaLink } from "react-icons/fa";
 
 export const countries = [
   { value: "", label: "Select the Country", code: "" },
@@ -89,25 +89,25 @@ export default function JobFindBanner() {
                 className="w-10 h-10 rounded-full border-2 border-white"
               />
             </div>
-            <div className="hidden lg:block min-h-20 text-blue-900 font-bold m-3">|</div>
-            <div className="ml-3 lg:ml-0">
+            <div className="hidden lg:block min-h-30 text-blue-900 font-bold m-3 ">|</div>
+            <div className="ml-3 lg:ml-0 ">
               <p className="text-lg lg:text-xl font-semibold text-blue-800">6K+</p>
-              <p className="text-blue-800">Active Daily Users</p>
+              <p className="text-blue-800 ">Active Daily Users</p>
             </div>
           </div>
 
           {/* Features section */}
-          <div className="flex flex-col lg:flex-row gap-4 lg:space-x-10 text-blue-700">
-            <div className="flex items-center space-x-2">
+          <div className="mt-40 flex flex-col lg:flex-row gap-4 lg:space-x-10 text-blue-700">
+            <div className="flex items-center space-x-2 ">
               <FaSearch className="w-6 h-6" />
               <p>Advanced Job Search</p>
             </div>
             <div className="flex items-center space-x-2">
-              <FaChartLine className="w-6 h-6" />
+              <FaMedal className="w-6 h-6" />
               <p>Career Growth Resources</p>
             </div>
             <div className="flex items-center space-x-2">
-              <FaUserTie className="w-6 h-6" />
+              <FaLink className="w-6 h-6" />
               <p>Recruiter Connections</p>
             </div>
           </div>

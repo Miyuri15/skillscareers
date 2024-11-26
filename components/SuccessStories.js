@@ -60,32 +60,25 @@ const SuccessStories = () => {
   return (
     <div className="relative w-full text-gray-800">
       {/* Image Group as Background */}
-      <div className="absolute inset-0 -z-10">
-        {/* White Background Image */}
+      <div className="relative inset-0 -z-10 md:block sm:hidden ">
         <Image
-          src="/images/whiteImage.png"
-          alt="White Background"
-          layout="fill"
-          objectFit="cover"
-          className="z-0"
+          src="/images/line1.png"
+          alt="line1 Background"
+          width={800}
+          height={200}
+          className="absolute top-0 left-5 w-auto h-auto z-0 transform rotate-45 origin-top-left"
+          style={{
+            width: "200vw",
+            height: "260vh",
+          }}
         />
 
-        {/* Thin Line Background */}
         <Image
-          src="/images/bgLineThin.jpg"
-          alt="Background Line Thin"
-          width={400}
-          height={600}
-          className="absolute top-[50px] right-[-50px] w-[400px] h-[2000px] -rotate-12 opacity-5"
-        />
-
-        {/* Wide Line Background */}
-        <Image
-          src="/images/bgLineWide.jpg"
-          alt="Background Line Wide"
-          width={400}
-          height={600}
-          className="absolute top-[-150px] left-[-150px] w-[500px] h-[2000px] opacity-5 rotate-180"
+          src="/images/line1.png"
+          alt="line2 Background"
+          width={800}
+          height={400}
+          className="absolute h-[2000px] top-0 right-[-400px] z-0 transform -translate-x-1/2 -translate-y-1/2"
         />
       </div>
       {/* Foreground Content */}

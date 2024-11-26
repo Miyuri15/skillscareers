@@ -43,12 +43,12 @@ const Header = () => {
           <div className="md:hidden bg-white p-4">
             <nav className="flex flex-col space-y-4 font-semibold">
               <Link href="/landingPage">Home</Link>
-              <Link href="/recruiterProfile/123">Explore Recruiters</Link>
+              <Link href="/recruiterSearch">Explore Recruiters</Link>
               <Link href="/about-us">About Us</Link>
               <Link href="/contact-us">Contact Us</Link>
-              <Link href="/register">
+              <Link href="/categories">
                 <Button>
-                  <p className="p-3">Join as Recruiter</p>
+                  <p className="px-6 py-2">Join as Recruiter</p>
                 </Button>
               </Link>
             </nav>

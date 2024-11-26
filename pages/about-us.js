@@ -76,25 +76,25 @@ export default function AboutUsPage() {
               here to support you every step of the way.{" "}
             </p>
           </div>
-          <div className="md:w-1/2 flex gap-4 justify-center md:justify-start">
+          <div className="md:w-1/2 flex gap-2 justify-center md:justify-start">
             <Image
               src="/images/people1.jpg"
               alt="Person 1"
-              width={150}
+              width={130}
               height={150}
               className="rounded-lg"
             />
             <Image
               src="/images/people2.jpg"
               alt="Person 2"
-              width={150}
+              width={130}
               height={150}
               className="rounded-lg"
             />
             <Image
               src="/images/people3.jpg"
               alt="Person 3"
-              width={150}
+              width={130}
               height={150}
               className="rounded-lg"
             />

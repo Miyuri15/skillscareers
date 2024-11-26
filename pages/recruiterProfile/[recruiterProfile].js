@@ -177,7 +177,7 @@ export default function RecruiterProfile() {
         </div>
 
         {/* Content */}
-        <div className="mt-8 sm:mt-10 py-4 sm:py-8">
+        <div className="mt-8 sm:mt-10 py-10">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-4 sm:mb-6">
             <h2 className="text-2xl sm:text-3xl font-semibold text-blue-900">
               Open Jobs

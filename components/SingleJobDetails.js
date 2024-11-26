@@ -20,7 +20,7 @@ const SingleJobDetails = () => {
       company: 'InnovateTech Solutions',
       location: 'New York, NY',
       description:
-        'Join our creative team to design intuitive user experiences and interfaces for cutting-edge tech solutions. Ideal for someone with a passion for modern design trends.',
+        'As a Senior UX/UI Designer at InnovateTech Solutions, you will work with a talented team of designers and developers to create intuitive, user-centered designs for our cutting-edge digital products. We are looking for a creative thinker who has a passion for modern design and enjoys collaborating in a fast-paced environment. You’ll be responsible for translating user needs into interactive, high-performing web and mobile applications.',
       employmentType: ['Full Time', 'On Site'],
     },
   ];
@@ -29,8 +29,8 @@ const SingleJobDetails = () => {
     <>
       <Header />
 
-      <div className="max-w-full mx-auto bg-white shadow-md rounded-md p-4 md:p-10">
-        <div className="space-y-6">
+      <div className="max-w-full mx-auto bg-white rounded-md p-4 md:p-10">
+        <div className="space-y-6 py-5">
           {jobs.map((job) => (
             <div className="flex items-center justify-between mb-8 mt-5" key={job.id}>
               {/* Left: Logo */}
@@ -70,13 +70,17 @@ const SingleJobDetails = () => {
             <Link href="/jobSearch">
               <button className="px-5 py-2 text-blue-950 border-2 border-blue-900 flex items-center space-x-2">
                 <span>View Company Profile</span>
-                <FaArrowRight className="text-blue-900" />
+                <img
+            src="/images/arrowBlue.png"
+            alt="View All"
+            className="h-6 w-6 ml-2"
+          />
               </button>
             </Link>
 
             <button
               onClick={() => setShowApplicationForm(true)}
-              className="px-4 py-2 bg-blue-950 text-white w-full md:w-auto"
+              className="px-5 py-2 bg-blue-950 text-white w-full md:w-auto"
             >
               Apply Now
             </button>
@@ -86,9 +90,12 @@ const SingleJobDetails = () => {
 
           <div className="space-y-6">
             <div>
-              <h2 className="text-xl font-semibold">Job Description</h2>
+              <h2 className="text-xl font-semibold mb-6">Job Description</h2>
               <p className="text-gray-700">{jobs[0].description}</p>
             </div>
+
+            <div className="border-t border-gray-300 my-6"></div>
+
 
             <div className="space-y-3">
               <h2 className="text-xl font-semibold">Key Responsibilities</h2>
@@ -101,6 +108,9 @@ const SingleJobDetails = () => {
               </ul>
             </div>
 
+            <div className="border-t border-gray-300 my-6"></div>
+
+
             <div className="space-y-3">
               <h2 className="text-xl font-semibold">Required Qualifications</h2>
               <ul className="list-disc list-inside space-y-1 text-gray-700">
@@ -111,6 +121,9 @@ const SingleJobDetails = () => {
                 <li>Excellent communication skills and ability to work in a team environment.</li>
               </ul>
             </div>
+
+            <div className="border-t border-gray-300 my-6"></div>
+
 
             <div className="space-y-3">
               <h2 className="text-xl font-semibold">Perks & Benefits</h2>

@@ -14,32 +14,31 @@ export default function LandingPage() {
     <>
       <Header />
       <div className="relative">
-          <Image
-            src="/images/bgLineWide.jpg"
-            alt="line"
-            width={100}
-            height={30}
-            className="absolute top-0 right-0 w-fit h-[670px] object-cover z-0 opacity-5 items-end"
-          />
+        <Image
+          src="/images/bgLineWide.jpg"
+          alt="line"
+          width={100}
+          height={30}
+          className="absolute top-0 right-0 w-fit h-[670px] object-cover z-0 opacity-5 items-end"
+        />
 
-          <Image
-            src="/images/bgLineThin.jpg"
-            alt="line"
-            width={200}
-            height={500}
-            className="absolute top-0 right-40 w-fit h-[670px] object-cover z-0 opacity-5 items-end"
-          />
-        </div>
+        <Image
+          src="/images/bgLineThin.jpg"
+          alt="line"
+          width={200}
+          height={500}
+          className="absolute top-0 right-40 w-fit h-[670px] object-cover z-0 opacity-5 items-end"
+        />
+      </div>
 
-      <JobFindBanner/>
-      <FeaturedJobs/>
-      <Category/>
-      <RecruiterPackages/>
-      <SuccessStories/>
-      <News/>
-      <FAQ/>
+      <JobFindBanner />
+      <FeaturedJobs />
+      <Category />
+      <RecruiterPackages />
+      <SuccessStories />
+      {/* News is on the successStrories */}
+      <FAQ />
       <Footer />
     </>
   );
 }
-

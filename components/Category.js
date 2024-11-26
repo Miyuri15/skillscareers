@@ -27,26 +27,25 @@ export default function Category() {
   ];
 
   return (
-    <div className="p-10 sm:p-6 md:p-10 mt-4 mb-6">
+    <div className="py-10 sm:p-6 md:p-10 mt-4 mb-6 px-5">
       <div className="flex justify-between items-center mb-4 sm:mb-6">
-        <h2 className="px-10 text-xl sm:text-2xl font-bold text-blue-900">
+        <h2 className=" text-xl sm:text-2xl font-bold text-blue-900">
           Categories
         </h2>
         <Link
-  href="#"
-  className="text-blue-900 flex items-center space-x-1 font-bold text-sm sm:text-base"
->
-  <span>View All</span>
-  <img
-    src="/images/arrow-up.png"
-    alt="Arrow Icon"
-    className="w-4 h-4 object-contain"
-  />
-</Link>
+          href="/categories"
+          className="text-blue-900 mb-10 flex items-center space-x-1 font-bold text-sm sm:text-base"
+        >
+          <span>View All</span>
+          <img
+            src="/images/arrowBlue.png"
+            alt="Arrow Icon"
+            className="w-4 h-4 object-contain"
+          />
+        </Link>
       </div>
 
-      {/* Responsive Grid with Dividers */}
-      <div className="px-10 space-y-6 sm:space-y-8">
+      <div className=" space-y-6 sm:space-y-8">
         {[0, 3, 6].map((rowIndex) => (
           <div key={rowIndex}>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 sm:gap-x-6">
@@ -63,7 +62,7 @@ export default function Category() {
                         alt={category.label}
                         width={40}
                         height={50}
-                        className="mx-auto mb-4 mr-2"
+                        className="mx-auto mb-1 mr-2 "
                       />
                     </div>
                     <span className="text-base sm:text-lg text-blue-900 font-medium">

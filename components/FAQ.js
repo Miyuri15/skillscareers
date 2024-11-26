@@ -46,13 +46,24 @@ export default function FAQ() {
   };
 
   return (
-    <div className="p-20 bg-gray-50 min-h-screen">
+    <div className=" relative py-20 px-10 bg-gray-50 lg:min-h-fit">
       <div className="max-w-full mx-auto">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-semibold text-blue-900">FAQs</h2>
-          <a href="#" className="text-blue-600 hover:underline">View All</a>
-        </div>
-
+      <div className="pt-5 flex justify-between items-center mb-4 md:mb-6">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-10">
+          FAQs
+        </h2>
+        <a
+          href="/jobSearch"
+          className="text-blue-900 font-bold text-sm sm:text-base flex items-center"
+        >
+          View All
+          <img
+            src="/images/arrowBlue.png"
+            alt="View All"
+            className="h-5 w-5 ml-2"
+          />
+        </a>
+      </div>
         <div className="border-t border-gray-300">
           {faqData.map((faq, index) => (
             <div key={index} className="border-b border-gray-300">

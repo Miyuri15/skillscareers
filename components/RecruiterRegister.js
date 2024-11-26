@@ -9,13 +9,13 @@ const RecruiterRegister = () => (
       <label className="block">
         <input
           type="text"
-          className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+          className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium"
           placeholder="Recruiter Name"
         />
       </label>
       <label className="block">
         <select
-          className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 text-blue-900 font-semibold"
+          className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 text-blue-900 font-medium"
         >
           <option value="">Employee Range</option>
           <option value="1-10">1-10</option>
@@ -29,28 +29,28 @@ const RecruiterRegister = () => (
     <label className="block">
       <input
         type="email"
-        className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+        className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium"
         placeholder="Email"
       />
     </label>
     <label className="block">
       <input
         type="text"
-        className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+        className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium"
         placeholder="Contact Number"
       />
     </label>
     <label className="block">
       <input
         type="password"
-        className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+        className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium"
         placeholder="Password"
       />
     </label>
     <label className="block">
       <input
         type="password"
-        className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+        className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium mb-8"
         placeholder="Confirm Password"
       />
     </label>
@@ -61,7 +61,7 @@ const RecruiterRegister = () => (
       <img
                 src="/images/arrow-up.png"
                 alt="Register"
-                className="h-5 w-5 ml-2"
+                className="h-5 w-5 ml-4"
               />
             </span>
 

@@ -42,7 +42,7 @@ const packages = [
 
 const Pricing = () => {
   return (
-    <div className="p-20 bg-gray-100">
+    <div className="py-20 px-10 bg-white">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-blue-900">Recruiter Packages</h2>
         <p className="text-blue-900 mt-2 mb-6">
@@ -57,7 +57,7 @@ const Pricing = () => {
           >
             <h3 className="text-xl font-semibold mb-2 text-center">{pkg.title}</h3>
             <p className="text-4xl font-bold text-center my-6 mb-20">${pkg.price}</p>
-            <ul className="flex-1 mt-5 space-y-4  text-sm">
+            <ul className="flex-1 mt-5 space-y-4  text-md text-center">
               {pkg.features.map((feature, idx) => (
                 <li key={idx} className="border-b border-gray-400 mt-5 mb-5 py-5">
                   {feature}

@@ -10,14 +10,14 @@ const JobSeekerRegister = () => (
       <label className="block">
         <input
           type="text"
-          className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+          className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium"
           placeholder="First Name"
         />
       </label>
       <label className="block">
         <input
           type="text"
-          className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+          className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium"
           placeholder="Last Name"
         />
       </label>
@@ -27,39 +27,39 @@ const JobSeekerRegister = () => (
     <label className="block">
       <input
         type="email"
-        className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+        className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium"
         placeholder="Email"
       />
     </label>
     <label className="block">
       <input
         type="text"
-        className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+        className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium"
         placeholder="Contact Number"
       />
     </label>
     <label className="block">
       <input
         type="password"
-        className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+        className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium"
         placeholder="Password"
       />
     </label>
     <label className="block">
       <input
         type="password"
-        className="w-full p-3 border rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-semibold"
+        className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium mb-8"
         placeholder="Confirm Password"
       />
     </label>
-    <Button variant="primary" className="w-full py-3 mt-4">
+    <Button variant="primary" className="w-full py-3 mt-10">
     <span className="flex items-center justify-center ">
 
       <Link href="/login">Register </Link>
       <img
                 src="/images/arrow-up.png"
                 alt="Register"
-                className="h-5 w-5 ml-2"
+                className="h-5 w-5 ml-4"
               />
             </span>
 

@@ -11,42 +11,45 @@ import {
 export default function ContactBanner() {
   return (
     <>
-      {/* Contact banner */}
-      <div className="bg-blue-950 p-4">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-          {/* Email section */}
-          <div className="flex items-center space-x-2 text-gray-50 ml-10">
-            <FaMailBulk size={24} className="cursor-pointer" />
-            <div className="flex flex-col">
-              <div>Email</div>
-              <div>info@skillscareer.com</div>
+      {/* Contact Banner */}
+      <div className="bg-blue-950 p-4 lg:p-6">
+        <div className="flex flex-col sm:space-y-6 lg:flex-row lg:justify-between lg:items-center gap-10">
+          {/* Contact Info Section */}
+          <div className="flex flex-col sm:space-y-6 lg:flex-row lg:flex-wrap justify-center md:justify-start gap-6 lg:gap-40 px-4 lg:px-0">
+            {/* Email Section */}
+            <div className="flex items-center space-x-3 text-gray-50">
+              <FaMailBulk size={28} className="cursor-pointer" />
+              <div className="flex flex-col">
+                <div className="font-semibold">Email</div>
+                <div className="text-sm">info@skillscareer.com</div>
+              </div>
+            </div>
+
+            {/* Phone Section */}
+            <div className="flex items-center space-x-3 text-gray-50">
+              <FaPhone size={28} className="cursor-pointer" />
+              <div className="flex flex-col">
+                <div className="font-semibold">Phone</div>
+                <div className="text-sm">0112-234-763</div>
+              </div>
+            </div>
+
+            {/* Location Section */}
+            <div className="flex items-center space-x-3 text-gray-50">
+              <FaLocationArrow size={28} className="cursor-pointer" />
+              <div className="flex flex-col">
+                <div className="font-semibold">Location</div>
+                <div className="text-sm">Union Place, Colombo 07</div>
+              </div>
             </div>
           </div>
 
-          {/* Phone section */}
-          <div className="flex items-center space-x-2 text-gray-50">
-            <FaPhone size={24} className="cursor-pointer" />
-            <div className="flex flex-col">
-              <div>Phone</div>
-              <div>0112-234-763</div>
-            </div>
-          </div>
-
-          {/* Location section */}
-          <div className="flex items-center space-x-2 text-gray-50">
-            <FaLocationArrow size={24} className="cursor-pointer" />
-            <div className="flex flex-col">
-              <div>Location</div>
-              <div>Union Place, Colombo 07</div>
-            </div>
-          </div>
-
-          {/* Social icons section */}
-          <div className="flex justify-center text-white md:justify-end space-x-4 mt-4 md:mt-0 px-10">
-            <FaLinkedin size={24} className="cursor-pointer" />
-            <FaTwitter size={24} className="cursor-pointer" />
-            <FaInstagram size={24} className="cursor-pointer" />
-            <FaFacebook size={24} className="cursor-pointer" />
+          {/* Social Icons Section */}
+          <div className="flex sm:justify-start sm:mt-6 lg:mt-0 lg:justify-start items-start space-x-6 px-4 lg:px-0 text-gray-50">
+            <FaLinkedin size={28} className="cursor-pointer hover:text-gray-400" />
+            <FaTwitter size={28} className="cursor-pointer hover:text-gray-400" />
+            <FaInstagram size={28} className="cursor-pointer hover:text-gray-400" />
+            <FaFacebook size={28} className="cursor-pointer hover:text-gray-400" />
           </div>
         </div>
       </div>

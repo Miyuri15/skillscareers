@@ -1,14 +1,15 @@
+import Image from "next/image";
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 
 export default function JobApplicationForm({ onClose }) {
-  const [selectedJob, setSelectedJob] = useState('');
+  const [selectedJob, setSelectedJob] = useState("");
   const [resume, setResume] = useState(null);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    contactNumber: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    contactNumber: "",
   });
 
   const handleInputChange = (e) => {
@@ -30,7 +31,10 @@ export default function JobApplicationForm({ onClose }) {
     <div className="fixed w-full inset-0 flex items-end justify-center bg-gray-800 bg-opacity-50 z-50">
       <div className="relative w-full max-h-[85vh] bg-white rounded-t-lg shadow-lg overflow-y-auto p-8">
         {/* Close icon */}
-        <button onClick={onClose} className="absolute top-2 right-2 text-gray-600 hover:text-gray-800">
+        <button
+          onClick={onClose}
+          className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+        >
           <FaTimes size={24} />
         </button>
 
@@ -48,7 +52,9 @@ export default function JobApplicationForm({ onClose }) {
               onChange={(e) => setSelectedJob(e.target.value)}
               className="mt-1 block w-full rounded-md border-gray-300 border-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg font-medium"
             >
-              <option value="">Select job from the listing</option>
+              <option value="" className="text-gray-200">
+                Select job from the listing
+              </option>
               <option value="Job1">Job1</option>
               <option value="Job2">Job2</option>
               <option value="Job3">Job3</option>
@@ -61,34 +67,25 @@ export default function JobApplicationForm({ onClose }) {
               Resume/CV
             </label>
             <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-              <div className="space-y-1 text-center">
+              <div className="space-y-3 text-center">
                 {/* File upload UI */}
-                <svg
-                  className="mx-auto h-12 w-12 text-gray-400"
-                  stroke="currentColor"
-                  fill="none"
-                  viewBox="0 0 48 48"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M28 8H14a2 2 0 00-2 2v28a2 2 0 002 2h20a2 2 0 002-2V16L28 8z"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                <div className="flex justify-center items-center">
+                  <Image
+                    src="/images/downloadIcon.png"
+                    alt="download"
+                    width={40}
+                    height={40}
+                    className=""
                   />
-                  <path
-                    d="M22 20h4M22 28h10M22 36h10"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                </div>
                 <div className="text-sm text-blue-900">
                   <label
                     htmlFor="file-upload"
                     className="relative cursor-pointer rounded-md font-medium text-blue-900 hover:text-indigo-500"
                   >
-                    <span>Click or drag file to this area to upload your Resume</span>
+                    <span>
+                      Click or drag file to this area to upload your Resume
+                    </span>
                     <input
                       id="file-upload"
                       name="file-upload"
@@ -99,14 +96,17 @@ export default function JobApplicationForm({ onClose }) {
                     />
                   </label>
                 </div>
-                <p className="text-xs text-blue-900">Please make sure to upload a PDF</p>
+                <p className="text-xs text-blue-900">
+                  Please make sure to upload a PDF
+                </p>
               </div>
             </div>
           </div>
-
           {/* Input fields for first name, last name, etc. */}
           <div>
-            <label className="block text-sm mt-4 font-semibold text-blue-900">First Name</label>
+            <label className="block text-sm mt-4 font-semibold text-blue-900">
+              First Name
+            </label>
             <input
               type="text"
               name="firstName"
@@ -117,7 +117,9 @@ export default function JobApplicationForm({ onClose }) {
           </div>
 
           <div>
-            <label className="block mt-4 text-sm  font-semibold text-blue-900">Last Name</label>
+            <label className="block mt-4 text-sm  font-semibold text-blue-900">
+              Last Name
+            </label>
             <input
               type="text"
               name="lastName"
@@ -128,7 +130,9 @@ export default function JobApplicationForm({ onClose }) {
           </div>
 
           <div className="mb-4 mt-4">
-            <label className="block text-sm font-semibold text-blue-900">Email</label>
+            <label className="block text-sm font-semibold text-blue-900">
+              Email
+            </label>
             <input
               type="email"
               name="email"
@@ -139,7 +143,9 @@ export default function JobApplicationForm({ onClose }) {
           </div>
 
           <div className="mb-6 mt-4">
-            <label className="block text-sm font-semibold text-blue-900">Contact Number</label>
+            <label className="block text-sm font-semibold text-blue-900">
+              Contact Number
+            </label>
             <input
               type="text"
               name="contactNumber"

@@ -1,7 +1,9 @@
+import Countries from "@/components/Countries";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SearchResults from "@/components/SearchResults";
 import Image from "next/image";
+import Link from "next/link";
 import { FaSearch } from "react-icons/fa";
 
 export const countries = [
@@ -28,110 +30,110 @@ export const countries = [
   { value: "SE", label: "Sweden", code: "se" },
 ];
 
-export default function jobSearchPage() {
+export default function JobSearchPage() {
   return (
     <>
       <Header />
-      <div className="relative">
-        <Image
-          src="/images/bgLineWide.jpg"
-          alt="line"
-          width={100}
-          height={30}
-          className="absolute top-0 right-0 w-fit h-[500px] object-cover z-0 opacity-5 items-end"
-        />
+      <div className="bg-gray-200 h-[3700px] sm:h-[4300px] md:h-[4400px] lg:h-[3400px]">
+        <div className="relative min-h-screen flex flex-col">
+          {/* Image Group as Background */}
+          <div className="relative w-full h-[800px]">
+            <Image
+              src="/images/whiteImage.png"
+              alt="White Background"
+              layout="fill"
+              objectFit="cover"
+              className="z-0"
+            />
+            <Image
+              src="/images/bgLineWide.jpg"
+              alt="Background Line Thin"
+              width={200}
+              height={350}
+              className="absolute top-0 right-0 w-auto h-[800px] opacity-5"
+            />
+            <Image
+              src="/images/bgLineThin.jpg"
+              alt="Background Line Wide"
+              width={200}
+              height={350}
+              className="absolute top-0 right-80 w-auto h-[800px] opacity-5"
+            />
+          </div>
+          {/* Content */}
+          <div className="absolute top-0 left-0 w-full p-4 sm:p-6 md:p-10">
+            <div className="mt-20 mb-12">
+              <h2 className="text-4xl text-gray-400 font-bold">
+                Find Your<span className="text-blue-900"> Perfect</span> Job.
+              </h2>
+            </div>
+            {/* Search Bar */}
+            <div className="bg-gray-300 mb-12 rounded-md p-4">
+              <div className="flex flex-wrap justify-between items-center gap-4">
+                <input
+                  type="text"
+                  placeholder="Search by job title, keywords, or company."
+                  className="bg-gray-300 flex-grow px-4 py-6 focus:outline-none w-full sm:w-[60%] md:w-[45%] lg:w-[30%] rounded-md font-semibold placeholder-[#5462A0]"
+                />
 
-        <Image
-          src="/images/bgLineThin.jpg"
-          alt="line"
-          width={200}
-          height={500}
-          className="absolute top-0 right-20 w-fit h-[500px] object-cover z-0 opacity-5 items-end"
-        />
-      </div>
+                <Countries />
 
-      <div className="p-4 md:p-10">
-        <div className="mt-20 mb-12">
-          <h2 className="text-3xl sm:text-4xl text-gray-400 font-bold">
-            Find Your<span className="text-blue-900"> Perfect</span> Job.
-          </h2>
+                <button className="bg-[#001571] text-white px-8 py-2 rounded-md font-semibold w-full sm:w-auto">
+                  <span className="flex items-center justify-center">
+                    <FaSearch className="m-2" />
+                    Search
+                  </span>
+                </button>
+              </div>
+            </div>
+            {/* Filters Section */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              <div className="relative">
+                <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg appearance-none">
+                  <option>Industry</option>
+                </select>
+                <img
+                  src="/images/arrow-down.png"
+                  alt="Arrow Down"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
+                />
+              </div>
+              <div className="relative">
+                <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg appearance-none">
+                  <option>Experience Level</option>
+                </select>
+                <img
+                  src="/images/arrow-down.png"
+                  alt="Arrow Down"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
+                />
+              </div>
+              <div className="relative">
+                <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg appearance-none">
+                  <option>Salary Range</option>
+                </select>
+                <img
+                  src="/images/arrow-down.png"
+                  alt="Arrow Down"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
+                />
+              </div>
+              <div className="relative">
+                <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg appearance-none">
+                  <option>Job Type</option>
+                </select>
+                <img
+                  src="/images/arrow-down.png"
+                  alt="Arrow Down"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
+                />
+              </div>
+            </div>
+            <SearchResults />
+          </div>
         </div>
-
-        <div className="bg-[#e6e8f1]  mb-8 rounded-md p-4 relative">
-  <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-    {/* Text Input */}
-    <input
-      type="text"
-      placeholder="Search by job title, keywords, or company."
-      className="bg-gray-200 flex-grow px-4 py-3 focus:outline-none rounded-md font-semibold placeholder-[#5462A0] w-full sm:w-auto"
-    />
-
-    {/* Countries Dropdown */}
-    <div className="flex flex-wrap justify-end items-center gap-4  w-full rounded-md">
-          <select className="w-full lg:w-auto bg-[#e6e8f1] border-2 border-[#B0B6D3] text-[#5462A0] px-4 py-3 lg:px-20 lg:py-5 font-semibold rounded-md">
-            {countries.map((country) => (
-              <option key={country.code}>{country.label}</option>
-            ))}
-          </select>
-        </div>
-
-    {/* Search Button */}
-    <button className="bg-[#001571] text-white px-6 py-3 rounded-md font-semibold w-full sm:w-auto">
-    <span className="flex items-center justify-center ">
-      <FaSearch className="m-2"/>
-                Search
-              </span>
-    </button>
-  </div>
-</div>
-
-{/* Filters Section */}
-<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
-  <div className="relative">
-    <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg appearance-none">
-      <option>Industry</option>
-    </select>
-    <img 
-      src="/images/arrow-down.png" 
-      alt="Arrow Down" 
-      className="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
-    />
-  </div>
-  <div className="relative">
-    <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg appearance-none">
-      <option>Experience Level</option>
-    </select>
-    <img 
-      src="/images/arrow-down.png" 
-      alt="Arrow Down" 
-      className="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
-    />
-  </div>
-  <div className="relative">
-    <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg appearance-none">
-      <option>Salary Range</option>
-    </select>
-    <img 
-      src="/images/arrow-down.png" 
-      alt="Arrow Down" 
-      className="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
-    />
-  </div>
-  <div className="relative">
-    <select className="bg-[#001571] w-full text-white px-4 py-4 rounded-lg appearance-none">
-      <option>Job Type</option>
-    </select>
-    <img 
-      src="/images/arrow-down.png" 
-      alt="Arrow Down" 
-      className="absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
-    />
-  </div>
-</div>
-        <SearchResults />
       </div>
-
-      <Footer />
+      <Footer className="bottom-0 fixed" />
     </>
   );
 }

@@ -149,7 +149,7 @@ export default function SearchResults() {
       </div>
   
       {/* Responsive Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-1 mb-8">
         {currentJobs.map((job) => (
           <Link key={job.id} href={`/job/${job.id}`}>
             <FeaturedJobCard job={job} />

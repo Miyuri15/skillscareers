@@ -98,7 +98,7 @@ export default function RecruiterProfile() {
                   {/* Details section */}
                   <div className="flex flex-col gap-2">
                     {/* Location, Category, Employee Range */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 sm:gap-2">
                       <div className="flex items-center gap-2">
                         <Image
                           src="/images/location.png"

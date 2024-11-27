@@ -8,6 +8,7 @@ import {
   FaEnvelope,
   FaFacebook,
 } from "react-icons/fa";
+import Link from "next/link";
 
 export default function RecruiterListPage() {
   const recruiters = [
@@ -189,7 +190,7 @@ export default function RecruiterListPage() {
 
               {/* Recruiter Details */}
               <div className="flex-grow">
-                <div className="flex flex-col md:flex-row justify-between items-center">
+                <div className="flex flex-col md:flex-row justify-between items-start">
                   <h3 className="text-lg sm:text-xl font-bold text-blue-900">
                     {recruiter.name} <span className="text-blue-500">✓</span>
                   </h3>
@@ -256,12 +257,16 @@ export default function RecruiterListPage() {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap justify-end gap-4 mt-4">
+              <Link href="/recruiterProfile/123">
               <button className="text-blue-900 border border-blue-900 px-4 py-2 rounded-md">
                 View Profile
               </button>
+              </Link>
+              <Link href="/jobSearch">
               <button className="bg-blue-900 text-white px-4 py-2 rounded-md">
                 Open Jobs
               </button>
+              </Link>
             </div>
           </div>
         ))}

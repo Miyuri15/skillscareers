@@ -8,7 +8,7 @@ export default function RecruiterSearchPage() {
   return (
     <>
       <Header />
-      <div className="bg-gray-200 h-[2200px] sm:h-[4200px] md:h-[3500px] lg:h-[2500px]">
+      <div className="bg-gray-200 h-[2200px] sm:h-[3300px] md:h-[3500px] lg:h-[2500px]">
         <div className="relative min-h-screen flex flex-col">
           {/* Image Group as Background */}
           <div className="relative w-full h-[700px]">
@@ -40,7 +40,7 @@ export default function RecruiterSearchPage() {
           <div className="absolute top-0 left-0 w-full p-4 sm:p-6 md:p-20">
             <div className="mt-20 mb-12">
               <h2 className="text-4xl text-gray-400 font-bold">
-                Find Your<span className="text-blue-900"> Perfect</span> Job.
+                Find Your<span className="text-blue-900"> Perfect</span> Recruiter.
               </h2>
             </div>
             {/* Search bar */}

@@ -35,7 +35,7 @@ function shuffleArray(array) {
   return (
     <>
       <Header />
-      <div className="bg-gray-200 h-[1300px] sm:h-[9999px] md:h-[2700px] lg:h-[2000px]">
+      <div className="bg-gray-200 h-[1300px] sm:h-[4700px] md:h-[2700px] lg:h-[2000px]">
         <div className="relative min-h-screen flex flex-col">
           {/* Image Group as Background */}
           <div className="relative w-full h-[500px]">
@@ -98,7 +98,7 @@ function shuffleArray(array) {
               {[...Array(5)].map((_, rowIndex) => (
                 <div
                   key={`${currentPage}-${rowIndex}`}
-                  className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-6"
+                  className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-6"
                 >
                   {shuffleArray(categories).map((category) => (
                     <div

@@ -34,7 +34,7 @@ export default function JobSearchPage() {
   return (
     <>
       <Header />
-      <div className="bg-gray-200 h-[3700px] sm:h-[4300px] md:h-[4400px] lg:h-[3400px]">
+      <div className="bg-gray-200 h-[3900px] sm:h-[5600px] md:h-[5600px] lg:h-[3400px]">
         <div className="relative min-h-screen flex flex-col">
           {/* Image Group as Background */}
           <div className="relative w-full h-[800px]">

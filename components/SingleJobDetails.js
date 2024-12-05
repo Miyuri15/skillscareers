@@ -41,16 +41,16 @@ const SingleJobDetails = () => {
             </div>
           ))}
 
-          <div className="flex flex-col md:flex-row justify-start items-center space-y-4 md:space-y-0 md:space-x-20">
+          <div className="flex flex-col md:flex-row justify-start items-center space-y-4 md:space-y-0 md:space-x-6">
             <div>
               <h1 className="text-2xl font-bold text-blue-900">{jobs[0].title}</h1>
             </div>
 
-            <div className="flex flex-wrap space-x-2">
+            <div className="flex flex-wrap space-x-3 text-md">
               {jobs[0].employmentType.map((type, index) => (
                 <span
                   key={index}
-                  className={`px-3 py-1 text-xs rounded ${
+                  className={`px-5 py-2 text-xs rounded ${
                     type === 'Full Time' ? 'bg-[#001571] text-white' : 'bg-[#00B6B4] text-white'
                   }`}
                 >
@@ -59,14 +59,14 @@ const SingleJobDetails = () => {
               ))}
             </div>
           </div>
-          <div>
+          <div className='flex flex-col lg:flex-row md:flex-row justify-between items-center '>
           <p className="text-gray-800 font-semibold mt-2">
-                {jobs[0].company}   |   {jobs[0].location}
+                {jobs[0].company}   | {jobs[0].location}
               </p>
 
-          </div>
+          
 
-          <div className="flex flex-col md:flex-row justify-end items-center space-y-4 md:space-y-0 md:space-x-6">
+          <div className="flex flex-col lg:flex-row md:flex-row justify-end items-center space-y-4 md:space-y-0 md:space-x-6">
             <Link href="/jobSearch">
               <button className="px-5 py-2 text-blue-950 border-2 border-blue-900 flex items-center space-x-2">
                 <span>View Company Profile</span>
@@ -85,7 +85,7 @@ const SingleJobDetails = () => {
               Apply Now
             </button>
           </div>
-
+          </div>
           <div className="border-t border-gray-300 my-6"></div>
 
           <div className="space-y-6">

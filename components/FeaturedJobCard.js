@@ -1,6 +1,7 @@
 import Image from "next/image";
 import JobApplicationForm from "./JobApplicationForm";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function FeaturedJobCard() {
   const [showApplicationForm, setShowApplicationForm] = useState(false);
@@ -26,7 +27,7 @@ export default function FeaturedJobCard() {
         {jobs.map((job) => (
           <div
             key={job.id}
-            className="bg-white p-8 rounded-lg shadow-md flex-shrink-0 w-72 relative"
+            className="bg-white p-8 rounded-lg shadow-md flex-shrink-0 w-80 relative"
           >
             {/* Logo on the top left */}
             <div className="absolute top-10 left-7">
@@ -49,7 +50,7 @@ export default function FeaturedJobCard() {
               {job.employmentType.map((type, index) => (
                 <span
                   key={index}
-                  className={`px-2 py-1 rounded-md text-xs font-medium ${
+                  className={`px-2 py-1 rounded-md text-xs font-medium font-sans ${
                     type === "Full Time"
                       ? "bg-[#001571] text-white"
                       : type === "On Site"
@@ -62,18 +63,17 @@ export default function FeaturedJobCard() {
               ))}
             </div>
 
-            <p className="font-semibold text-gray-700 mt-10">{job.company}</p>
-            <p className="text-gray-500 mb-4">{job.location}</p>
+            <p className="font-bold text-gray-800 mt-6 font-sans">{job.company}</p>
+            <p className="text-gray-800 font-bold mb-4 font-sans">{job.location}</p>
 
-            <p className="text-gray-600 mb-4">{job.description}</p>
-            <div className="flex space-x-4">
+            <p className="text-gray-600 mb-8 font-sans">{job.description}</p>
+            <div className="flex justify-center space-x-6">
               <button
-                onClick={() => setShowApplicationForm(true)}
-                className="bg-[#001571] text-white p-2 rounded-md font-semibold w-auto"
+                className="bg-[#001571] text-white py-2 px-4 rounded-md font-semibold w-auto font-sans"
               >
                 Apply Now
               </button>
-              <button className="border border-[#001571] text-[#001571] p-2 rounded-md font-semibold w-auto">
+              <button className="border border-[#001571] text-[#001571] py-2 px-3 rounded-md font-semibold font-sans w-auto">
                 Quick View
               </button>
             </div>

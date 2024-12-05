@@ -61,7 +61,7 @@ export default function News() {
               <h3 className="text-lg font-semibold text-gray-800">
                 {newsData[0].title}
               </h3>
-              <p className="text-gray-600 mt-6">{newsData[0].description}</p>
+              <p className="text-gray-800 mt-6">{newsData[0].description}</p>
 
               <div className="flex items-center justify-between mt-20">
                 <a
@@ -78,7 +78,7 @@ export default function News() {
               </div>
 
               <div className="mt-4">
-                <span className="text-gray-500 text-sm">
+                <span className="text-gray-900 text-sm font-semibold">
                   {newsData[0].date}
                 </span>
               </div>
@@ -101,7 +101,7 @@ export default function News() {
                   <h3 className="text-md font-semibold text-gray-800">
                     {news.title}
                   </h3>
-                  <p className="text-gray-600 mt-2 mb-4 text-sm">
+                  <p className="text-gray-800 mt-2 mb-4 text-sm">
                     {news.description}
                   </p>
                   <div className="flex items-center justify-between mt-4 ">
@@ -118,7 +118,7 @@ export default function News() {
                     </a>
                   </div>
                   <div className="mt-4">
-                    <span className="text-gray-500 text-sm">{news.date}</span>
+                    <span className="text-gray-900 text-sm font-semibold">{news.date}</span>
                   </div>
                 </div>
               </div>

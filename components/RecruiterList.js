@@ -176,9 +176,9 @@ export default function RecruiterListPage() {
             <p className="text-gray-800 font-semibold text-right p-3 mb-8">
               Member Since {recruiter.memberSince}
             </p>
-            <div className="flex flex-col md:flex-row items-start md:items-center">
+            <div className="flex flex-col md:flex-col items-start md:items-start">
               {/* Recruiter Logo */}
-              <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
+              <div className="flex-shrink-0 mb-4 md:mb-5 md:mr-6">
                 <Image
                   src={recruiter.logo}
                   alt={`${recruiter.name} logo`}
@@ -190,11 +190,11 @@ export default function RecruiterListPage() {
 
               {/* Recruiter Details */}
               <div className="flex-grow">
-                <div className="flex flex-col md:flex-row justify-between items-start">
+                <div className="flex flex-col md:flex-col justify-between items-start">
                   <h3 className="text-lg sm:text-xl font-bold text-blue-900">
                     {recruiter.name} <span className="text-blue-500">✓</span>
                   </h3>
-                  <div className="flex gap-3 mt-2 md:mt-0 sm:justify-start">
+                  <div className="flex gap-3 mt-2 md:mt-4 sm:justify-start">
                     {recruiter.socialLinks.map((link, index) => (
                       <a
                         key={index}
@@ -237,7 +237,7 @@ export default function RecruiterListPage() {
                   </p>
                 </div>
 
-                <p className="text-gray-600 mt-4 text-sm sm:text-base">
+                <p className="text-gray-600 mt-4 text-sm sm:text-base font-sans">
                   {recruiter.description}
                 </p>
 
@@ -258,12 +258,12 @@ export default function RecruiterListPage() {
             {/* Action Buttons */}
             <div className="flex flex-wrap justify-end gap-4 mt-4">
               <Link href="/recruiterProfile/123">
-              <button className="text-blue-900 border border-blue-900 px-4 py-2 rounded-md">
+              <button className="text-blue-900 font-sans border border-blue-900 px-4 py-2 rounded-md">
                 View Profile
               </button>
               </Link>
               <Link href="/jobSearch">
-              <button className="bg-blue-900 text-white px-4 py-2 rounded-md">
+              <button className="bg-blue-900 font-sans text-white px-4 py-2 rounded-md">
                 Open Jobs
               </button>
               </Link>

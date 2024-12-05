@@ -30,17 +30,17 @@ const Register = () => {
         </div>
       </div>
       {/* Right Side with Form */}
-      <div className="flex flex-col justify-center md:w-2/5 p-8">
-        <div className="flex flex-col items-center my-6">
-          <p className="text-blue-900 text-center text-md font-semibold  mb-4 ">
+      <div className="flex flex-col justify-center md:w-2/5 p-4">
+        <div className="flex flex-col items-center my-3">
+          <p className="text-blue-900 text-center text-md font-semibold  mb-2 ">
             Create your free account to explore job listings, connect with
             recruiters, and take the next step in your career.{" "}
           </p>
         </div>
 
-        <div className="flex flex-col justify-center p-8">
+        <div className="flex flex-col justify-center p-4">
           {/* Job Seeker / Recruiter Selection */}
-          <div className="flex space-x-4 mb-6">
+          <div className="flex space-x-4 mb-3">
             <button
               onClick={() => setIsRecruiter(false)}
               className={` w-full border-2 border-gray-300 rounded-lg ${

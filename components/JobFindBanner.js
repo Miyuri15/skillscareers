@@ -6,14 +6,14 @@ import Countries from "./Countries";
 
 export default function JobFindBanner() {
   return (
-    <div className="flex flex-col lg:flex-row pt-5 px-5 lg:px-10 relative">
+    <div className="flex flex-col lg:flex-row pt-5 px-5 lg:px-10 relative ">
       {/* Search content section */}
       <div className="w-full lg:w-2/3 pt-10 lg:pt-20 relative overflow-hidden">
         {/* Content inside the white section */}
         <div className="relative z-10 container mx-auto flex flex-col items-center lg:items-start">
           <div className="w-full">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-700 mb-4 text-center lg:text-left">
-              Your Future <span className="text-blue-700">Starts Here!</span>
+              Your Future <span className="text-blue-900">Starts Here!</span>
             </h1>
             <p className="text-gray-500 mb-6 text-center lg:text-left">
               Explore personalized job opportunities, expert tools, and
@@ -26,13 +26,13 @@ export default function JobFindBanner() {
         <Countries/>
 
         {/* Searchbar */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4 lg:mb-8 w-full bg-gray-200 rounded-md">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4 lg:mb-8 w-full bg-gray-200 rounded-md mt-3">
           <input
             type="text"
             placeholder="Easily find the job you're looking for..."
             className="w-full sm:flex-grow px-4 py-3 lg:py-6 focus:outline-none rounded-md font-semibold placeholder-[#5462A0] bg-gray-200"
           />
-                <button className="bg-[#001571] text-white px-7 py-5 rounded-md font-semibold w-full sm:w-auto">
+                <button className="bg-[#001571] text-white px-7 py-3 mr-2 rounded-md font-semibold w-full sm:w-auto">
                   <span className="flex items-center justify-center">
                     <FaSearch className="m-2" />
                     Search
@@ -40,9 +40,9 @@ export default function JobFindBanner() {
                 </button>
         </div>
 
-        <div className="flex flex-col items-center lg:items-start">
+        <div className="flex flex-col items-start lg:items-start">
           {/* User images and active users section */}
-          <div className="flex items-center justify-center lg:justify-start mb-4">
+          <div className="flex items-center justify-start lg:justify-start mb-4">
             <div className="flex -space-x-2">
               <Image
                 src="/images/people1.jpg"
@@ -74,7 +74,7 @@ export default function JobFindBanner() {
           </div>
 
           {/* Features section */}
-          <div className="mt-20 flex flex-col lg:flex-row gap-4 lg:space-x-10 text-blue-700">
+          <div className="mt-20 flex flex-row lg:flex-row gap-4 lg:space-x-10 text-blue-700">
             <div className="flex items-center space-x-2 ">
               <FaSearch className="w-6 h-6" />
               <p>Advanced Job Search</p>

@@ -48,11 +48,11 @@ const JobSeekerRegister = () => (
     <label className="block">
       <input
         type="password"
-        className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium mb-8"
+        className="w-full p-3 border border-gray-300 rounded-lg mt-1 outline-none focus:ring-2 focus:ring-blue-500 placeholder-blue-900 font-medium mb-4"
         placeholder="Confirm Password"
       />
     </label>
-    <Button variant="primary" className="w-full py-3 mt-10">
+    <Button variant="primary" className="w-full py-3 mt-8">
     <span className="flex items-center justify-center ">
 
       <Link href="/login">Register </Link>

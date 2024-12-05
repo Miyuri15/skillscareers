@@ -65,7 +65,7 @@ export default function ContactSection() {
             src="/images/ppl4.png"
             alt="Person 1"
             layout="intrinsic"
-            width={80}
+            width={70}
             height={110}
             className="object-cover sm:w-[100px] sm:h-[80px] md:w-[150px] md:h-[120px]"
           />

@@ -18,17 +18,17 @@ const Header = () => {
             <img src="/images/logo.png" alt="Logo" className="w-30" />
           </Link>
           <div className="hidden md:flex flex-1 justify-center font-semibold">
-            <nav className="flex space-x-6">
-              <Link href="/landingPage">Home</Link>
-              <Link href="/recruiterProfile/123">Explore Recruiters</Link>
-              <Link href="/about-us">About Us</Link>
-              <Link href="/contact-us">Contact Us</Link>
+            <nav className="flex space-x-6 font-mono">
+              <Link href="/landingPage">HOME</Link>
+              <Link href="/recruiterProfile/123">EXPLORE RECRUITERS</Link>
+              <Link href="/about-us">ABOUT US</Link>
+              <Link href="/contact-us">CONTACT US</Link>
             </nav>
           </div>
           <div className="hidden md:block">
             <Link href="/register">
               <Button>
-                <p className="p-3">Join as Recruiter</p>
+                <p className="py-2 px-6 font-mono">JOIN AS RECRUITER</p>
               </Button>
             </Link>
           </div>
@@ -48,7 +48,7 @@ const Header = () => {
               <Link href="/contact-us">Contact Us</Link>
               <Link href="/categories">
                 <Button>
-                  <p className="px-6 py-2">Join as Recruiter</p>
+                  <p className="px-6 py-2 ">Join as Recruiter</p>
                 </Button>
               </Link>
             </nav>

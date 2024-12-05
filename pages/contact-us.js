@@ -18,11 +18,11 @@ export default function ContactUsPage() {
       <Header />
       {/* Upper Banner */}
       <div
-        className="relative hidden md:flex md:w-full bg-cover bg-center h-80"
-        style={{ backgroundImage: "url('/images/loginscrn.jpg')" }}
+        className="relative md:flex md:w-full sm:flex sm:w-full bg-cover bg-center h-80 sm:h-50"
+        style={{ backgroundImage: "url('/images/contactUsBanner.png')" }}
       >
         {/* Content */}
-        <div className="flex flex-col items-start justify-end p-10 bg-black bg-opacity-30 text-white h-full w-full ">
+        <div className="flex flex-col items-start justify-end p-10 bg-blue-500 bg-opacity-30 text-white h-full w-full ">
           <h1 className="text-3xl ml-3 font-bold mb-2 ">
             Get In Touch With Us.
           </h1>

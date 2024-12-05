@@ -17,7 +17,7 @@ const jobsData = Array.from({ length: 20 }, (_, i) => ({
 
 export default function FeaturedJobs() {
   return (
-    <div className="p-4 sm:p-6 md:p-10 bg-gray-100">
+    <div className="p-4 sm:p-6 md:p-10 bg-gray-100 ">
       {/* Header Section */}
       <div className="pt-10 flex justify-between items-center mb-6">
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">
@@ -48,7 +48,7 @@ export default function FeaturedJobs() {
             el: ".custom-pagination",
             clickable: true,
           }}
-          spaceBetween={16}
+          spaceBetween={1}
           slidesPerView={1}
           breakpoints={{
             640: { slidesPerView: 2, spaceBetween: 16 },

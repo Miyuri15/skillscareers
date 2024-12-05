@@ -42,10 +42,10 @@ const packages = [
 
 const Pricing = () => {
   return (
-    <div className="py-20 px-10 bg-white">
+    <div className="py-20 px-10 bg-white ">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-blue-900">Recruiter Packages</h2>
-        <p className="text-blue-900 mt-2 mb-6">
+        <p className="text-blue-900 mt-2 mb-6 font-bold text-2xl">
           Empower your hiring and assessment process with comprehensive tools designed to meet your goals.
         </p>
       </div>
@@ -55,8 +55,8 @@ const Pricing = () => {
             key={index}
             className={`flex flex-col p-6 rounded-lg shadow-md ${pkg.cardStyle} w-full md:w-1/3`}
           >
-            <h3 className="text-xl font-semibold mb-2 text-center">{pkg.title}</h3>
-            <p className="text-4xl font-bold text-center my-6 mb-20">${pkg.price}</p>
+            <h3 className="text-4xl font-semibold mb-6 text-center">{pkg.title}</h3>
+            <p className="text-5xl font-bold text-center my-6 mb-5">${pkg.price}</p>
             <ul className="flex-1 mt-5 space-y-4  text-md text-center">
               {pkg.features.map((feature, idx) => (
                 <li key={idx} className="border-b border-gray-400 mt-5 mb-5 py-5">
@@ -64,7 +64,7 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <button className={`mt-16 mb-10 py-2 w-full rounded-md ${pkg.buttonStyle}`}>
+            <button className={`mt-16 mb-10 py-2 font-bold w-full rounded-md ${pkg.buttonStyle}`}>
               Choose This Package
             </button>
           </div>

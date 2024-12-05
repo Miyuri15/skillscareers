@@ -8,11 +8,11 @@ import { FaSearch } from "react-icons/fa";
 
 export default function Categories() {
   const categories = [
-    { id: 1, label: "Creative & Design", icon: "/images/creativeIdea.png" },
-    { id: 2, label: "Education & Training", icon: "/images/educationTraining.png" },
-    { id: 3, label: "Technology & Development", icon: "/images/technologyDevelopment.png" },
-    { id: 4, label: "Operations & Logistics", icon: "/images/operationsLogistics.png" },
-    { id: 5, label: "Marketing & Sales", icon: "/images/marketingSales.png" },
+    { id: 1, label: "Creative Design", icon: "/images/creativeIdea.png" },
+    { id: 2, label: "Education Training", icon: "/images/educationTraining.png" },
+    { id: 3, label: "Technology Development", icon: "/images/technologyDevelopment.png" },
+    { id: 4, label: "Operations Logistics", icon: "/images/operationsLogistics.png" },
+    { id: 5, label: "Marketing Sales", icon: "/images/marketingSales.png" },
   ];
 
   const totalPages = 6; // Number of pages
@@ -98,7 +98,7 @@ function shuffleArray(array) {
               {[...Array(5)].map((_, rowIndex) => (
                 <div
                   key={`${currentPage}-${rowIndex}`}
-                  className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-6"
+                  className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-6 mb-6"
                 >
                   {shuffleArray(categories).map((category) => (
                     <div

@@ -46,7 +46,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className=" relative py-20 px-10 bg-gray-50 lg:min-h-fit">
+    <div className=" relative py-20 px-10 bg-gray-50 lg:min-h-screen ">
       <div className="max-w-full mx-auto">
       <div className="pt-5 flex justify-between items-center mb-4 md:mb-6">
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900 mb-10">

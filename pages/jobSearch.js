@@ -34,8 +34,8 @@ export default function JobSearchPage() {
   return (
     <>
       <Header />
-      <div className="bg-gray-200 h-[3900px] sm:h-[5600px] md:h-[5600px] lg:h-[3400px]">
-        <div className="relative min-h-screen flex flex-col">
+      <div className="bg-gray-200 h-[3000px] sm:h-[5400px] md:h-[5400px] lg:h-[3100px]">
+        <div className="relative min-h-screen flex flex-col ml-3">
           {/* Image Group as Background */}
           <div className="relative w-full h-[800px]">
             <Image
@@ -68,12 +68,12 @@ export default function JobSearchPage() {
               </h2>
             </div>
             {/* Search Bar */}
-            <div className="bg-gray-300 mb-12 rounded-md p-4">
+            <div className="bg-gray-200 mb-12 rounded-md p-4">
               <div className="flex flex-wrap justify-between items-center gap-4">
                 <input
                   type="text"
                   placeholder="Search by job title, keywords, or company."
-                  className="bg-gray-300 flex-grow px-4 py-6 focus:outline-none w-full sm:w-[60%] md:w-[45%] lg:w-[30%] rounded-md font-semibold placeholder-[#5462A0]"
+                  className="bg-gray-200 flex-grow px-4 py-2 focus:outline-none w-full sm:w-[60%] md:w-[45%] lg:w-[30%] rounded-md font-semibold placeholder-[#5462A0]"
                 />
 
                 <Countries />

@@ -14,7 +14,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-white py-10 min-h-fit">
+    <footer className="bg-slate-900 text-white py-10 min-h-fit ">
       <div className="container mx-auto px-6 md:px-12">
         {/* Logo and Description on opposite corners */}
         <div className="flex flex-col md:flex-row justify-between items-start h-full mb-5">

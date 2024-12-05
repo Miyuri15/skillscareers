@@ -8,7 +8,7 @@ export default function RecruiterSearchPage() {
   return (
     <>
       <Header />
-      <div className="bg-gray-200 h-[2200px] sm:h-[3300px] md:h-[3500px] lg:h-[2500px]">
+      <div className="bg-gray-200 h-[2600px] sm:h-[3300px] md:h-[3400px] lg:h-[2950px]">
         <div className="relative min-h-screen flex flex-col">
           {/* Image Group as Background */}
           <div className="relative w-full h-[700px]">

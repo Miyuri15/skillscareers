@@ -12,8 +12,8 @@ export default function ContactBanner() {
   return (
     <>
       {/* Contact Banner */}
-      <div className="bg-blue-950 p-4 lg:p-6">
-        <div className="flex flex-col sm:space-y-6 lg:flex-row lg:justify-between lg:items-center gap-10">
+      <div className="bg-blue-950 p-4 lg:p-6 ">
+        <div className="flex flex-col sm:space-y-6 lg:flex-row lg:justify-between lg:items-center gap-10 lg:px-10">
           {/* Contact Info Section */}
           <div className="flex flex-col sm:space-y-1 lg:flex-row sm:flex-row sm:flex-wrap lg:flex-wrap justify-center md:justify-start gap-6 lg:gap-40 px-4 lg:px-0">
             {/* Email Section */}

@@ -67,7 +67,7 @@ export default function SimilarJobs() {
           <button
             onClick={handlePrevPage}
             disabled={currentPage === 1}
-            className={`absolute left-3 text-blue-900 hover:text-blue-700 ${
+            className={`absolute left-1 right-5 text-blue-900 hover:text-blue-700 ${
               currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""
             }`}
             aria-label="Previous page"
@@ -75,7 +75,7 @@ export default function SimilarJobs() {
             <FaAngleLeft className="text-5xl" />
           </button>
           {/* Job Cards */}
-          <div className="pl-10 pr-10 w-full grid grid-cols-1 sm:grid-cols-1 sm:px-20 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="pl-3 pr-5 w-full grid grid-cols-1 sm:grid-cols-1 sm:pl-10 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-8">
             {currentJobs.map((job) => (
               <Link key={job.id} href={`/job/${job.id}`}>
                 <FeaturedJobCard job={job} />

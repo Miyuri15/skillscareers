@@ -52,7 +52,7 @@ export default function RecruiterProfile() {
   return (
     <>
       <Header />
-      <div className="bg-gray-200 min-h-screen flex flex-col items-center justify-center p-4 sm:p-10">
+      <div className="bg-gray-200 min-h-screen flex flex-col items-center lg:px-20 sm:p-20">
         {/* Profile Banner */}
         <div className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="relative">
@@ -65,7 +65,7 @@ export default function RecruiterProfile() {
               className="w-full h-32 sm:h-48 object-cover"
             />
             {/* Profile Image */}
-            <div className="absolute transform -mt-14 sm:-mt-16 left-1/4 -translate-x-1/2 border-4 border-[#001571] p-1 bg-white rounded-full overflow-hidden w-[120px] sm:w-[180px] h-[120px] sm:h-[180px] flex items-center justify-center">
+            <div className="absolute transform -mt-14 sm:-mt-16 left-[150px] -translate-x-1/2 border-4 border-[#001571] p-1 bg-white rounded-full overflow-hidden w-[120px] sm:w-[180px] h-[120px] sm:h-[180px] flex items-center justify-center">
               <Image
                 src="/images/AerFin.png"
                 alt="Aerfin Technologies Logo"
@@ -76,7 +76,7 @@ export default function RecruiterProfile() {
           </div>
 
           {/* Social Media Icons */}
-          <div className="pr-8 sm:pr-12 flex justify-end mt-4 space-x-2 sm:space-x-4 text-blue-900">
+          <div className="pr-8 sm:pr-6 flex justify-end mt-4 space-x-2 sm:space-x-4 text-blue-900">
             <FaLinkedin size={20} className="cursor-pointer" />
             <FaTwitter size={20} className="cursor-pointer" />
             <FaInstagram size={20} className="cursor-pointer" />
@@ -94,54 +94,54 @@ export default function RecruiterProfile() {
                 </h3>
 
                 {/* Container for details and Apply Now button */}
-                <div className="flex flex-col sm:flex-row justify-between mt-4 gap-4">
+                <div className="flex flex-col lg:flex-row sm:flex-col md:flex-row justify-between items-start sm:items-start mt-4  gap-4">
                   {/* Details section */}
-                  <div className="flex flex-col gap-2">
-                    {/* Location, Category, Employee Range */}
-                    <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 sm:gap-2">
-                      <div className="flex items-center gap-2">
-                        <Image
-                          src="/images/location.png"
-                          alt="location"
-                          width={20}
-                          height={2}
-                        />
-                        <p className="text-gray-800 font-semibold">
-                          {recruiter.location}
-                        </p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Image
-                          src="/images/category.png"
-                          alt="industry"
-                          width={20}
-                          height={2}
-                        />
-                        <p className="text-gray-800 font-semibold">
-                          {recruiter.industry}
-                        </p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Image
-                          src="/images/user-octagon.png"
-                          alt="employees"
-                          width={20}
-                          height={2}
-                        />
-                        <p className="text-gray-800 font-semibold">
-                          {recruiter.employees}
-                        </p>
-                      </div>
+                  <div className="flex flex-col lg:flex-row sm:flex-col md:flex-col sm:gap-8 items-start sm:items-start">
+                    {/* Location */}
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src="/images/location.png"
+                        alt="location"
+                        width={20}
+                        height={20}
+                      />
+                      <p className="text-gray-800 font-semibold">
+                        {recruiter.location}
+                      </p>
+                    </div>
+                    {/* Category */}
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src="/images/category.png"
+                        alt="industry"
+                        width={20}
+                        height={20}
+                      />
+                      <p className="text-gray-800 font-semibold">
+                        {recruiter.industry}
+                      </p>
+                    </div>
+                    {/* Employee Range */}
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src="/images/user-octagon.png"
+                        alt="employees"
+                        width={20}
+                        height={20}
+                      />
+                      <p className="text-gray-800 font-semibold">
+                        {recruiter.employees}
+                      </p>
                     </div>
                   </div>
 
                   {/* Apply Now button */}
-                  <div className="self-center sm:self-auto">
+                  <div>
                     <button
                       onClick={() => setShowApplicationForm(true)}
-                      className="bg-blue-900 text-white border-blue-950 border-2 px-3 py-2 sm:px-4 rounded-md"
+                      className="bg-blue-950 text-white border-blue-950 border-2 px-3 py-2 sm:px-4 rounded-md"
                     >
-                      <div className="flex items-center gap-2 px-2 sm:px-4">
+                      <div className="flex items-center gap-2">
                         <span>Apply Now</span>
                         <Image
                           src="/images/arrow.png"
@@ -153,20 +153,20 @@ export default function RecruiterProfile() {
                     </button>
                   </div>
                 </div>
-                <h3 className="mt-5 text-blue-900 text-lg sm:text-xl font-semibold">
+                <h3 className="mt-5 text-blue-900 text-lg sm:text-xl font-bold font-mono">
                   Company Description
                 </h3>
-                <p className="text-gray-600 mt-4 sm:mt-8 mb-4 sm:mb-6">
+                <p className="text-gray-800 mt-4 sm:mt-8 mb-4 sm:mb-6 font-sans">
                   {recruiter.description}
                 </p>
 
                 {/* Contact Information */}
-                <div className="flex flex-col sm:flex-row gap-4 mt-4 p-4">
-                  <button className="flex items-center bg-blue-900 text-white px-4 py-2 rounded-md">
+                <div className="flex flex-col lg:flex-row sm:flex-col gap-4 mt-4 p-4">
+                  <button className=" flex items-center bg-blue-950 text-white px-4 py-2 rounded-md">
                     <FaPhoneAlt className="mr-2" />
                     {recruiter.phone}
                   </button>
-                  <button className="flex items-center bg-blue-900 text-white px-4 py-2 rounded-md">
+                  <button className="flex items-center bg-blue-950 text-white px-4 py-2 rounded-md">
                     <FaEnvelope className="mr-2" />
                     {recruiter.email}
                   </button>
@@ -177,26 +177,26 @@ export default function RecruiterProfile() {
         </div>
 
         {/* Content */}
-        <div className="mt-8 sm:mt-10 py-10">
-          <div className="flex flex-col sm:flex-row justify-between items-center mb-4 sm:mb-6">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-blue-900">
+        <div className=" w-full ">
+          <div className="flex flex-col px-5 sm:flex-row justify-between items-center mb-4 sm:mb-6 mt-20">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-blue-900 font-mono">
               Open Jobs
             </h2>
-            <div className="flex space-x-2 sm:space-x-4 mt-2 sm:mt-0">
-              <button className="px-3 py-2 bg-gray-300 text-blue-900 font-semibold hover:underline">
+            <div className="flex space-x-2 sm:space-x-4 mt-2 sm:mt-0 ">
+              <button className="px-4 py-2 bg-gray-300 text-blue-900 font-semibold hover:underline rounded-lg">
                 Onsite
               </button>
-              <button className="px-3 py-2 bg-gray-300 text-blue-900 font-semibold hover:underline">
+              <button className="px-4 py-2 bg-gray-300 text-blue-900 font-semibold hover:underline rounded-lg">
                 Hybrid
               </button>
-              <button className="px-3 py-2 bg-gray-300 text-blue-900 font-semibold hover:underline">
+              <button className="px-4 py-2 bg-gray-300 text-blue-900 font-semibold hover:underline rounded-lg">
                 Remote
               </button>
             </div>
           </div>
 
           {/* Open jobs */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-4 sm:mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-4 sm:mb-8">
             {jobsData.map((job) => (
               <Link key={job.id} href={`/job/${job.id}`}>
                 <FeaturedJobCard job={job} />

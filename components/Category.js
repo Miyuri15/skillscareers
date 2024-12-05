@@ -27,14 +27,14 @@ export default function Category() {
   ];
 
   return (
-    <div className="py-10 sm:p-6 md:p-10 mt-4 mb-6 px-5">
+    <div className="py-10 sm:p-6 md:p-10 mt-4 mb-6 px-5 ">
       <div className="flex justify-between items-center mb-4 sm:mb-6">
         <h2 className=" text-xl sm:text-2xl font-bold text-blue-900">
           Categories
         </h2>
         <Link
           href="/categories"
-          className="text-blue-900 mb-10 flex items-center space-x-1 font-bold text-sm sm:text-base"
+          className="text-blue-900 mb-10 flex items-center space-x-1 font-bold text-md sm:text-base"
         >
           <span>View All</span>
           <img
@@ -72,7 +72,7 @@ export default function Category() {
                 ))}
             </div>
             {/* Divider */}
-            {rowIndex < 6 && (
+            {rowIndex < 9 && (
               <div className="border-t border-gray-300 mt-4 sm:mt-6"></div>
             )}
           </div>

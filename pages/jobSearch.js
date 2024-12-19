@@ -63,17 +63,17 @@ export default function JobSearchPage() {
           {/* Content */}
           <div className="absolute top-0 left-0 w-full p-4 sm:p-6 md:p-10">
             <div className="mt-20 mb-12">
-              <h2 className="text-4xl text-gray-400 font-bold">
-                Find Your<span className="text-blue-900"> Perfect</span> Job.
+              <h2 className="text-4xl text-[#8A93BE] font-bold font-sans">
+                Find Your<span className="text-[#001571]"> Perfect</span> Job.
               </h2>
             </div>
             {/* Search Bar */}
-            <div className="bg-gray-200 mb-12 rounded-md p-4">
+            <div className="bg-[#E6E8F1] mb-12 rounded-md p-4">
               <div className="flex flex-wrap justify-between items-center gap-4">
                 <input
                   type="text"
                   placeholder="Search by job title, keywords, or company."
-                  className="bg-gray-200 flex-grow px-4 py-2 focus:outline-none w-full sm:w-[60%] md:w-[45%] lg:w-[30%] rounded-md font-semibold placeholder-[#5462A0]"
+                  className="bg-[#E6E8F1] flex-grow px-4 py-2 focus:outline-none w-full sm:w-[60%] md:w-[45%] lg:w-[30%] rounded-md font-semibold placeholder-[#5462A0]"
                 />
 
                 <Countries />

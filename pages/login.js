@@ -37,23 +37,29 @@ const Login = () => {
               </button>
             </div>
             <ul className="space-y-4 text-sm">
-              <li className="text-gray-800 hover:text-blue-500 cursor-pointer">
-                HOME
-              </li>
+              <Link href="/landingPage">
+                <li className="text-gray-800 hover:text-blue-500 cursor-pointer">
+                  HOME
+                </li>
+              </Link>
               <div className="border-b border-gray-200" />
-              <li className="text-gray-800 hover:text-blue-500 cursor-pointer">
-                EXPLORE RECRUITERS
-              </li>
+              <Link href="/recruiterSearch">
+                <li className="text-gray-800 hover:text-blue-500 cursor-pointer mt-2">
+                  EXPLORE RECRUITERS
+                </li>
+              </Link>
               <div className="border-b border-gray-200" />
-
-              <li className="text-gray-800 hover:text-blue-500 cursor-pointer">
-                ABOUT US
-              </li>
+              <Link href="/about-us">
+                <li className="text-gray-800 hover:text-blue-500 cursor-pointer mt-2">
+                  ABOUT US
+                </li>
+              </Link>
               <div className="border-b border-gray-200" />
-
-              <li className="text-gray-800 hover:text-blue-500 cursor-pointer">
-                CONTACT US
-              </li>
+              <Link href="/contact-us">
+                <li className="text-gray-800 hover:text-blue-500 cursor-pointer mt-2">
+                  CONTACT US
+                </li>
+              </Link>
               <div className="border-b border-gray-200" />
             </ul>
           </div>
@@ -115,7 +121,7 @@ const Login = () => {
             </a>
           </div>
 
-          <Button variant="primary">
+          <Button>
             <span className="flex items-center justify-center ">
               <Link href="/userProfile/124">Login </Link>
               <img
@@ -128,7 +134,7 @@ const Login = () => {
         </form>
 
         <div className="flex items-center justify-between mt-6">
-          <span className="border-t border-gray-500 md:w-full lg:w-full"></span>
+          <span className="border-t border-gray-500 md:w-full lg:w-full sm:w-full"></span>
         </div>
         <div className="justify-items-center">
           <p className="mt-3 mb-3 text-black text-md font-medium">
@@ -137,10 +143,7 @@ const Login = () => {
         </div>
         <div className="space-y-2 mt-1">
           <div className="mb-4">
-            <Button
-              variant="primary"
-              className="bg-blue-900 hover:bg-blue-800 text-white rounded"
-            >
+            <Button className="bg-blue-900 hover:bg-blue-800 text-white rounded">
               <span className="flex items-center justify-center py-1 px-5">
                 <img
                   src="/images/google-icon.png"
@@ -153,7 +156,7 @@ const Login = () => {
           </div>
 
           <div className="mt-3">
-            <Button variant="primary">
+            <Button>
               <span className="flex items-center justify-center py-1 px-5">
                 <img
                   src="/images/linkedin-icon.png"

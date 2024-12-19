@@ -39,19 +39,19 @@ export default function RecruiterSearchPage() {
           {/* content */}
           <div className="absolute top-0 left-0 w-full p-4 sm:p-6 md:p-20">
             <div className="mt-20 mb-12">
-              <h2 className="text-4xl text-gray-400 font-bold">
-                Find Your<span className="text-blue-900"> Perfect</span> Recruiter.
+              <h2 className="text-4xl text-[#8A93BE] font-bold font-sans">
+                Find Your<span className="text-[#001571]"> Perfect</span> Recruiter.
               </h2>
             </div>
             {/* Search bar */}
-            <div className="bg-gray-300 h-auto mb-12 rounded-md">
+            <div className="bg-[#E6E8F1] h-auto mb-12 rounded-md">
               <div className="flex flex-wrap justify-between items-center gap-4">
                 <input
                   type="text"
                   placeholder="Easily find the Recruiters you’re looking for..."
-                  className="bg-gray-300 flex-grow px-4 py-6 focus:outline-none w-full sm:w-[60%] md:w-[45%] lg:w-[30%] rounded-md font-semibold placeholder-[#5462A0]"
+                  className="bg-[#E6E8F1] flex-grow px-4 py-6 focus:outline-none w-full sm:w-[60%] md:w-[45%] lg:w-[30%] rounded-md font-semibold placeholder-[#5462A0]"
                 />
-                <button className="bg-[#001571] text-white px-4 py-5 rounded-md font-semibold w-full sm:w-auto">
+                <button className="bg-[#001571] text-white px-6 py-3 mr-2 rounded-md font-semibold w-full sm:w-auto">
                   <span className="flex items-center justify-center">
                     <FaSearch className="m-2" />
                     Search

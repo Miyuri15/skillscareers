@@ -29,12 +29,12 @@ export default function Category() {
   return (
     <div className="py-10 sm:p-6 md:p-10 mt-4 mb-6 px-5 ">
       <div className="flex justify-between items-center mb-4 sm:mb-6">
-        <h2 className=" text-xl sm:text-2xl font-bold text-blue-900">
+        <h2 className=" text-xl sm:text-2xl font-bold text-[#33448D]">
           Categories
         </h2>
         <Link
           href="/categories"
-          className="text-blue-900 mb-10 flex items-center space-x-1 font-bold text-md sm:text-base"
+          className="text-[#33448D] mb-10 flex items-center space-x-1 font-bold text-md sm:text-base"
         >
           <span>View All</span>
           <img
@@ -56,7 +56,7 @@ export default function Category() {
                     key={index}
                     className="flex items-center space-x-2 sm:space-x-3"
                   >
-                    <div className="text-2xl sm:text-3xl text-blue-900">
+                    <div className="text-2xl sm:text-3xl text-[#33448D]">
                       <Image
                         src={category.icon}
                         alt={category.label}
@@ -65,7 +65,7 @@ export default function Category() {
                         className="mx-auto mb-1 mr-2 "
                       />
                     </div>
-                    <span className="text-base sm:text-lg text-blue-900 font-medium">
+                    <span className="text-base sm:text-lg text-[#33448D] font-medium">
                       {category.name}
                     </span>
                   </div>

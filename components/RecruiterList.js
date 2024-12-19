@@ -173,7 +173,7 @@ export default function RecruiterListPage() {
             key={recruiter.id}
             className="border rounded-lg bg-white p-4 sm:p-6 shadow-md"
           >
-            <p className="text-gray-800 font-semibold text-right p-3 mb-8">
+            <p className="text-gray-800 font-semibold text-right p-3 mb-4">
               Member Since {recruiter.memberSince}
             </p>
             <div className="flex flex-col md:flex-col items-start md:items-start">
@@ -190,7 +190,7 @@ export default function RecruiterListPage() {
 
               {/* Recruiter Details */}
               <div className="flex-grow">
-                <div className="flex flex-col md:flex-col justify-between items-start">
+                <div className="flex flex-row md:flex-col justify-between items-start">
                   <h3 className="text-lg sm:text-xl font-bold text-blue-900">
                     {recruiter.name} <span className="text-blue-500">✓</span>
                   </h3>

@@ -44,8 +44,8 @@ const Pricing = () => {
   return (
     <div className="py-20 px-10 bg-white ">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-blue-900">Recruiter Packages</h2>
-        <p className="text-blue-900 mt-2 mb-6 font-bold text-2xl">
+        <h2 className="text-2xl font-bold text-[#33448D]">Recruiter Packages</h2>
+        <p className="text-[#33448D] mt-2 mb-20 font-bold text-xl">
           Empower your hiring and assessment process with comprehensive tools designed to meet your goals.
         </p>
       </div>

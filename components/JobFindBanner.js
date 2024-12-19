@@ -12,10 +12,10 @@ export default function JobFindBanner() {
         {/* Content inside the white section */}
         <div className="relative z-10 container mx-auto flex flex-col items-center lg:items-start">
           <div className="w-full">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-700 mb-4 text-center lg:text-left">
-              Your Future <span className="text-blue-900">Starts Here!</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#8A93BE] mb-4 text-center lg:text-left">
+              Your Future <span className="text-[#001571]">Starts Here!</span>
             </h1>
-            <p className="text-gray-500 mb-6 text-center lg:text-left">
+            <p className="text-[#001571] mb-6 text-center lg:text-left text-xl">
               Explore personalized job opportunities, expert tools, and
               connections with top companies to advance your career with Skill
               Careers.
@@ -45,36 +45,36 @@ export default function JobFindBanner() {
           <div className="flex items-center justify-start lg:justify-start mb-4">
             <div className="flex -space-x-2">
               <Image
-                src="/images/people1.jpg"
+                src="/images/people1.png"
                 alt="User 1"
                 width={40}
                 height={40}
                 className="w-10 h-10 rounded-full border-2 border-white"
               />
               <Image
-                src="/images/people2.jpg"
+                src="/images/people2.png"
                 alt="User 2"
                 width={40}
                 height={40}
                 className="w-10 h-10 rounded-full border-2 border-white"
               />
               <Image
-                src="/images/people3.jpg"
+                src="/images/people3.png"
                 alt="User 3"
                 width={40}
                 height={40}
                 className="w-10 h-10 rounded-full border-2 border-white"
               />
             </div>
-            <div className="hidden lg:block min-h-30 text-blue-900 font-bold m-3 ">|</div>
+            <div className="hidden lg:block min-h-30 text-[#001571] font-bold m-3 ">|</div>
             <div className="ml-3 lg:ml-0 ">
-              <p className="text-lg lg:text-xl font-semibold text-blue-800">6K+</p>
-              <p className="text-blue-800 ">Active Daily Users</p>
+              <p className="text-lg lg:text-xl font-semibold text-[#001571]">6K+</p>
+              <p className="text-[#001571] ">Active Daily Users</p>
             </div>
           </div>
 
           {/* Features section */}
-          <div className="mt-20 flex flex-row lg:flex-row gap-4 lg:space-x-10 text-blue-700">
+          <div className="mt-20 flex flex-row lg:flex-row gap-4 lg:space-x-10 text-[#001571]">
             <div className="flex items-center space-x-2 ">
               <FaSearch className="w-6 h-6" />
               <p>Advanced Job Search</p>

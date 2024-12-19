@@ -73,7 +73,7 @@ export default function ContactSection() {
             src="/images/pp3.png"
             alt="Person 2"
             layout="intrinsic"
-            width={80}
+            width={70}
             height={110}
             className="object-cover sm:w-[100px] sm:h-[80px] md:w-[150px] md:h-[120px]"
           />
@@ -81,7 +81,7 @@ export default function ContactSection() {
             src="/images/pp2.png"
             alt="Person 3"
             layout="intrinsic"
-            width={80}
+            width={70}
             height={110}
             className="object-cover sm:w-[100px] sm:h-[80px] md:w-[150px] md:h-[120px]"
           />

@@ -69,17 +69,17 @@ export default function FAQ() {
             <div key={index} className="border-b border-gray-300">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center p-4 text-left text-gray-800 hover:bg-gray-100"
+                className="w-full flex justify-between items-center p-4 text-left text-gray-900 hover:bg-gray-100"
               >
                 <span className="font-semibold">{faq.question}</span>
                 {openIndex === index ? (
-                  <FaChevronUp className="text-gray-500" />
+                  <FaChevronUp className="text-[#33448D]" />
                 ) : (
-                  <FaChevronDown className="text-gray-500" />
+                  <FaChevronDown className="text-[#33448D]" />
                 )}
               </button>
               {openIndex === index && (
-                <div className="px-4 pb-4 text-gray-600">{faq.answer}</div>
+                <div className="px-4 pb-4 text-gray-800">{faq.answer}</div>
               )}
             </div>
           ))}

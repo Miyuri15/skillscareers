@@ -20,12 +20,12 @@ export default function FeaturedJobs() {
     <div className="p-4 sm:p-6 md:p-10 bg-gray-100 ">
       {/* Header Section */}
       <div className="pt-10 flex justify-between items-center mb-6">
-        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-900">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[#33448D]">
           Featured Jobs
         </h2>
         <Link
           href="/jobSearch"
-          className="text-blue-900 font-bold text-sm sm:text-base flex items-center"
+          className="text-[#33448D] font-bold text-sm sm:text-base flex items-center"
         >
           View All
           <img

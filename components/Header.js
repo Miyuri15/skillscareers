@@ -20,7 +20,7 @@ const Header = () => {
           <div className="hidden md:flex flex-1 justify-center font-semibold">
             <nav className="flex space-x-6 font-mono">
               <Link href="/landingPage">HOME</Link>
-              <Link href="/recruiterProfile/123">EXPLORE RECRUITERS</Link>
+              <Link href="/recruiterSearch">EXPLORE RECRUITERS</Link>
               <Link href="/about-us">ABOUT US</Link>
               <Link href="/contact-us">CONTACT US</Link>
             </nav>

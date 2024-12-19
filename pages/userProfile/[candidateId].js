@@ -32,12 +32,13 @@ const CandidateProfile = () => {
               className="w-full h-32 sm:h-48 object-cover"
             />
             {/* Profile Image */}
-            <div className="absolute transform -mt-10 sm:-mt-16 ml-4 sm:ml-10 lg:ml-20 border-4 border-[#001571] p-1 bg-white rounded-full overflow-hidden w-24 h-24 sm:w-28 sm:h-28 lg:w-[180px] lg:h-[180px] flex items-center justify-center">
+            <div className="absolute transform -mt-10 sm:-mt-16 ml-4 sm:ml-10 lg:ml-20 border-4 border-[#001571]n bg-white rounded-full overflow-hidden w-24 h-24 sm:w-28 sm:h-28 lg:w-[180px] lg:h-[180px] flex items-center justify-center">
               <Image
                 src="/images/dp1.jpeg"
                 alt="Profile"
-                width={200}
-                height={170}
+                width={300}
+                height={190}
+                className="fill"
               />
             </div>
           </div>
@@ -68,10 +69,10 @@ const CandidateProfile = () => {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row justify-start items-start gap-4">
-                <button className="flex items-center justify-center px-4 py-2 text-white bg-[#001571] rounded-md hover:bg-blue-800 text-sm sm:text-base">
+                <button className="flex items-center justify-center px-4 py-2 text-white bg-[#001571] rounded-md hover:bg-blue-900 text-sm sm:text-base">
                   Download CV <FaDownload className="ml-2" />
                 </button>
-                <button className="flex items-center justify-center px-4 py-2 text-white bg-[#001571] rounded-md hover:bg-blue-800 text-sm sm:text-base">
+                <button className="flex items-center justify-center px-4 py-2 text-white bg-[#001571] rounded-md hover:bg-blue-900 text-sm sm:text-base">
                   Send an Email <FaEnvelope className="ml-2" />
                 </button>
               </div>

@@ -43,7 +43,7 @@ const Register = () => {
           <div className="flex space-x-4 mb-3">
             <button
               onClick={() => setIsRecruiter(false)}
-              className={` w-full border-2 border-gray-300 rounded-lg ${
+              className={` w-full border-2 border-gray-300 rounded-lg px-3 ${
                 !isRecruiter
                   ? "bg-blue-900 text-white"
                   : "bg-gray-50 text-blue-900"
@@ -59,13 +59,13 @@ const Register = () => {
                 <img
                   src="/images/Livello_1.png"
                   alt="Login"
-                  className="h-6 w-6 ml-7"
+                  className="h-6 w-6 ml-5"
                 />
               </span>
             </button>
             <button
               onClick={() => setIsRecruiter(true)}
-              className={`p-4 w-full border-2 border-gray-300 rounded-lg ${
+              className={`px-3 py-2 w-full border-2 border-gray-300 rounded-lg ${
                 isRecruiter
                   ? "bg-blue-900 text-white"
                   : "bg-gray-50 text-blue-900"
@@ -75,7 +75,7 @@ const Register = () => {
                 <img
                   src="/images/buliding.png"
                   alt="register"
-                  className="h-6 w-6 mr-5 "
+                  className="h-6 w-6 mr-1 "
                 />
                 Recruiter
                 <img

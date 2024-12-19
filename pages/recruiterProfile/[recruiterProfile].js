@@ -196,7 +196,7 @@ export default function RecruiterProfile() {
           </div>
 
           {/* Open jobs */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-4 sm:mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-4 sm:mb-8 ">
             {jobsData.map((job) => (
               <Link key={job.id} href={`/job/${job.id}`}>
                 <FeaturedJobCard job={job} />

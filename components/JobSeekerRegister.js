@@ -52,7 +52,7 @@ const JobSeekerRegister = () => (
         placeholder="Confirm Password"
       />
     </label>
-    <Button variant="primary" className="w-full py-3 mt-8">
+    <Button className="w-full py-3 mt-8">
     <span className="flex items-center justify-center ">
 
       <Link href="/login">Register </Link>

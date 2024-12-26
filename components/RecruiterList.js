@@ -190,7 +190,7 @@ export default function RecruiterListPage() {
 
               {/* Recruiter Details */}
               <div className="flex-grow">
-                <div className="flex flex-row md:flex-col justify-between items-start">
+                <div className="flex flex-col md:flex-row justify-between items-start">
                   <h3 className="text-lg sm:text-xl font-bold text-blue-900">
                     {recruiter.name} <span className="text-blue-500">✓</span>
                   </h3>

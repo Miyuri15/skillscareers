@@ -29,7 +29,7 @@ return(
               <button
                 key={item.name}
                 onClick={() => setActiveButton(item.name)}
-                className={`flex items-center p-3 rounded-lg font-sans ${
+                className={`flex items-center py-2 px-3 rounded-lg font-sans ${
                   activeButton === item.name
                     ? "bg-[#001571] text-white"
                     : "bg-white text-[#001571] hover:bg-gray-100"
@@ -42,7 +42,7 @@ return(
                     activeButton === item.name ? "filter invert brightness-0" : ""
                   }`}
                 />
-                <Link href={item.href} className="text-sm font-medium">
+                <Link href={item.href} className="text-md font-medium">
                   {item.name}
                 </Link>
               </button>

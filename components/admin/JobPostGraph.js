@@ -14,8 +14,8 @@ export default function Graph() {
 {/* Job Posts and Active Users Graphs */}
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
   {/* Job Posts Graph */}
-  <div className="bg-white rounded-lg p-6 shadow-sm relative">
-    <div className="flex flex-row items-center justify-between mb-8">
+  <div className="bg-white rounded-lg px-6 py-4 shadow-sm relative">
+    <div className="flex flex-row items-center justify-between mb-4">
       <h3 className="text-lg font-semibold text-[#001571]">Job Posts</h3>
       <h3 className="text-lg font-semibold text-[#001571]">This Week</h3>
     </div>
@@ -37,7 +37,7 @@ export default function Graph() {
       <div
         className="absolute top-24 right-[100px] w-[2px] bg-[#001571]"
         style={{
-          height: "200px", // Adjust the height of the vertical line
+          height: "140px", // Adjust the height of the vertical line
         }}
       ></div>
       {/* Days and Vertical Dashed Lines */}
@@ -52,7 +52,7 @@ export default function Graph() {
             <div
               className="w-px border-dashed border-2 border-[#B0B6D3] opacity-30"
               style={{
-                height: "240px", // Set the height of the dashed line
+                height: "160px", // Set the height of the dashed line
                 marginTop: "10px", // Space between count and the start of the dashed line
               }}
             ></div>

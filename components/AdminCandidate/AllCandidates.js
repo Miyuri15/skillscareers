@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Allrecruiters() {
+export default function AllCandidates() {
   const [selectedRows, setSelectedRows] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 8;
   const totalPages = 15;
 
-  const recruiters = Array.from(
+  const candidates = Array.from(
     { length: rowsPerPage * totalPages },
     (_, index) => ({
       id: index + 1,
@@ -25,7 +25,7 @@ export default function Allrecruiters() {
     );
   };
 
-  const displayedRecruiters = recruiters.slice(
+  const displayedCandidates = candidates.slice(
     (currentPage - 1) * rowsPerPage,
     currentPage * rowsPerPage
   );
@@ -104,41 +104,41 @@ export default function Allrecruiters() {
                   type="checkbox"
                   onChange={(e) =>
                     setSelectedRows(
-                      e.target.checked ? recruiters.map((r) => r.id) : []
+                      e.target.checked ? candidates.map((r) => r.id) : []
                     )
                   }
-                  checked={selectedRows.length === recruiters.length}
+                  checked={selectedRows.length === candidates.length}
                 />
               </th>
 
-              <th className="px-4 py-2">Recruiter Name</th>
+              <th className="px-4 py-2">Candidate Name</th>
               <th className="px-4 py-2">Email</th>
               <th className="px-4 py-2">Phone</th>
               <th className="px-4 py-2 text-end">Actions</th>
             </tr>
           </thead>
           <tbody>
-            {displayedRecruiters.map((recruiter) => (
+            {displayedCandidates.map((candidate) => (
               <tr
-                key={recruiter.id}
+                key={candidate.id}
                 className="border-b text-gray-700 hover:bg-gray-50"
               >
                 <td className="px-4 py-2">
                   <input
                     type="checkbox"
-                    checked={selectedRows.includes(recruiter.id)}
-                    onChange={() => handleCheckboxChange(recruiter.id)}
+                    checked={selectedRows.includes(candidate.id)}
+                    onChange={() => handleCheckboxChange(candidate.id)}
                   />
                 </td>
                 <td className="px-4 py-2">
                   <div className="flex">
-                  <Image src={recruiter.logo} alt="logo" width={40} height={20} className="pr-2"/>
-                  {recruiter.name} </div></td>
+                  <Image src={candidate.logo} alt="logo" width={40} height={20} className="pr-2"/>
+                  {candidate.name} </div></td>
                  
-                <td className="px-4 py-2">{recruiter.email}</td>
-                <td className="px-4 py-2">{recruiter.phone}</td>
+                <td className="px-4 py-2">{candidate.email}</td>
+                <td className="px-4 py-2">{candidate.phone}</td>
                 <td className="px-1 py-2 flex space-x-2 justify-end">
-                  <Link href="/admin/recruiters/editProfile">
+                  <Link href="/admin/candidates/editProfile">
                     <button className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm">
                       <div className="flex space-x-2">
                         <Image

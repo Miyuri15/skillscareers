@@ -1,45 +1,43 @@
 import Image from "next/image";
 import { useState } from "react";
 import {
-    FaDribbble,
-    FaFacebook,
-    FaGithub,
-    FaInstagram,
-    FaLinkedin,
-    FaTwitter,
-  } from "react-icons/fa";
+  FaDribbble,
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 import EditProfileForm from "./EditProfileForm";
-  
-  
 
-export default function ProfileDetails(){
-      const [showApplicationForm, setShowApplicationForm] = useState(false);
-    
-      const recruiters = [
-        {
-          id: 1,
-          name: "AerFin Technologies PVT (LTD)",
-          location: "San Francisco, Canada",
-          industry: "Technology & Development",
-          employees: "11 - 50 Employees",
-          description:
-            "I am a dedicated and results-driven Senior UX/UI Designer with over 5 years of experience in creating user-friendly and aesthetically pleasing digital products. My expertise lies in designing intuitive interfaces for web and mobile applications, conducting user research, and collaborating with cross-functional teams to deliver seamless user experiences. I have a passion for combining creativity with data-driven insights to solve complex design challenges. Throughout my career, I have worked with innovative companies like InnovateTech Solutions and BrightPath Marketing, leading design projects that significantly improved user engagement and product usability. I am always eager to learn new trends in design and technology, and I strive to create designs that not only meet business goals but also delight users. In my free time, I enjoy mentoring junior designers, contributing to open-source projects, and exploring the latest developments in UX design.",
-          phone: "011-2353-876",
-          email: "info@aerfintechnologies.com",
-          logo: "/images/AerFin.png",
-          socialLinks: [
-            { icon: <FaLinkedin className="text-blue-800 w-8 h-8" />, url: "#" },
-            { icon: <FaTwitter className="text-blue-800 w-8 h-8" />, url: "#" },
-            { icon: <FaInstagram className="text-blue-800 w-8 h-8" />, url: "#" },
-            { icon: <FaFacebook className="text-blue-800 w-8 h-8" />, url: "#" },
-          ],
-        },
-      ];
+export default function ProfileDetails() {
+  const [showApplicationForm, setShowApplicationForm] = useState(false);
 
-    
-    return<>
-<div>
-<div className="relative">
+  const recruiters = [
+    {
+      id: 1,
+      name: "AerFin Technologies PVT (LTD)",
+      location: "San Francisco, Canada",
+      industry: "Technology & Development",
+      employees: "11 - 50 Employees",
+      description:
+        "I am a dedicated and results-driven Senior UX/UI Designer with over 5 years of experience in creating user-friendly and aesthetically pleasing digital products. My expertise lies in designing intuitive interfaces for web and mobile applications, conducting user research, and collaborating with cross-functional teams to deliver seamless user experiences. I have a passion for combining creativity with data-driven insights to solve complex design challenges. Throughout my career, I have worked with innovative companies like InnovateTech Solutions and BrightPath Marketing, leading design projects that significantly improved user engagement and product usability. I am always eager to learn new trends in design and technology, and I strive to create designs that not only meet business goals but also delight users. In my free time, I enjoy mentoring junior designers, contributing to open-source projects, and exploring the latest developments in UX design.",
+      phone: "011-2353-876",
+      email: "info@aerfintechnologies.com",
+      logo: "/images/AerFin.png",
+      socialLinks: [
+        { icon: <FaLinkedin className="text-blue-800 w-8 h-8" />, url: "#" },
+        { icon: <FaTwitter className="text-blue-800 w-8 h-8" />, url: "#" },
+        { icon: <FaInstagram className="text-blue-800 w-8 h-8" />, url: "#" },
+        { icon: <FaFacebook className="text-blue-800 w-8 h-8" />, url: "#" },
+      ],
+    },
+  ];
+
+  return (
+    <>
+      <div>
+        <div className="relative">
           {/* Background Image */}
           <Image
             src="/images/recruiterbg.png"
@@ -58,13 +56,27 @@ export default function ProfileDetails(){
             />
           </div>
           {/* Profile Image */}
-          <div className="absolute transform -mt-14 sm:-mt-16 left-[150px] -translate-x-1/2 border-4 border-[#001571] p-1 bg-white rounded-full overflow-hidden w-[120px] sm:w-[180px] h-[120px] sm:h-[180px] flex items-center justify-center">
-            <Image
-              src="/images/AerFin.png"
-              alt="Aerfin Technologies Logo"
-              width={100}
-              height={100}
-            />
+          <div className="relative">
+            {/* DP Image */}
+            <div className="absolute transform -mt-10 sm:-mt-16 ml-4 sm:ml-10 lg:ml-20 border-4 border-[#001571] bg-white rounded-full overflow-hidden w-24 h-24 sm:w-28 sm:h-28 lg:w-[180px] lg:h-[180px] flex items-center justify-center">
+              <Image
+                src="/images/AerFin.png"
+                alt="Profile"
+                width={300}
+                height={190}
+                className="fill"
+              />
+            </div>
+
+            {/* Edit Icon */}
+            <div className="absolute -top-9 left-[200px] transform translate-x-1/2 -translate-y-1/2 w-20 h-8 sm:w-10 sm:h-30  rounded-full  items-center justify-center shadow-md">
+              <Image
+                src="/images/editiconwhite.png"
+                alt="Edit Icon"
+                width={40}
+                height={20}
+              />
+            </div>
           </div>
         </div>
 
@@ -151,21 +163,18 @@ export default function ProfileDetails(){
               <p className="text-gray-800 mt-4 sm:mt-8 mb-4 sm:mb-6 font-sans">
                 {recruiter.description}
               </p>
-
             </div>
           ))}
         </div>
-                    {/* Edit Profile Form Popup */}
-                    {showApplicationForm && (
-              <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
-                <div className="relative bg-white shadow-lg rounded-lg px-4 sm:px-6 w-full max-w-4xl">
-                  <EditProfileForm onClose={() => setShowApplicationForm(false)} />
-                  </div>
-              </div>
-            )}
-      
-
-
-</div>
+        {/* Edit Profile Form Popup */}
+        {showApplicationForm && (
+          <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+            <div className="relative bg-white shadow-lg rounded-lg px-4 sm:px-6 w-full max-w-4xl">
+              <EditProfileForm onClose={() => setShowApplicationForm(false)} />
+            </div>
+          </div>
+        )}
+      </div>
     </>
+  );
 }

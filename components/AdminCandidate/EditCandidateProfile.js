@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { useState } from "react";
-import ProfileDetails from "./ProfileDetails";
-import CredencialDetails from "./CredencialDetails";
+import CandidateProfileDetails from "./CandidateProfileDetails";
+import CandidateCredencialDetails from "./CandidateCredentialDetails";
 
-export default function EditProfile() {
+export default function EditCandidateProfile() {
   const [isProfile, setIsProfile] = useState(true);
 
   return (
@@ -48,7 +48,7 @@ export default function EditProfile() {
           </button>
         </div>
               {/* Display Components */}
-              {isProfile ? <ProfileDetails /> : <CredencialDetails />}
+              {isProfile ? <CandidateProfileDetails /> : <CandidateCredencialDetails/>}
         
 
       </div>

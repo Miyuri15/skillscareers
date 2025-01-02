@@ -14,6 +14,8 @@ export default function RestrictedRecruiters() {
       name: "Codezela Technologies",
       email: "info@codezela.com",
       phone: "011 234 4857",
+      logo:"/images/codezelalogo.png",
+
     })
   );
 
@@ -135,7 +137,7 @@ export default function RestrictedRecruiters() {
               <th className="px-4 py-2">Recruiter Name</th>
               <th className="px-4 py-2">Email</th>
               <th className="px-4 py-2">Phone</th>
-              <th className="px-4 py-2">Actions</th>
+              <th className="px-4 py-2 text-end">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -151,10 +153,13 @@ export default function RestrictedRecruiters() {
                     onChange={() => handleCheckboxChange(recruiter.id)}
                   />
                 </td>
-                <td className="px-4 py-2">{recruiter.name}</td>
+                <td className="px-4 py-2">
+                  <div className="flex">
+                  <Image src={recruiter.logo} alt="logo" width={40} height={20} className="pr-2"/>
+                  {recruiter.name} </div></td>
                 <td className="px-4 py-2">{recruiter.email}</td>
                 <td className="px-4 py-2">{recruiter.phone}</td>
-                <td className="px-1 py-2 flex space-x-2">
+                <td className="px-1 py-2 flex space-x-2 justify-end">
                   <button className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm">
                     <div className="flex space-x-2">
                       <Image

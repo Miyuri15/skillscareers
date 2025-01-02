@@ -1,79 +1,187 @@
-export default function Graph() {
-  const posts = [
-    { day: "Sun", count: 9 },
-    { day: "Mon", count: 10 },
-    { day: "Tue", count: 11 },
-    { day: "Wed", count: 12 },
-    { day: "Thu", count: 13 },
-    { day: "Fri", count: 14 },
-    { day: "Sat", count: 15 },
-  ];
+import { Line, Bar } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
 
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+const Charts = () => {
+  const lineData = {
+    labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    datasets: [
+      {
+        label: 'Job Posts',
+        data: [9, 10, 18, 22, 13, 25, 15],
+        borderColor: '#4F46E5',
+        backgroundColor: 'rgba(79, 70, 229, 0.2)',
+        fill: true,
+        tension: 0.4,
+      },
+    ],
+  };
+
+  const barData = {
+    labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    datasets: [
+      {
+        label: 'Active Users',
+        data: [123, 521, 302, 459, 252, 289, 112],
+        backgroundColor: 'rgba(79, 70, 229, 0.6)',
+        borderRadius: 10, // Add rounded edges
+        barPercentage: 0.6, // Adjust bar width
+      },
+    ],
+  };
+
+  const lineOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false, // Hide legend
+      },
+      tooltip: {
+        callbacks: {
+          label: (tooltipItem) => ` ${tooltipItem.raw}`,
+        },
+        backgroundColor: '#4F46E5',
+        titleFont: { size: 14 },
+        bodyFont: { size: 14 },
+        padding: 8,
+        displayColors: false,
+      },
+    },
+    scales: {
+      x: {
+        position: 'top', // Display x-axis at the top
+        grid: {
+          drawOnChartArea: true, // Draw vertical lines
+          drawTicks: false, // Hide tick marks
+          lineWidth: 1,
+          color: '#E5E7EB', // Light gray for vertical lines
+          borderDash: [4, 4], // Dashed lines
+          border: false, // Remove top border
+        },
+        ticks: {
+          color: '#6B7280',
+          font: { size: 12 },
+          callback: function (value, index, ticks) {
+            // Get the label and value from the dataset
+            const dayLabel = this.getLabelForValue(value); // Day (e.g., Sun, Mon)
+            const chartValue = lineData.datasets[0].data[index]; // Value from the dataset
+  
+            // Return formatted label: day + newline + value
+            return `${dayLabel}\n${chartValue}`;
+          },
+        },
+      },
+      y: {
+        grid: {
+          display: false, // No horizontal grid lines
+          border: false, // Remove left border
+        },
+        ticks: {
+          display: false, // Remove Y-axis values
+        },
+      },
+    },
+  };
+  
+  const customXLabelPlugin = {
+    id: 'customXLabelPlugin',
+    afterDraw(chart) {
+      const {
+        ctx,
+        scales: { x },
+      } = chart;
+  
+      x.ticks.forEach((tick, index) => {
+        const value = chart.data.datasets[0].data[index]; // Get the value
+        ctx.save();
+        ctx.fillStyle = '#001571'; // Set the custom color
+        ctx.font = '12px Arial'; // Set font style and size
+        ctx.textAlign = 'center';
+        ctx.fillText(value, x.getPixelForValue(tick.value), x.bottom + 20); // Position under day label
+        ctx.restore();
+      });
+    },
+  };
+          
+  const barOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        callbacks: {
+          label: (tooltipItem) => ` ${tooltipItem.raw}`,
+        },
+        backgroundColor: '#4F46E5',
+        titleFont: { size: 14 },
+        bodyFont: { size: 14 },
+        padding: 8,
+        displayColors: false,
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          drawOnChartArea: true, // Draw grid lines only on the chart area
+          drawTicks: false, // Hide tick marks
+          lineWidth: 1,
+          color: '#E5E7EB', // Light gray for vertical lines
+          borderDash: [4, 4], // Dashed lines
+        },
+        ticks: {
+          color: '#6B7280',
+          font: { size: 12 },
+        },
+      },
+      y: {
+        grid: {
+          display: false, // Disable horizontal grid lines
+        },
+        ticks: {
+          color: '#6B7280',
+          font: { size: 12 },
+        },
+      },
+    },
+  };
+  
   return (
-    <>
-{/* Job Posts and Active Users Graphs */}
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-  {/* Job Posts Graph */}
-  <div className="bg-white rounded-lg px-6 py-4 shadow-sm relative">
-    <div className="flex flex-row items-center justify-between mb-4">
-      <h3 className="text-lg font-semibold text-[#001571]">Job Posts</h3>
-      <h3 className="text-lg font-semibold text-[#001571]">This Week</h3>
-    </div>
-    {/* Parent Container for Graph */}
-    <div className="relative">
-      {/* Line Graph Image */}
-      <img
-        src="/images/lineGraph.png"
-        alt="Line Graph Background"
-        className="absolute w-4/5 h-auto top-24 left-0 z-10 pointer-events-none"
-      />
-      {/* Line Graph Overlay */}
-      <img
-        src="/images/lineGraphLine.png"
-        alt="Line Graph Line"
-        className="absolute w-4/5 h-auto top-24 left-0 z-10 pointer-events-none"
-      />
-      {/* Vertical Line Beside the Graphs */}
-      <div
-        className="absolute top-24 right-[100px] w-[2px] bg-[#001571]"
-        style={{
-          height: "140px", // Adjust the height of the vertical line
-        }}
-      ></div>
-      {/* Days and Vertical Dashed Lines */}
-      <div className="flex justify-between relative z-40">
-        {posts.map((post) => (
-          <div key={post.day} className="flex flex-col items-center">
-            {/* Day */}
-            <h4 className="text-[#001571] font-medium">{post.day}</h4>
-            {/* Count */}
-            <h5 className="text-[#001571] text-md">{post.count}</h5>
-            {/* Vertical Dashed Line */}
-            <div
-              className="w-px border-dashed border-2 border-[#B0B6D3] opacity-30"
-              style={{
-                height: "160px", // Set the height of the dashed line
-                marginTop: "10px", // Space between count and the start of the dashed line
-              }}
-            ></div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+      <div className="bg-white p-6 rounded-xl shadow-lg">
+        <h3 className="text-base font-medium text-gray-600 mb-4">Job Posts</h3>
+        <Line
+          data={lineData}
+          options={lineOptions}
+          plugins={[customXLabelPlugin]}
+        />    
           </div>
-        ))}
+      <div className="bg-white p-6 rounded-xl shadow-lg">
+        <h3 className="text-base font-medium text-gray-600 mb-4">Active Users</h3>
+        <Bar data={barData} options={barOptions} />
       </div>
     </div>
-  </div>
-
-
-        {/* Active Users Graph */}
-        <div className="bg-white rounded-lg p-6 shadow-sm">
-          <div className="flex flex-row items-center justify-between">
-            <h3 className="text-lg font-semibold text-[#001571]">
-              Active Users
-            </h3>
-            <h3 className="text-lg font-semibold text-[#001571]">This Week</h3>
-          </div>
-          <div className="h-40 bg-gray-100 rounded-lg"></div>
-        </div>
-      </div>
-    </>
   );
-}
+};
+
+export default Charts;

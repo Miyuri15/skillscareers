@@ -1,11 +1,11 @@
 import { useState } from "react";
-import AllRecruiters from "./Allrecruiters";
-import RestrictedRecruiters from "./RestrctedRecruiters";
 import Image from "next/image";
-import AddNewRecruiter from "./AddNewRecruiter";
+import AllCandidates from "./AllCandidates";
+import RestrictedCandidates from "./RestrictedCandidates";
+import AddNewCandidate from "./AddNewCandidate";
 
-export default function AdminRecruiters() {
-  const [isAllRecruiter, setIsAllRecruiter] = useState(true);
+export default function AdminCandidates() {
+  const [isAllCandidate, setisAllCandidate] = useState(true);
   const [showApplicationForm, setShowApplicationForm] = useState(false);
 
 
@@ -13,7 +13,7 @@ export default function AdminRecruiters() {
     <div className="flex flex-col p-6 bg-white">
       {/* Page Title */}
       <div className="flex flex-row items-center justify-between">
-        <h2 className="text-[#001571] text-xl font-bold mb-6">Recruiters</h2>
+        <h2 className="text-[#001571] text-xl font-bold mb-6">Candidates</h2>
         <button
           className="bg-[#001571] text-white px-4 py-2 rounded-lg font-medium mb-6"
           onClick={() => setShowApplicationForm(true)}
@@ -25,15 +25,15 @@ export default function AdminRecruiters() {
       {/* Toggle Buttons */}
       <div className="flex space-x-2 mb-4 bg-gray-200 p-1 rounded-xl w-fit">
         <button
-          onClick={() => setIsAllRecruiter(true)}
+          onClick={() => setisAllCandidate(true)}
           className={`px-4 py-2 rounded-lg font-medium ${
-            isAllRecruiter
+            isAllCandidate
               ? "bg-blue-900 text-white"
               : "bg-gray-100 text-blue-900"
           }`}
         >
           <div className="flex space-x-3">
-            <p>All Recruiters</p>
+            <p>All Candidates</p>
             <Image
               src="/images/whitetick.png"
               alt="tick"
@@ -43,15 +43,15 @@ export default function AdminRecruiters() {
           </div>
         </button>
         <button
-          onClick={() => setIsAllRecruiter(false)}
+          onClick={() => setisAllCandidate(false)}
           className={`px-4 py-2 rounded-lg font-medium ${
-            !isAllRecruiter
+            !isAllCandidate
               ? "bg-blue-900 text-white"
               : "bg-gray-100 text-gray-400"
           }`}
         >
           <div className="flex space-x-3">
-            <p>Restricted Recruiters</p>
+            <p>Restricted Candidates</p>
             <Image
               src="/images/graytick.png"
               alt="tick"
@@ -73,18 +73,18 @@ export default function AdminRecruiters() {
         />
         <input
           type="text"
-          placeholder="Search Recruiters..."
+          placeholder="Search Candidates..."
           className="flex-grow text-gray-600 outline-none bg-transparent"
         />
       </div>
 
       {/* Display Components */}
-      {isAllRecruiter ? <AllRecruiters /> : <RestrictedRecruiters />}
+      {isAllCandidate ? <AllCandidates /> : <RestrictedCandidates />}
                           {/* Edit Profile Form Popup */}
                           {showApplicationForm && (
                     <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
                       <div className="relative bg-white shadow-lg rounded-lg px-4 sm:px-6 w-full max-w-4xl">
-                        <AddNewRecruiter onClose={() => setShowApplicationForm(false)} />
+                        <AddNewCandidate onClose={() => setShowApplicationForm(false)} />
                         </div>
                     </div>
                   )}

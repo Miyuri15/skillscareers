@@ -16,6 +16,44 @@ import {
 } from "react-icons/fa";
 
 const CandidateProfile = () => {
+  const experiences = [
+    {
+      role: "Senior UX/UI Designer",
+      company: "InnovateTech Solutions",
+      location: "Colombo, Sri Lanka",
+      duration: "Jan 2023 - Jan 2024",
+      description:
+        "Led the design of multiple high-profile web and mobile applications, focusing on enhancing user experience and product usability. Collaborated with cross-functional teams, including developers and product managers, to deliver seamless solutions. Conducted user research, created wireframes, and built interactive prototypes.",
+    },
+    // Add more experiences as needed
+  ];
+
+  const education = [
+    {
+      degree: "MSc in Human Computer Interaction",
+      institution: "University of Colombo, Sri Lanka",
+      duration: "Jan 2019 - Jan 2021",
+    },
+    {
+      degree: "Bachelor of Science in Graphic Design",
+      institution: "University of Colombo, Sri Lanka",
+      duration: "Jan 2014 - Jan 2019",
+    },
+  ];
+
+  const certifications = [
+    {
+      title: "Google UX Design Professional Certificate",
+      provider: "Google",
+      date: "Jan 2022",
+    },
+    {
+      title: "Certified User Experience Professional (CUXP)",
+      provider: "CUXP",
+      date: "Jan 2021",
+    },
+  ];
+
   return (
     <>
       <Header />

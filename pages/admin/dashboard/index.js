@@ -3,6 +3,7 @@ import HeaderBar from "@/components/admin/HeaderBar";
 import Help from "@/components/admin/Help";
 import Graph from "@/components/admin/JobPostGraph";
 import SideMenu from "@/components/admin/SideMenu";
+import { Chart } from "chart.js";
 
 export default function AdminDashboard() {
   return (

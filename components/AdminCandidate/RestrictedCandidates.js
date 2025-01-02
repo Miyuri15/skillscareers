@@ -1,14 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 
-export default function Allrecruiters() {
+export default function RestrictedCandidates() {
   const [selectedRows, setSelectedRows] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 8;
   const totalPages = 15;
 
-  const recruiters = Array.from(
+  const candidates = Array.from(
     { length: rowsPerPage * totalPages },
     (_, index) => ({
       id: index + 1,
@@ -16,6 +15,7 @@ export default function Allrecruiters() {
       email: "info@codezela.com",
       phone: "011 234 4857",
       logo:"/images/codezelalogo.png",
+
     })
   );
 
@@ -25,7 +25,7 @@ export default function Allrecruiters() {
     );
   };
 
-  const displayedRecruiters = recruiters.slice(
+  const displayedCandidates = candidates.slice(
     (currentPage - 1) * rowsPerPage,
     currentPage * rowsPerPage
   );
@@ -69,16 +69,35 @@ export default function Allrecruiters() {
           }`}
           disabled={selectedRows.length === 0}
         >
-          <div className="flex space-x-2">
-            <Image
-              src="/images/CheckBox.png"
-              alt="bin"
-              width={15}
-              height={10}
-            />
-            <p>Select More</p>
-          </div>
+                    <div className="flex space-x-2">
+                      <Image
+                        src="/images/CheckBox.png"
+                        alt="bin"
+                        width={15}
+                        height={10}
+                      />
+                      <p>Select More</p>
+                    </div>
         </button>
+        <button
+          className={`px-4 py-2 rounded-lg font-medium ${
+            selectedRows.length > 0
+              ? "bg-blue-900 text-white"
+              : "bg-gray-300 text-gray-500"
+          }`}
+          disabled={selectedRows.length === 0}
+        >
+                    <div className="flex space-x-2">
+                      <Image
+                        src="/images/eye.png"
+                        alt="bin"
+                        width={20}
+                        height={20}
+                      />
+                      <p>Unrestricted</p>
+                    </div>
+        </button>
+
         <button
           className={`px-4 py-2 rounded-lg font-medium ${
             selectedRows.length > 0
@@ -87,15 +106,20 @@ export default function Allrecruiters() {
           }`}
           disabled={selectedRows.length === 0}
         >
-          <div className="flex space-x-2">
-            <Image src="/images/trash.png" alt="bin" width={25} height={20} />
-            <p>Delete</p>
-          </div>
+                    <div className="flex space-x-2">
+                      <Image
+                        src="/images/trash.png"
+                        alt="bin"
+                        width={25}
+                        height={20}
+                      />
+                      <p>Delete</p>
+                    </div>
         </button>
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto w-full">
+      <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead className="text-md text-gray-500">
             <tr>
@@ -104,62 +128,58 @@ export default function Allrecruiters() {
                   type="checkbox"
                   onChange={(e) =>
                     setSelectedRows(
-                      e.target.checked ? recruiters.map((r) => r.id) : []
+                      e.target.checked ? candidates.map((r) => r.id) : []
                     )
                   }
-                  checked={selectedRows.length === recruiters.length}
+                  checked={selectedRows.length === candidates.length}
                 />
               </th>
-
-              <th className="px-4 py-2">Recruiter Name</th>
+              <th className="px-4 py-2">Candidate Name</th>
               <th className="px-4 py-2">Email</th>
               <th className="px-4 py-2">Phone</th>
               <th className="px-4 py-2 text-end">Actions</th>
             </tr>
           </thead>
           <tbody>
-            {displayedRecruiters.map((recruiter) => (
+            {displayedCandidates.map((candidate) => (
               <tr
-                key={recruiter.id}
+                key={candidate.id}
                 className="border-b text-gray-700 hover:bg-gray-50"
               >
                 <td className="px-4 py-2">
                   <input
                     type="checkbox"
-                    checked={selectedRows.includes(recruiter.id)}
-                    onChange={() => handleCheckboxChange(recruiter.id)}
+                    checked={selectedRows.includes(candidate.id)}
+                    onChange={() => handleCheckboxChange(candidate.id)}
                   />
                 </td>
                 <td className="px-4 py-2">
                   <div className="flex">
-                  <Image src={recruiter.logo} alt="logo" width={40} height={20} className="pr-2"/>
-                  {recruiter.name} </div></td>
-                 
-                <td className="px-4 py-2">{recruiter.email}</td>
-                <td className="px-4 py-2">{recruiter.phone}</td>
+                  <Image src={candidate.logo} alt="logo" width={40} height={20} className="pr-2"/>
+                  {candidate.name} </div></td>
+                <td className="px-4 py-2">{candidate.email}</td>
+                <td className="px-4 py-2">{candidate.phone}</td>
                 <td className="px-1 py-2 flex space-x-2 justify-end">
-                  <Link href="/admin/recruiters/editProfile">
-                    <button className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm">
-                      <div className="flex space-x-2">
-                        <Image
-                          src="/images/edit.png"
-                          alt="edit"
-                          width={20}
-                          height={20}
-                        />
-                        <p>Edit Account</p>
-                      </div>
-                    </button>
-                  </Link>{" "}
-                  <button className="bg-red-500 text-white px-5 py-2 rounded-lg text-sm">
+                  <button className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm">
                     <div className="flex space-x-2">
                       <Image
-                        src="/images/eye-slash.png"
+                        src="/images/eye.png"
                         alt="bin"
                         width={20}
                         height={20}
                       />
-                      <p>Restrict</p>
+                      <p>Unrestricted</p>
+                    </div>
+                  </button>
+                  <button className="bg-red-500 text-white px-5 py-2 rounded-lg text-sm">
+                    <div className="flex space-x-2">
+                      <Image
+                        src="/images/trash.png"
+                        alt="bin"
+                        width={20}
+                        height={20}
+                      />
+                      <p>Delete</p>
                     </div>
                   </button>
                 </td>

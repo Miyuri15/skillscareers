@@ -1,6 +1,6 @@
 import HeaderBar from '@/components/admin/HeaderBar'
 import SideMenu from '@/components/admin/SideMenu'
-import EditProfile from '@/components/AdminRecruiters/EditRecruiterProfile'
+import EditCandidateProfile from '@/components/AdminCandidate/EditCandidateProfile'
 import React from 'react'
 
 const editProfile = () => {
@@ -9,7 +9,7 @@ const editProfile = () => {
         <SideMenu />
         <div className="flex-1 px-5">
             <HeaderBar/>
-            <EditProfile/>
+            <EditCandidateProfile/>
         </div>
       </div>
   )

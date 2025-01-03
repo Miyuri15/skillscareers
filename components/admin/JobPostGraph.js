@@ -152,6 +152,14 @@ const Charts = () => {
         ticks: {
           color: '#6B7280',
           font: { size: 12 },
+          callback: function (value, index, ticks) {
+            // Get the label (day) and value from the dataset
+            const dayLabel = this.getLabelForValue(value); // Day (e.g., Sun, Mon)
+            const chartValue = barData.datasets[0].data[index]; // Value from the dataset
+    
+            // Return formatted label: day + newline + value
+            return `${dayLabel}\n${chartValue}`;
+          },
         },
       },
       y: {
@@ -159,17 +167,20 @@ const Charts = () => {
           display: false, // Disable horizontal grid lines
         },
         ticks: {
-          color: '#6B7280',
-          font: { size: 12 },
+          display: false, // Remove Y-axis values
         },
       },
     },
   };
-  
+      
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
       <div className="bg-white p-6 rounded-xl shadow-lg">
-        <h3 className="text-base font-medium text-gray-600 mb-4">Job Posts</h3>
+        <div className='flex flex-row justify-between'>
+        <p className="font-5xl font-semibold text-[#001571] mb-4">Job Posts</p>
+        <p className="font-5xl font-semibold text-[#001571] mb-4">This Week</p>
+
+       </div>
         <Line
           data={lineData}
           options={lineOptions}
@@ -177,7 +188,11 @@ const Charts = () => {
         />    
           </div>
       <div className="bg-white p-6 rounded-xl shadow-lg">
-        <h3 className="text-base font-medium text-gray-600 mb-4">Active Users</h3>
+      <div className='flex flex-row justify-between'>
+        <p className="font-5xl font-semibold text-[#001571] mb-4">Active Users</p>
+        <p className="font-5xl font-semibold text-[#001571] mb-4">This Week</p>
+
+       </div>
         <Bar data={barData} options={barOptions} />
       </div>
     </div>

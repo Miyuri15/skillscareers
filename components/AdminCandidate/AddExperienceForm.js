@@ -39,7 +39,7 @@ export default function AddExperienceForm({ onClose }) {
             <FaTimes size={24} />
           </button>
         </div>
-        <div className="border-2 border-gray-200 mb-4" />
+        <div className="border-t-2 border-gray-200 mb-4" />
 
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
@@ -119,7 +119,7 @@ export default function AddExperienceForm({ onClose }) {
               />
             </div>
           </div>
-          <div className="border-2 border-gray-200 mb-4" />
+          <div className="border-t-2 border-gray-200 mb-4" />
 
           <div className="flex justify-end">
             <button

@@ -9,7 +9,7 @@ export default function SideMenu(){
       { name: "Dashboard", href: "/admin/dashboard", icon: "/images/dashboardIcon.png" },
       { name: "Recruiters", href: "/admin/recruiters", icon: "/images/recruitersIcon.png" },
       { name: "Candidates", href: "/admin/candidates", icon: "/images/candidatesIcon.png" },
-      { name: "Job Posts", href: "/admin/job-posts", icon: "/images/jobPostsIcon.png" },
+      { name: "Job Posts", href: "/admin/jobPosts", icon: "/images/jobPostsIcon.png" },
       { name: "Analytics", href: "/admin/analytics", icon: "/images/analyticsIcon.png" },
       { name: "Memberships", href: "/admin/memberships", icon: "/images/membershipsIcon.png" },
       { name: "Announcements", href: "/admin/announcements", icon: "/images/announcementsIcon.png" },

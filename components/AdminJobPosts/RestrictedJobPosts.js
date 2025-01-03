@@ -1,21 +1,19 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function RestrictedRecruiters() {
+export default function RestrictedJobPosts() {
   const [selectedRows, setSelectedRows] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 8;
   const totalPages = 15;
 
-  const recruiters = Array.from(
+  const jobPosts = Array.from(
     { length: rowsPerPage * totalPages },
     (_, index) => ({
       id: index + 1,
-      name: "Codezela Technologies",
-      email: "info@codezela.com",
-      phone: "011 234 4857",
-      logo:"/images/codezelalogo.png",
-
+      Recruitername: "Codezela Technologies",
+      postedDate: "25 AUG 2024",
+      position:"Software Engineer",
     })
   );
 
@@ -25,7 +23,7 @@ export default function RestrictedRecruiters() {
     );
   };
 
-  const displayedRecruiters = recruiters.slice(
+  const displayedJobPosts = jobPosts.slice(
     (currentPage - 1) * rowsPerPage,
     currentPage * rowsPerPage
   );
@@ -128,37 +126,35 @@ export default function RestrictedRecruiters() {
                   type="checkbox"
                   onChange={(e) =>
                     setSelectedRows(
-                      e.target.checked ? recruiters.map((r) => r.id) : []
+                      e.target.checked ? jobPosts.map((r) => r.id) : []
                     )
                   }
-                  checked={selectedRows.length === recruiters.length}
+                  checked={selectedRows.length === jobPosts.length}
                 />
               </th>
+              <th className="px-4 py-2">Position </th>
               <th className="px-4 py-2">Recruiter Name</th>
-              <th className="px-4 py-2">Email</th>
-              <th className="px-4 py-2">Phone</th>
+              <th className="px-4 py-2">Posted Date</th>
               <th className="px-4 py-2 text-end">Actions</th>
             </tr>
           </thead>
           <tbody>
-            {displayedRecruiters.map((recruiter) => (
+            {displayedJobPosts.map((jobPost) => (
               <tr
-                key={recruiter.id}
+                key={jobPost.id}
                 className="border-b text-gray-700 hover:bg-gray-50"
               >
                 <td className="px-4 py-2">
                   <input
                     type="checkbox"
-                    checked={selectedRows.includes(recruiter.id)}
-                    onChange={() => handleCheckboxChange(recruiter.id)}
+                    checked={selectedRows.includes(jobPost.id)}
+                    onChange={() => handleCheckboxChange(jobPost.id)}
                   />
                 </td>
                 <td className="px-4 py-2">
-                  <div className="flex">
-                  <Image src={recruiter.logo} alt="logo" width={40} height={20} className="pr-2"/>
-                  {recruiter.name} </div></td>
-                <td className="px-4 py-2">{recruiter.email}</td>
-                <td className="px-4 py-2">{recruiter.phone}</td>
+                  {jobPost.position}</td>
+                <td className="px-4 py-2">{jobPost.Recruitername}</td>
+                <td className="px-4 py-2">{jobPost.postedDate}</td>
                 <td className="px-1 py-2 flex space-x-2 justify-end">
                   <button className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm">
                     <div className="flex space-x-2">

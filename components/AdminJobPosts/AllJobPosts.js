@@ -1,21 +1,20 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
-export default function RestrictedRecruiters() {
+export default function AllJobPosts() {
   const [selectedRows, setSelectedRows] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 8;
   const totalPages = 15;
 
-  const recruiters = Array.from(
+  const jobPosts = Array.from(
     { length: rowsPerPage * totalPages },
     (_, index) => ({
       id: index + 1,
-      name: "Codezela Technologies",
-      email: "info@codezela.com",
-      phone: "011 234 4857",
-      logo:"/images/codezelalogo.png",
-
+      Recruitername: "Codezela Technologies",
+      postedDate: "25 AUG 2024",
+      position:"Software Engineer",
     })
   );
 
@@ -25,7 +24,7 @@ export default function RestrictedRecruiters() {
     );
   };
 
-  const displayedRecruiters = recruiters.slice(
+  const displayedJobPosts = jobPosts.slice(
     (currentPage - 1) * rowsPerPage,
     currentPage * rowsPerPage
   );
@@ -69,35 +68,16 @@ export default function RestrictedRecruiters() {
           }`}
           disabled={selectedRows.length === 0}
         >
-                    <div className="flex space-x-2">
-                      <Image
-                        src="/images/CheckBox.png"
-                        alt="bin"
-                        width={15}
-                        height={10}
-                      />
-                      <p>Select More</p>
-                    </div>
+          <div className="flex space-x-2">
+            <Image
+              src="/images/CheckBox.png"
+              alt="bin"
+              width={15}
+              height={10}
+            />
+            <p>Select More</p>
+          </div>
         </button>
-        <button
-          className={`px-4 py-2 rounded-lg font-medium ${
-            selectedRows.length > 0
-              ? "bg-blue-900 text-white"
-              : "bg-gray-300 text-gray-500"
-          }`}
-          disabled={selectedRows.length === 0}
-        >
-                    <div className="flex space-x-2">
-                      <Image
-                        src="/images/eye.png"
-                        alt="bin"
-                        width={20}
-                        height={20}
-                      />
-                      <p>Unrestricted</p>
-                    </div>
-        </button>
-
         <button
           className={`px-4 py-2 rounded-lg font-medium ${
             selectedRows.length > 0
@@ -106,20 +86,15 @@ export default function RestrictedRecruiters() {
           }`}
           disabled={selectedRows.length === 0}
         >
-                    <div className="flex space-x-2">
-                      <Image
-                        src="/images/trash.png"
-                        alt="bin"
-                        width={25}
-                        height={20}
-                      />
-                      <p>Delete</p>
-                    </div>
+          <div className="flex space-x-2">
+            <Image src="/images/trash.png" alt="bin" width={25} height={20} />
+            <p>Delete</p>
+          </div>
         </button>
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto w-full">
         <table className="w-full text-left border-collapse">
           <thead className="text-md text-gray-500">
             <tr>
@@ -128,53 +103,55 @@ export default function RestrictedRecruiters() {
                   type="checkbox"
                   onChange={(e) =>
                     setSelectedRows(
-                      e.target.checked ? recruiters.map((r) => r.id) : []
+                      e.target.checked ? jobPosts.map((r) => r.id) : []
                     )
                   }
-                  checked={selectedRows.length === recruiters.length}
+                  checked={selectedRows.length === jobPosts.length}
                 />
               </th>
+
+              <th className="px-4 py-2">Position</th>
               <th className="px-4 py-2">Recruiter Name</th>
-              <th className="px-4 py-2">Email</th>
-              <th className="px-4 py-2">Phone</th>
+              <th className="px-4 py-2">Posted Date</th>
               <th className="px-4 py-2 text-end">Actions</th>
             </tr>
           </thead>
           <tbody>
-            {displayedRecruiters.map((recruiter) => (
+            {displayedJobPosts.map((jobPost) => (
               <tr
-                key={recruiter.id}
+                key={jobPost.id}
                 className="border-b text-gray-700 hover:bg-gray-50"
               >
                 <td className="px-4 py-2">
                   <input
                     type="checkbox"
-                    checked={selectedRows.includes(recruiter.id)}
-                    onChange={() => handleCheckboxChange(recruiter.id)}
+                    checked={selectedRows.includes(jobPost.id)}
+                    onChange={() => handleCheckboxChange(jobPost.id)}
                   />
                 </td>
                 <td className="px-4 py-2">
-                  <div className="flex">
-                  <Image src={recruiter.logo} alt="logo" width={40} height={20} className="pr-2"/>
-                  {recruiter.name} </div></td>
-                <td className="px-4 py-2">{recruiter.email}</td>
-                <td className="px-4 py-2">{recruiter.phone}</td>
+                  {jobPost.position}</td>
+                 
+                <td className="px-4 py-2">{jobPost.Recruitername}</td>
+                <td className="px-4 py-2">{jobPost.postedDate}</td>
                 <td className="px-1 py-2 flex space-x-2 justify-end">
-                  <button className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm">
-                    <div className="flex space-x-2">
-                      <Image
-                        src="/images/eye.png"
-                        alt="bin"
-                        width={20}
-                        height={20}
-                      />
-                      <p>Unrestricted</p>
-                    </div>
-                  </button>
+                  <Link href="/admin/jobPosts/editJobPosts">
+                    <button className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm">
+                      <div className="flex space-x-2">
+                        <Image
+                          src="/images/edit.png"
+                          alt="edit"
+                          width={20}
+                          height={20}
+                        />
+                        <p>Edit Job Post</p>
+                      </div>
+                    </button>
+                  </Link>{" "}
                   <button className="bg-red-500 text-white px-5 py-2 rounded-lg text-sm">
                     <div className="flex space-x-2">
                       <Image
-                        src="/images/trash.png"
+                        src="/images/eye-slash.png"
                         alt="bin"
                         width={20}
                         height={20}

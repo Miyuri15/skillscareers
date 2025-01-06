@@ -7,10 +7,10 @@ export default function MembershipPlans() {
   const [showApplicationForm, setShowApplicationForm] = useState(false);
 
   const [selectedRows, setSelectedRows] = useState(
-    Array.from({ length: 15 }, () => "Basic Recruiter") // Default selection for all rows (15 rows in total)
+    Array.from({ length: 8 }, () => "Basic Recruiter") // Default selection for all rows (15 rows in total)
   );
 
-  const plans = Array.from({ length: 10 }, (_, index) => ({
+  const plans = Array.from({ length: 7 }, (_, index) => ({
     id: index + 1,
     name: "Codezela Technologies",
     period: "25 AUG 2024 - 25 AUG 2024",

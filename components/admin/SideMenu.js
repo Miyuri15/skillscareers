@@ -12,7 +12,7 @@ export default function SideMenu() {
     { name: "Analytics", href: "/admin/analytics", icon: "/images/analyticsIcon.png" },
     { name: "Memberships", href: "/admin/memberships", icon: "/images/membershipsIcon.png" },
     { name: "Announcements", href: "/admin/announcements", icon: "/images/announcementsIcon.png" },
-    { name: "Press Releases", href: "/admin/press-releases", icon: "/images/pressReleasesIcon.png" },
+    { name: "Press Releases", href: "/admin/pressReleases", icon: "/images/pressReleasesIcon.png" },
     { name: "My Profile", href: "/admin/my-profile", icon: "/images/myProfileIcon.png" },
     { name: "Help & Contact", href: "/admin/help-contact", icon: "/images/helpContactIcon.png" },
     { name: "Settings", href: "/admin/settings", icon: "/images/settingsIcon.png" },

@@ -67,7 +67,7 @@ export default function Inquires() {
   };
 
   return (
-    <div className="p-6 bg-white">
+    <div className="p-6 bg-white rounded-xl">
       <h1 className="text-xl font-bold text-[#001571] mb-4">
         Help & Contact Inquires
       </h1>

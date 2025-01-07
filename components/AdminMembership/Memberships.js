@@ -5,7 +5,7 @@ import MembershipPlans from "./MembershipPlans";
 export default function Membership() {
   return (
     <>
-      <div className="p-5 bg-white">
+      <div className="p-5 bg-white rounded-xl">
         <p className=" text-[#001571] font-semibold text-lg mb-6">Memberships</p>
         <MembershipCard />
         {/* search bar */}

@@ -10,7 +10,7 @@ export default function AdminRecruiters() {
 
 
   return (
-    <div className="flex flex-col p-6 bg-white">
+    <div className="flex flex-col p-6 bg-white rounded-xl">
       {/* Page Title */}
       <div className="flex flex-row items-center justify-between">
         <h2 className="text-[#001571] text-xl font-bold mb-6">Recruiters</h2>

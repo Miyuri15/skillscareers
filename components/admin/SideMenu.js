@@ -5,7 +5,7 @@ export default function SideMenu() {
   const router = useRouter();
 
   const menuItems = [
-    { name: "Dashboard", href: "/admin/dashboard", icon: "/images/dashboardIcon.png" },
+    { name: "Dashboard", href: "/admin/dashboard", icon: "/images/dashboardiconblue.png" },
     { name: "Recruiters", href: "/admin/recruiters", icon: "/images/recruitersIcon.png" },
     { name: "Candidates", href: "/admin/candidates", icon: "/images/candidatesIcon.png" },
     { name: "Job Posts", href: "/admin/jobPosts", icon: "/images/jobPostsIcon.png" },

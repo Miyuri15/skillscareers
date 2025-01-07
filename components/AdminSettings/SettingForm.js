@@ -2,13 +2,12 @@ import Image from "next/image";
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 
-export default function EditMyProfileForm({ onClose }) {
+export default function SettingsForm({ onClose }) {
     const [formData, setFormData] = useState({
-      firstName: "info@aerfintechnologies.com",
-      lastName: "info@aerfintechnologies.com",
-      userName: "info@aerfintechnologies.com",
-      phone: "011-2335-876",
-      email: "info@aerfintechnologies.com",
+        userName: "info@aerfintechnologies.com",
+        phone: "011-2335-876",
+        email:"info@aerfintechnologies.com",
+        password:"info@aerfintechnologies.com",
     });
   
     const handleChange = (e) => {
@@ -45,34 +44,7 @@ export default function EditMyProfileForm({ onClose }) {
             </div>
   
             <form className="space-y-6 flex-grow" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-[#001571]">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    className="mt-1 block w-full border border-[#B0B6D3] rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm px-3 py-2"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-[#001571]">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    className="mt-1 block w-full border border-[#B0B6D3] rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm px-3 py-2"
-                  />
-                </div>
-              </div>
-  
-              <div>
+            <div>
                 <label className="block text-sm font-semibold text-[#001571]">
                   User Name
                 </label>
@@ -84,7 +56,7 @@ export default function EditMyProfileForm({ onClose }) {
                   className="mt-1 block w-full border border-[#B0B6D3] rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm px-3 py-2"
                 />
               </div>
-  
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-[#001571]">
@@ -111,6 +83,34 @@ export default function EditMyProfileForm({ onClose }) {
                   />
                 </div>
               </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-semibold text-[#001571]">
+                    password
+                  </label>
+                  <input
+                    type="email"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                    className="mt-1 block w-full border border-[#B0B6D3] rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm px-3 py-2"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-[#001571]">
+                    Confirm password
+                  </label>
+                  <input
+                    type="text"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                    className="mt-1 block w-full border border-[#B0B6D3] rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm px-3 py-2"
+                  />
+                </div>
+              </div>
+  
+  
             </form>
   
             {/* End Form Section */}

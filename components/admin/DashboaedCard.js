@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { BsArrowUpShort } from "react-icons/bs";
 import { FaArrowUp } from "react-icons/fa";
 
 export default function DashboardCard() {

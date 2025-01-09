@@ -5,15 +5,15 @@ export default function SideMenu() {
   const router = useRouter();
 
   const menuItems = [
-    { name: "Dashboard", href: "/candidate/dashboard", icon: "/images/dashboardiconblue.png" },
-    { name: "Search Jobs", href: "/candidate/searchJobs", icon: "/images/search.png" },
-    { name: "Recruiters", href: "/candidate/recruiters", icon: "/images/recruitersIcon.png" },
-    { name: "My Applications", href: "/candidate/myApplications", icon: "/images/myapplications.png" },
-    { name: "Announcements", href: "/candidate/announcements", icon: "/images/announcementsIcon.png" },
-    { name: "Press Releases", href: "/candidate/pressRelease", icon: "/images/pressReleasesIcon.png" },
-    { name: "My Profile", href: "/candidate/myProfile", icon: "/images/myProfileIcon.png" },
-    { name: "Help & Contact", href: "/candidate/help-contact", icon: "/images/helpContactIcon.png" },
-    { name: "Settings", href: "/candidate/settings", icon: "/images/settingsIcon.png" },
+    { name: "Dashboard", href: "/recruiter/dashboard", icon: "/images/dashboardiconblue.png" },
+    { name: "Search Candidates", href: "/recruiter/searchCandidates", icon: "/images/search.png" },
+    { name: "Job Posts", href: "/recruiter/jobPosts", icon: "/images/recruitersIcon.png" },
+    { name: "Received Applications", href: "/recruiter/receivedApplications", icon: "/images/myapplications.png" },
+    { name: "Announcements", href: "/recruiter/announcements", icon: "/images/announcementsIcon.png" },
+    { name: "Press Releases", href: "/recruiter/pressRelease", icon: "/images/pressReleasesIcon.png" },
+    { name: "My Profile", href: "/recruiter/myProfile", icon: "/images/myProfileIcon.png" },
+    { name: "Help & Contact", href: "/recruiter/help-contact", icon: "/images/helpContactIcon.png" },
+    { name: "Settings", href: "/recruiter/settings", icon: "/images/settingsIcon.png" },
   ];
 
   const logoutItem = { name: "Logout", href: "/logout", icon: "/images/logoutIcon.png" };

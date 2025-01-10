@@ -38,7 +38,7 @@ export default function CandidateSettings() {
               <Image
                 src="/images/editicon.png"
                 alt="arrow"
-                width={50}
+                width={40}
                 height={16}
               />
             </div>

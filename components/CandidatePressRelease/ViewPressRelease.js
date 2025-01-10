@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import SideMenu from "../admin/SideMenu";
 import PressReleasePage from "./PressReleasePage";
 import HeaderBar from "../Candidate/HeaderBar";
+import SideMenu from "../Candidate/SideMenu";
 
 const ViewPressRelease = () => {
   const router = useRouter();

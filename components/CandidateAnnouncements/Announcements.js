@@ -55,7 +55,7 @@ export default function Announcements(){
       <div className="overflow-x-auto ">
     {displayedAnnouncements.map((announcement)=>(
         <div key={announcement.id}
-        className="bg-[#E6E8F1] rounded-2xl p-5 mb-5">
+        className="bg-[#E6E8F1] rounded-2xl p-4 mb-5">
         <p className="font-semibold mb-4">{announcement.title}</p>
         <p className="text-left mb-5 text-md">{announcement.desc}</p>
         <p className="text-sm font-semibold">{announcement.date}</p>

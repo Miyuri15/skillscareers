@@ -17,7 +17,7 @@ export default function ViewLatestApplicationForm() {
           className={`px-4 py-2 rounded-2xl font-medium ${
             isMyApplication
               ? "bg-blue-900 text-white"
-              : "bg-gray-100 text-blue-900"
+              : "bg-gray-200 text-blue-900"
           }`}
         >
           <div className="flex space-x-3">
@@ -35,7 +35,7 @@ export default function ViewLatestApplicationForm() {
           className={`px-4 py-2 rounded-2xl font-medium ${
             !isMyApplication
               ? "bg-blue-900 text-white"
-              : "bg-gray-100 text-gray-400"
+              : "bg-gray-200 text-gray-400"
           }`}
         >
           <div className="flex space-x-3">

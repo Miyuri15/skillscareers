@@ -72,7 +72,7 @@ export default function CandidateInquires() {
           Help & Contact
         </h2>
         <button
-          className="bg-[#001571] text-white px-4 py-2 rounded-lg font-medium mb-6"
+          className="bg-[#001571] text-white px-8 py-2 rounded-lg font-medium mb-6"
           onClick={() => setShowAddInquire(true)}
         >
           + Inquire New
@@ -84,11 +84,11 @@ export default function CandidateInquires() {
         <table className="min-w-full ">
           <thead>
             <tr className="text-left text-sm font-medium text-[#8A93BE]">
-              <th className="py-3 px-6">Inquire Title</th>
-              <th className="py-3 px-6">Date</th>
-              <th className="py-3 px-6">Time</th>
-              <th className="py-3 px-6">Status</th>
-              <th className="py-3 px-6 text-end">Action</th>
+              <th className="py-3 px-6 items-center w-1/4">Inquire Title</th>
+              <th className="py-3 px-6 items-center w-1/5">Date</th>
+              <th className="py-3 px-6 items-center w-1/5">Time</th>
+              <th className="py-3 px-6 items-center w-1/5">Status</th>
+              <th className="py-3 px-6 items-center w-1/5">Action</th>
             </tr>
           </thead>
           <tbody className="text-sm text-gray-800 font-semibold">
@@ -97,12 +97,12 @@ export default function CandidateInquires() {
                 key={item.id}
                 className="border-b text-gray-700 hover:bg-gray-50"
               >
-                <td className="py-2 px-6 flex items-center">{item.title}</td>
-                <td className="py-4 px-6">{item.date}</td>
-                <td className="py-4 px-6">{item.time}</td>
-                <td className="py-4 px-6">{item.status}</td>
+                <td className="py-2 px-6 items-center">{item.title}</td>
+                <td className="py-4 px-6 items-center">{item.date}</td>
+                <td className="py-4 px-6 items-center">{item.time}</td>
+                <td className="py-4 px-6 items-center">{item.status}</td>
                 <td className="py-4 px-6 text-end">
-                  <div className="flex justify-end">
+                  <div className="flex justify-start">
                     <button
                       className="flex items-center bg-[#001571] text-white px-4 py-2 rounded-md"
                       onClick={() => setShowViewInquire(true)}

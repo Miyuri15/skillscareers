@@ -73,11 +73,11 @@ export default function LatestApplications() {
         <table className="min-w-full ">
           <thead>
             <tr className="text-left text-sm font-medium text-[#8A93BE]">
-              <th className="py-3 px-6">Position</th>
-              <th className="py-3 px-6">Recruiter Name</th>
-              <th className="py-3 px-6">Applied Date</th>
-              <th className="py-3 px-6">Status</th>
-              <th className="py-3 px-6 text-end">Action</th>
+              <th className="py-3 px-6 items-center w-1/5">Position</th>
+              <th className="py-3 px-6 items-center w-1/5">Recruiter Name</th>
+              <th className="py-3 px-6 items-center w-1/5">Applied Date</th>
+              <th className="py-3 px-6 items-center w-1/5">Status</th>
+              <th className="py-3 px-6 items-center w-1/5">Action</th>
             </tr>
           </thead>
           <tbody className="text-sm text-gray-800 font-semibold">
@@ -89,10 +89,10 @@ export default function LatestApplications() {
                 <td className="py-2 px-6  items-center">
                   {item.position}
                 </td>
-                <td className="py-2 px-6">{item.recruiterName}</td>
-                <td className="py-2 px-6">{item.date}</td>
-                <td className="py-2 px-6">{item.status}</td>
-                <td className="py-2 px-6">
+                <td className="py-2 px-6 items-center">{item.recruiterName}</td>
+                <td className="py-2 px-6 items-center">{item.date}</td>
+                <td className="py-2 px-6 items-center">{item.status}</td>
+                <td className="py-2 px-6 flex justify-start">
                   <Link href="/candidate/myApplications/ViewApplication">
                   <div className="flex justify-end">
 

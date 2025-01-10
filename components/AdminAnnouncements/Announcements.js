@@ -64,7 +64,7 @@ export default function AllAnnouncements() {
     <div className="flex flex-col p-6 bg-white rounded-xl">
     {/* Page Title */}
       <div className="flex flex-row items-center justify-between ">
-        <h2 className="text-[#001571] text-xl font-bold mb-6">Recruiters</h2>
+        <h2 className="text-[#001571] text-xl font-bold mb-6">Announcements</h2>
         <button
           className="bg-[#001571] text-white px-4 py-2 rounded-lg font-medium mb-6"
           onClick={() => setShowAddAnnouncementForm(true)}
@@ -92,7 +92,7 @@ export default function AllAnnouncements() {
               width={15}
               height={10}
             />
-            <p>Select More</p>
+            <p className="text-white">Select More</p>
           </div>
         </button>
         <button
@@ -105,7 +105,7 @@ export default function AllAnnouncements() {
         >
           <div className="flex space-x-2">
             <Image src="/images/trash.png" alt="bin" width={25} height={20} />
-            <p>Delete</p>
+            <p className="text-white">Delete</p>
           </div>
         </button>
       </div>
@@ -127,9 +127,9 @@ export default function AllAnnouncements() {
                 />
               </th>
 
-              <th className="px-4 py-2">Title</th>
-              <th className="px-4 py-2">Date Posted</th>
-              <th className="px-4 py-2 text-end">Actions</th>
+              <th className="px-4 py-2 items-center w-1/3">Title</th>
+              <th className="px-4 py-2 items-center w-1/3">Date Posted</th>
+              <th className="px-4 py-2 items-center ">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -145,11 +145,11 @@ export default function AllAnnouncements() {
                     onChange={() => handleCheckboxChange(announcement.id)}
                   />
                 </td>
-                <td className="px-4 py-2">
+                <td className="px-4 py-2 items-center">
                   {announcement.desc}</td>
                  
-                <td className="px-4 py-2">{announcement.date}</td>
-                <td className="px-1 py-2 flex space-x-2 justify-end">
+                <td className="px-4 py-2 items-center">{announcement.date}</td>
+                <td className="px-1 py-2 flex justify-center space-x-2 ">
                   <Link href="#">
                     <button className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm"
                                   onClick={() => setShowAnnouncementEditForm(true)}

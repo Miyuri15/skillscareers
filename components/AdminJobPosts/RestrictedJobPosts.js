@@ -74,7 +74,7 @@ export default function RestrictedJobPosts() {
                         width={15}
                         height={10}
                       />
-                      <p>Select More</p>
+                      <p className="text-white">Select More</p>
                     </div>
         </button>
         <button
@@ -92,7 +92,7 @@ export default function RestrictedJobPosts() {
                         width={20}
                         height={20}
                       />
-                      <p>Unrestricted</p>
+                      <p className="text-white">Unrestricted</p>
                     </div>
         </button>
 
@@ -111,7 +111,7 @@ export default function RestrictedJobPosts() {
                         width={25}
                         height={20}
                       />
-                      <p>Delete</p>
+                      <p className="text-white">Delete</p>
                     </div>
         </button>
       </div>
@@ -119,7 +119,7 @@ export default function RestrictedJobPosts() {
       {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
-          <thead className="text-md text-gray-500">
+          <thead className="text-md text-[#8A93BE]">
             <tr>
               <th className="px-4 py-2">
                 <input
@@ -132,10 +132,10 @@ export default function RestrictedJobPosts() {
                   checked={selectedRows.length === jobPosts.length}
                 />
               </th>
-              <th className="px-4 py-2">Position </th>
-              <th className="px-4 py-2">Recruiter Name</th>
-              <th className="px-4 py-2">Posted Date</th>
-              <th className="px-4 py-2 text-end">Actions</th>
+              <th className="px-4 py-2 text-center w-1/4">Position </th>
+              <th className="px-4 py-2 text-center w-1/4">Recruiter Name</th>
+              <th className="px-4 py-2 text-center w-1/4">Posted Date</th>
+              <th className="px-4 py-2 text-center w-1/4 ">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -151,11 +151,11 @@ export default function RestrictedJobPosts() {
                     onChange={() => handleCheckboxChange(jobPost.id)}
                   />
                 </td>
-                <td className="px-4 py-2">
+                <td className="px-4 py-2 text-center">
                   {jobPost.position}</td>
-                <td className="px-4 py-2">{jobPost.Recruitername}</td>
-                <td className="px-4 py-2">{jobPost.postedDate}</td>
-                <td className="px-1 py-2 flex space-x-2 justify-end">
+                <td className="px-4 py-2 text-center">{jobPost.Recruitername}</td>
+                <td className="px-4 py-2 text-center">{jobPost.postedDate}</td>
+                <td className="px-1 py-2 flex space-x-2 justify-center">
                   <button className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm">
                     <div className="flex space-x-2">
                       <Image

@@ -68,7 +68,7 @@ export default function Help() {
   return (
     <div className="p-6 bg-white rounded-xl max-h-screen mt-5">
       <div className='flex flex-row justify-between'>
-        <p className="font-5xl font-semibold text-[#001571] mb-4">Help & Contact</p>
+        <p className="font-5xl font-semibold text-[#001571] mb-4">Help & Contact Inquiries</p>
         <Link href="/admin/help-contact">
         <div className="flex space-x-4 items-center">
         <p className="font-5xl font-semibold text-[#001571]">View All</p>

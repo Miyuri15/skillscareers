@@ -76,7 +76,7 @@ export default function RestrictedCandidates() {
                         width={15}
                         height={10}
                       />
-                      <p>Select More</p>
+                      <p className="text-white">Select More</p>
                     </div>
         </button>
         <button
@@ -94,7 +94,7 @@ export default function RestrictedCandidates() {
                         width={20}
                         height={20}
                       />
-                      <p>Unrestricted</p>
+                      <p className="text-white">Unrestricted</p>
                     </div>
         </button>
 
@@ -113,7 +113,7 @@ export default function RestrictedCandidates() {
                         width={25}
                         height={20}
                       />
-                      <p>Delete</p>
+                      <p className="text-white">Delete</p>
                     </div>
         </button>
       </div>
@@ -121,9 +121,9 @@ export default function RestrictedCandidates() {
       {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
-          <thead className="text-md text-gray-500">
+          <thead className="text-md text-[#8A93BE]">
             <tr>
-              <th className="px-4 py-2">
+              <th  className="px-4 py-2 ">
                 <input
                   type="checkbox"
                   onChange={(e) =>
@@ -134,10 +134,10 @@ export default function RestrictedCandidates() {
                   checked={selectedRows.length === candidates.length}
                 />
               </th>
-              <th className="px-4 py-2">Candidate Name</th>
-              <th className="px-4 py-2">Email</th>
-              <th className="px-4 py-2">Phone</th>
-              <th className="px-4 py-2 text-end">Actions</th>
+              <th  className="px-4 py-2 text-center w-1/4">Candidate Name</th>
+              <th  className="px-4 py-2 text-center w-1/4">Email</th>
+              <th  className="px-4 py-2 text-center w-1/4">Phone</th>
+              <th  className="px-4 py-2 text-center w-1/4">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -146,20 +146,20 @@ export default function RestrictedCandidates() {
                 key={candidate.id}
                 className="border-b text-gray-700 hover:bg-gray-50"
               >
-                <td className="px-4 py-2">
+                <td className="px-4 py-2 ">
                   <input
                     type="checkbox"
                     checked={selectedRows.includes(candidate.id)}
                     onChange={() => handleCheckboxChange(candidate.id)}
                   />
                 </td>
-                <td className="px-4 py-2">
+                <td className="px-4 py-2 text-center">
                   <div className="flex">
                   <Image src={candidate.logo} alt="logo" width={40} height={20} className="pr-2"/>
                   {candidate.name} </div></td>
-                <td className="px-4 py-2">{candidate.email}</td>
-                <td className="px-4 py-2">{candidate.phone}</td>
-                <td className="px-1 py-2 flex space-x-2 justify-end">
+                <td className="px-4 py-2 text-center">{candidate.email}</td>
+                <td className="px-4 py-2 text-center">{candidate.phone}</td>
+                <td className="px-1 py-2 flex justify-center space-x-2">
                   <button className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm">
                     <div className="flex space-x-2">
                       <Image

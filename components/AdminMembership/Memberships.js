@@ -10,7 +10,7 @@ export default function Membership() {
         <MembershipCard />
         {/* search bar */}
                 <div className="flex-grow">
-                  <div className="bg-gray-200 flex items-center pl-8 pr-4 py-4 rounded-lg shadow-sm w-full">
+                  <div className="bg-[#E6E8F1] flex items-center pl-8 pr-4 py-4 rounded-lg shadow-sm w-full">
                     <Image
                       src="/images/search.png"
                       alt="Search"
@@ -19,8 +19,8 @@ export default function Membership() {
                     />
                     <input
                       type="text"
-                      placeholder="Search Recruiters..."
-                      className="ml-2 text-gray-500 outline-none w-full bg-gray-200"
+                      placeholder="Search Memberships..."
+                      className="ml-2 text-[#8A93BE] outline-none w-full bg-gray-200"
                     />
                   </div>
                 </div>

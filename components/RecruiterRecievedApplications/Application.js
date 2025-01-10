@@ -192,7 +192,7 @@ export default function CandidateApplication() {
             alt="Background"
             width={1200}
             height={300}
-            className="w-full h-32 sm:h-48 object-cover"
+            className="w-full h-32 sm:h-48 object-cover rounded-t-xl"
           />
           {/* Profile Image */}
           <div className="relative">

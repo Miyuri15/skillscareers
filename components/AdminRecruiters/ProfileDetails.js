@@ -157,7 +157,7 @@ export default function ProfileDetails() {
                   </button>
                 </div>
               </div>
-              <h3 className="mt-5 text-blue-900 text-lg sm:text-xl font-bold font-mono">
+              <h3 className="mt-5 text-blue-900 text-lg sm:text-xl font-bold">
                 Company Description
               </h3>
               <p className="text-gray-800 mt-4 sm:mt-8 mb-4 sm:mb-6 font-sans">

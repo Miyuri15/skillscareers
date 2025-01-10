@@ -70,7 +70,7 @@ export default function PressReleases() {
         <div className="flex flex-row items-center justify-between">
           <h2 className="text-[#001571] text-xl font-bold mb-6">Press Releases</h2>
           <button
-            className="bg-[#001571] text-white px-4 py-2 rounded-lg font-medium mb-6"
+            className="bg-[#001571] text-white px-8 py-2 rounded-lg font-medium mb-6"
             onClick={() => setShowAddReleaseForm(true)}
           >
             + Add New
@@ -78,7 +78,7 @@ export default function PressReleases() {
         </div>
 
         {/* Search Bar */}
-        <div className="bg-gray-100 flex items-center rounded-xl px-6 py-4 mb-4 shadow">
+        <div className="bg-[#E6E8F1] flex items-center rounded-xl px-6 py-4 mb-4 shadow">
           <Image
             src="/images/search.png"
             alt="search"
@@ -89,7 +89,7 @@ export default function PressReleases() {
           <input
             type="text"
             placeholder="Search Press releases..."
-            className="flex-grow text-gray-600 outline-none bg-transparent"
+            className="flex-grow text-[#8A93BE] outline-none bg-transparent"
           />
         </div>
 

@@ -40,7 +40,7 @@ export default function EditProfileForm({ onClose }) {
             <FaTimes size={24} />
           </button>
         </div>
-        <div className="border-2 border-gray-200 mb-4" />
+        <div className="border-t-2 border-gray-200 mb-4" />
 
         <form
           className="space-y-6"
@@ -132,6 +132,7 @@ export default function EditProfileForm({ onClose }) {
               className="mt-1 block w-full border border-[#B0B6D3] rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm px-3 py-2"
             />
           </div>
+          <div className="border-t-2 border-gray-200 mt-4" />
 
           <div className="flex justify-end">
             <button

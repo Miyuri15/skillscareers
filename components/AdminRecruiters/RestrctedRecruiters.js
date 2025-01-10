@@ -76,7 +76,7 @@ export default function RestrictedRecruiters() {
                         width={15}
                         height={10}
                       />
-                      <p>Select More</p>
+                      <p className="text-white">Select More</p>
                     </div>
         </button>
         <button
@@ -94,7 +94,7 @@ export default function RestrictedRecruiters() {
                         width={20}
                         height={20}
                       />
-                      <p>Unrestricted</p>
+                      <p className="text-white">Unrestricted</p>
                     </div>
         </button>
 
@@ -113,7 +113,7 @@ export default function RestrictedRecruiters() {
                         width={25}
                         height={20}
                       />
-                      <p>Delete</p>
+                      <p className="text-white">Delete</p>
                     </div>
         </button>
       </div>
@@ -121,7 +121,7 @@ export default function RestrictedRecruiters() {
       {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
-          <thead className="text-md text-gray-500">
+          <thead className="text-md text-[#8A93BE]">
             <tr>
               <th className="px-4 py-2">
                 <input
@@ -134,10 +134,10 @@ export default function RestrictedRecruiters() {
                   checked={selectedRows.length === recruiters.length}
                 />
               </th>
-              <th className="px-4 py-2">Recruiter Name</th>
-              <th className="px-4 py-2">Email</th>
-              <th className="px-4 py-2">Phone</th>
-              <th className="px-4 py-2 text-end">Actions</th>
+              <th className="px-4 py-2 text-center w-1/4">Recruiter Name</th>
+              <th className="px-4 py-2 text-center w-1/4">Email</th>
+              <th className="px-4 py-2 text-center w-1/4">Phone</th>
+              <th className="px-4 py-2 text-center w-1/4">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -153,13 +153,13 @@ export default function RestrictedRecruiters() {
                     onChange={() => handleCheckboxChange(recruiter.id)}
                   />
                 </td>
-                <td className="px-4 py-2">
+                <td className="px-4 py-2 text-center">
                   <div className="flex">
                   <Image src={recruiter.logo} alt="logo" width={40} height={20} className="pr-2"/>
                   {recruiter.name} </div></td>
-                <td className="px-4 py-2">{recruiter.email}</td>
-                <td className="px-4 py-2">{recruiter.phone}</td>
-                <td className="px-1 py-2 flex space-x-2 justify-end">
+                <td className="px-4 py-2 text-center">{recruiter.email}</td>
+                <td className="px-4 py-2 text-center">{recruiter.phone}</td>
+                <td className="px-1 py-2 flex space-x-2 justify-center">
                   <button className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm">
                     <div className="flex space-x-2">
                       <Image

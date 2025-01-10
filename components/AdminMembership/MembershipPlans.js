@@ -74,11 +74,11 @@ export default function MembershipPlans() {
                     ))}
                   </select>
                 </td>
-                <td className="px-4 py-2">{plan.period}</td>
+                <td className="px-4 py-2 text-sm">{plan.period}</td>
                 <td className="px-1 py-2 flex space-x-2 justify-end">
                   <Link href="#">
                     <button
-                      className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm"
+                      className="bg-[#001571] text-white px-8 py-2 rounded-lg text-sm"
                       onClick={() => setShowApplicationForm(true)}
                     >
                       <div className="flex space-x-2">

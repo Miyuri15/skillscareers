@@ -49,9 +49,9 @@ export default function EditJobForm({ onClose }) {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white w-full max-w-4xl min-h-[90vh] overflow-y-auto rounded-xl shadow-md p-8 scrollbar-hide flex flex-col">
         <div className="flex items-center justify-between mb-4">
-          <h4 className="text-2xl font-semibold text-[#001571]">
+          <p className=" text-xl font-semibold text-[#001571]">
             Edit Job Post
-          </h4>
+          </p>
           <button
             onClick={onClose}
             className="text-gray-500 hover:text-red-500 focus:outline-none"

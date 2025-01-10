@@ -41,7 +41,7 @@ export default function CredencialsForm({ onClose }) {
             <FaTimes size={24} />
           </button>
         </div>
-        <div className="border-2 border-gray-200 mb-4" />
+        <div className="border-t-2 border-gray-200 mb-4" />
 
         <form
           className="space-y-6"
@@ -99,8 +99,8 @@ export default function CredencialsForm({ onClose }) {
                 </select>
             </div>
 
-
-          <div className="flex justify-end">
+            <div className="border-t-2 border-gray-200 mt-4" />
+            <div className="flex justify-end">
             <button
               type="submit"
               className="bg-[#001571] text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm"

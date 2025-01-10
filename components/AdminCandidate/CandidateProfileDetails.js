@@ -9,7 +9,6 @@ import {
   FaDribbble,
   FaMedal,
 } from "react-icons/fa";
-import EditProfileForm from "./EditCandidateProfileForm";
 import EditBioDataForm from "./EditBioDataForm";
 import EditExperienceForm from "./EditExperienceForm";
 import EditCertificatesForm from "./EditCertificatesForm";
@@ -182,20 +181,20 @@ export default function CandidateProfileDetails() {
 
         {/* Social Media Icons */}
         <div className="pr-8 sm:pr-6 flex justify-end mt-4 space-x-2 sm:space-x-4 text-blue-900">
-          <FaLinkedin size={20} className="cursor-pointer" />
-          <FaTwitter size={20} className="cursor-pointer" />
-          <FaInstagram size={20} className="cursor-pointer" />
-          <FaFacebook size={20} className="cursor-pointer" />
-          <FaGithub size={20} className="cursor-pointer" />
-          <FaDribbble size={20} className="cursor-pointer" />
+          <FaLinkedin size={25} className="cursor-pointer" />
+          <FaTwitter size={25} className="cursor-pointer" />
+          <FaInstagram size={25} className="cursor-pointer" />
+          <FaFacebook size={25} className="cursor-pointer" />
+          <FaGithub size={25} className="cursor-pointer" />
+          <FaDribbble size={25} className="cursor-pointer" />
         </div>
 
         {/* Profile Info */}
         <div className="p-4 sm:p-10 text-left mt-20">
           {candidates.map((candidate) => (
             <div key={candidate.id}>
-              <h3 className="text-lg sm:text-xl font-bold text-blue-900">
-                {candidate.name} <span className="text-blue-500">✓</span>
+              <h3 className="text-lg sm:text-xl font-bold ">
+                {candidate.name} 
               </h3>
               <div className="flex flex-grow justify-between">
                 <div className="flex flex-row space-x-3">
@@ -213,7 +212,7 @@ export default function CandidateProfileDetails() {
                       <Image
                         src="/images/editicon.png"
                         alt="arrow"
-                        width={50}
+                        width={40}
                         height={16}
                       />
                     </div>
@@ -221,10 +220,10 @@ export default function CandidateProfileDetails() {
                 </div>
               </div>
 
-              <h3 className="mt-5 text-blue-900 text-lg sm:text-xl font-bold">
+              <h3 className="mt-3 text-blue-900 text-lg sm:text-xl font-bold">
                 Personal Profile
               </h3>
-              <p className="text-gray-800 mt-4 sm:mt-8 mb-4 sm:mb-6 font-sans">
+              <p className="text-gray-800 mt-4 sm:mt-8 mb-4 sm:mb-4 font-sans">
                 {candidate.description}
               </p>
             </div>
@@ -233,7 +232,7 @@ export default function CandidateProfileDetails() {
 
         {/* Bio Data Section */}
         <div className="w-full space-y-8 mb-4">
-          <div className="bg-white px-10 py-4 sm:px-10 sm:py-8 lg:px-10 lg:py-10 rounded-lg">
+          <div className="bg-white px-10 py-4 sm:px-10 sm:py-8 lg:px-10 lg:py-2 rounded-lg">
             <div className="flex flex-grow justify-between">
               <h2 className="text-base font-sans sm:text-lg font-bold text-blue-800 mb-4">
                 Bio Data
@@ -246,7 +245,7 @@ export default function CandidateProfileDetails() {
                   <Image
                     src="/images/editicon.png"
                     alt="arrow"
-                    width={50}
+                    width={40}
                     height={16}
                   />
                 </div>
@@ -284,14 +283,14 @@ export default function CandidateProfileDetails() {
                 <Image
                   src="/images/editicon.png"
                   alt="arrow"
-                  width={50}
+                  width={40}
                   height={16}
                 />
               </div>
             </button>
           </div>
           {experiences.map((exp, index) => (
-            <div key={index} className="my-10">
+            <div key={index} className="my-5">
               <div className="flex flex-col sm:flex-row justify-between">
                 <div className="w-2/3">
                   <h3 className="text-lg font-semibold text-gray-700">
@@ -320,7 +319,7 @@ export default function CandidateProfileDetails() {
                 <Image
                   src="/images/editicon.png"
                   alt="arrow"
-                  width={50}
+                  width={40}
                   height={16}
                 />
               </div>
@@ -358,7 +357,7 @@ export default function CandidateProfileDetails() {
                 <Image
                   src="/images/editicon.png"
                   alt="arrow"
-                  width={50}
+                  width={40}
                   height={16}
                 />
               </div>
@@ -394,7 +393,7 @@ export default function CandidateProfileDetails() {
                 <Image
                   src="/images/editicon.png"
                   alt="arrow"
-                  width={50}
+                  width={40}
                   height={16}
                 />
               </div>
@@ -425,7 +424,7 @@ export default function CandidateProfileDetails() {
                 <Image
                   src="/images/editicon.png"
                   alt="arrow"
-                  width={50}
+                  width={40}
                   height={16}
                 />
               </div>
@@ -458,7 +457,7 @@ export default function CandidateProfileDetails() {
                 <Image
                   src="/images/editicon.png"
                   alt="arrow"
-                  width={50}
+                  width={40}
                   height={16}
                 />
               </div>

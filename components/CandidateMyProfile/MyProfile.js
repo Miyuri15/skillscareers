@@ -143,7 +143,7 @@ export default function CandidateMyProfile() {
             alt="Background"
             width={1200}
             height={300}
-            className="w-full h-32 sm:h-48 object-cover"
+            className="w-full h-32 sm:h-48 object-cover rounded-t-xl"
           />
           {/* Edit Image */}
           <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-white rounded-full overflow-hidden w-[30px] sm:w-[30px] h-[30px] sm:h-[30px] flex items-center justify-center shadow-md">

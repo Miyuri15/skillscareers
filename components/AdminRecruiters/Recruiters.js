@@ -15,7 +15,7 @@ export default function AdminRecruiters() {
       <div className="flex flex-row items-center justify-between">
         <h2 className="text-[#001571] text-xl font-bold mb-6">Recruiters</h2>
         <button
-          className="bg-[#001571] text-white px-4 py-2 rounded-lg font-medium mb-6"
+          className="bg-[#001571] text-white px-6 py-2 rounded-lg font-medium mb-6"
           onClick={() => setShowApplicationForm(true)}
         >
           + Add New
@@ -23,13 +23,13 @@ export default function AdminRecruiters() {
       </div>
 
       {/* Toggle Buttons */}
-      <div className="flex space-x-2 mb-4 bg-gray-200 p-1 rounded-xl w-fit">
+      <div className="flex space-x-2 mb-4 bg-gray-200 p-1 rounded-2xl w-fit">
         <button
           onClick={() => setIsAllRecruiter(true)}
-          className={`px-4 py-2 rounded-lg font-medium ${
+          className={`px-4 py-2 rounded-2xl font-medium ${
             isAllRecruiter
               ? "bg-blue-900 text-white"
-              : "bg-gray-100 text-blue-900"
+              : "bg-gray-200 text-[#B0B6D3]"
           }`}
         >
           <div className="flex space-x-3">
@@ -44,10 +44,10 @@ export default function AdminRecruiters() {
         </button>
         <button
           onClick={() => setIsAllRecruiter(false)}
-          className={`px-4 py-2 rounded-lg font-medium ${
+          className={`px-4 py-2 rounded-2xl font-medium ${
             !isAllRecruiter
               ? "bg-blue-900 text-white"
-              : "bg-gray-100 text-gray-400"
+              : "bg-gray-200 text-[#B0B6D3]"
           }`}
         >
           <div className="flex space-x-3">
@@ -63,7 +63,7 @@ export default function AdminRecruiters() {
       </div>
 
       {/* Search Bar */}
-      <div className="bg-gray-100 flex items-center rounded-xl px-6 py-4 mb-4 shadow">
+      <div className="bg-[#E6E8F1] flex items-center rounded-xl px-6 py-4 mb-4 shadow">
         <Image
           src="/images/search.png"
           alt="search"
@@ -74,7 +74,7 @@ export default function AdminRecruiters() {
         <input
           type="text"
           placeholder="Search Recruiters..."
-          className="flex-grow text-gray-600 outline-none bg-transparent"
+          className="flex-grow text-[#8A93BE] outline-none bg-transparent"
         />
       </div>
 

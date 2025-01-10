@@ -1,6 +1,6 @@
-import HeaderBar from '@/components/recruiter/HeaderBar'
-import SideMenu from '@/components/recruiter/SideMenu'
-import EditJobPost from '@/components/RecruiterJobPosts/EditJobPost'
+import HeaderBar from '@/components/admin/HeaderBar'
+import SideMenu from '@/components/admin/SideMenu'
+import EditJobPost from '@/components/AdminJobPosts/EditJobPost'
 import React from 'react'
 
 const editJobPost = () => {

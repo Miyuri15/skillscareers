@@ -126,7 +126,7 @@ export default function EditJobPost() {
                 <h3 className="text-2xl font-bold text-blue-900 mt-6 mb-2">
                   {job.title}
                 </h3>
-                <div className="flex space-x-2 mb-4 mt-6">
+                <div className="flex space-x-2 mb-5 mt-6 items-center">
                   {job.employmentType.map((type, index) => (
                     <span
                       key={index}
@@ -152,7 +152,7 @@ export default function EditJobPost() {
                     <Image
                       src="/images/arrowblue.png"
                       alt="arrow"
-                      width={30}
+                      width={40}
                       height={10}
                     />
                   </div>

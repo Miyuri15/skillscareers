@@ -28,7 +28,7 @@ export default function HeaderBar() {
         </div>
 
         {/* Right Section */}
-        <div className="flex items-center bg-white px-5 py-1 rounded-lg shadow-sm">
+        <div className="flex items-center bg-white px-8 py-1 rounded-lg shadow-sm">
           <div className="text-left mr-4">
             <p className="font-semibold text-[#001571]">Skills Careers</p>
             <p className="text-sm text-gray-400">Admin</p>

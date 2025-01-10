@@ -108,10 +108,10 @@ export default function EditMembership({ onClose }) {
 
           <div className="flex justify-between">
                   {/* Toggle Buttons */}
-                  <div className="flex space-x-2  bg-gray-200 p-1 rounded-xl w-fit">
+                  <div className="flex space-x-2  bg-gray-200 p-1 rounded-2xl w-fit">
                     <button
                       onClick={() => setIsEnableMembership(true)}
-                      className={`px-4 py-2 rounded-lg font-medium ${
+                      className={`px-4 py-2 rounded-2xl font-medium ${
                         isEnableMembership
                           ? "bg-blue-900 text-white"
                           : "bg-gray-100 text-blue-900"
@@ -129,7 +129,7 @@ export default function EditMembership({ onClose }) {
                     </button>
                     <button
                       onClick={() => setIsEnableMembership(false)}
-                      className={`px-4 py-2 rounded-lg font-medium ${
+                      className={`px-4 py-2 rounded-2xl font-medium ${
                         !isEnableMembership
                           ? "bg-blue-900 text-white"
                           : "bg-gray-100 text-gray-400"
@@ -149,7 +149,7 @@ export default function EditMembership({ onClose }) {
             
             <button
               type="submit"
-              className="bg-[#001571] text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm"
+              className="bg-[#001571] text-white px-6 py-1 rounded-md shadow-sm hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm"
             >
               <div className="flex items-center space-x-3">
                 <p>Save</p>

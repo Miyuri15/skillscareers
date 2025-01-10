@@ -63,11 +63,11 @@ export default function AllApplications() {
         <table className="min-w-full ">
           <thead>
             <tr className="text-left text-sm font-medium text-[#8A93BE]">
-              <th className="py-3 px-6">Candidate Name</th>
-              <th className="py-3 px-6">Job Title</th>
-              <th className="py-3 px-6">Applied Date</th>
-              <th className="py-3 px-6">Email</th>
-              <th className="py-3 px-6 text-end">Actions</th>
+              <th className="py-3 px-6 items-center w-1/5">Candidate Name</th>
+              <th className="py-3 px-6 items-center w-1/5">Job Title</th>
+              <th className="py-3 px-6 items-center w-1/5">Applied Date</th>
+              <th className="py-3 px-6 items-center w-1/5">Email</th>
+              <th className="py-3 px-6 items-center w-1/5">Actions</th>
             </tr>
           </thead>
           <tbody className="text-sm text-gray-800 font-semibold">
@@ -79,12 +79,12 @@ export default function AllApplications() {
                 <td className="py-2 px-6  items-center">
                   {item.candidateName}
                 </td>
-                <td className="py-2 px-6">{item.jobTitle}</td>
-                <td className="py-2 px-6">{item.date}</td>
-                <td className="py-2 px-6">{item.email}</td>
-                <td className="py-2 px-6">
+                <td className="py-2 px-6 items-center">{item.jobTitle}</td>
+                <td className="py-2 px-6 items-center">{item.date}</td>
+                <td className="py-2 px-6 items-center">{item.email}</td>
+                <td className="py-2 px-6 items-center">
                   <Link href="/recruiter/receivedApplications/ViewApplication">
-                  <div className="flex justify-end">
+                  <div className="flex justify-start">
 
                   <button
                     className="flex items-center bg-[#001571] text-white px-4 py-2 rounded-md"

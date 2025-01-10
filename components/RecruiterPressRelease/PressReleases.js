@@ -68,7 +68,7 @@ export default function PressReleases() {
           <h2 className="text-[#001571] text-xl font-bold mb-6">Press Releases</h2>
 
         {/* Search Bar */}
-        <div className="bg-gray-100 flex items-center rounded-xl px-6 py-4 mb-4 shadow">
+        <div className="bg-[#E6E8F1] flex items-center rounded-xl px-6 py-4 mb-4 shadow">
           <Image
             src="/images/search.png"
             alt="search"
@@ -79,7 +79,7 @@ export default function PressReleases() {
           <input
             type="text"
             placeholder="Search Press releases..."
-            className="flex-grow text-gray-600 outline-none bg-transparent"
+            className="flex-grow text-[#8A93BE] outline-none bg-transparent"
           />
         </div>
 

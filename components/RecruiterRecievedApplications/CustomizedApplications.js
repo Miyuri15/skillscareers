@@ -63,10 +63,10 @@ export default function CustomizedApplications() {
         <table className="min-w-full ">
           <thead>
             <tr className="text-left text-sm font-medium text-[#8A93BE]">
-              <th className="py-3 px-6">Position</th>
-              <th className="py-3 px-6">Published Date</th>
-              <th className="py-3 px-6">Applications</th>
-              <th className="py-3 px-6 text-end">Actions</th>
+              <th className="py-3 px-6 items-center w-1/4">Position</th>
+              <th className="py-3 px-6 items-center w-1/4">Published Date</th>
+              <th className="py-3 px-6 items-center w-1/4">Applications</th>
+              <th className="py-3 px-6 items-center w-1/4">Actions</th>
             </tr>
           </thead>
           <tbody className="text-sm text-gray-800 font-semibold">
@@ -78,11 +78,11 @@ export default function CustomizedApplications() {
                 <td className="py-2 px-6  items-center">
                   {item.position}
                 </td>
-                <td className="py-2 px-6">{item.date}</td>
-                <td className="py-2 px-6">{item.applications}</td>
-                <td className="py-2 px-6">
+                <td className="py-2 px-6 items-center">{item.date}</td>
+                <td className="py-2 px-6 items-center">{item.applications}</td>
+                <td className="py-2 px-6 items-center">
                   <Link href="/recruiter/receivedApplications/ViewApplication">
-                  <div className="flex justify-end">
+                  <div className="flex justify-start">
 
                   <button
                     className="flex items-center bg-[#001571] text-white px-4 py-2 rounded-md"

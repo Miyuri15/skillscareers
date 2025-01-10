@@ -153,7 +153,7 @@ export default function RecruiterProfileEdit() {
                       <Image
                         src="/images/editicon.png"
                         alt="arrow"
-                        width={50}
+                        width={40}
                         height={16}
                       />
                     </div>

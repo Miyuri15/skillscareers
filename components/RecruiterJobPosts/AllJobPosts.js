@@ -64,7 +64,7 @@ export default function AllJobPosts() {
           className={`px-4 py-2 rounded-lg font-medium ${
             selectedRows.length > 0
               ? "bg-blue-900 text-white"
-              : "bg-gray-300 text-gray-500"
+              : "bg-[#E6E8F1] text-gray-500"
           }`}
           disabled={selectedRows.length === 0}
         >
@@ -75,7 +75,7 @@ export default function AllJobPosts() {
               width={15}
               height={10}
             />
-            <p>Select More</p>
+            <p className="text-white">Select More</p>
           </div>
         </button>
         <button
@@ -88,7 +88,7 @@ export default function AllJobPosts() {
         >
           <div className="flex space-x-2">
             <Image src="/images/trash.png" alt="bin" width={25} height={20} />
-            <p>Delete</p>
+            <p className="text-white">Delete</p>
           </div>
         </button>
       </div>
@@ -110,10 +110,10 @@ export default function AllJobPosts() {
                 />
               </th>
 
-              <th className="px-4 py-2">Position</th>
-              <th className="px-4 py-2">Published Date</th>
-              <th className="px-4 py-2">Applications</th>
-              <th className="px-4 py-2 text-end">Actions</th>
+              <th className="px-4 py-2 items-center w-1/4">Position</th>
+              <th className="px-4 py-2 items-center w-1/4">Published Date</th>
+              <th className="px-4 py-2 items-center w-1/4">Applications</th>
+              <th className="px-4 py-2 items-center w-1/4">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -129,12 +129,12 @@ export default function AllJobPosts() {
                     onChange={() => handleCheckboxChange(jobPost.id)}
                   />
                 </td>
-                <td className="px-4 py-2">
+                <td className="px-4 py-2 items-center">
                   {jobPost.position}</td>
                  
-                <td className="px-4 py-2">{jobPost.publishedDate}</td>
-                <td className="px-4 py-2">{jobPost.applications}</td>
-                <td className="px-1 py-2 flex space-x-2 justify-end">
+                <td className="px-4 py-2 items-center ">{jobPost.publishedDate}</td>
+                <td className="px-4 py-2 items-center">{jobPost.applications}</td>
+                <td className="px-1 py-2 flex space-x-2 justify-center">
                   <Link href="/recruiter/jobPosts/editJobPosts">
                     <button className="bg-[#001571] text-white px-5 py-2 rounded-lg text-sm">
                       <div className="flex space-x-2">

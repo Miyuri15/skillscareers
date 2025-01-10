@@ -15,7 +15,7 @@ export default function ReceivedApplications() {
       <div className="flex flex-row items-center justify-between">
         <h2 className="text-[#001571] text-xl font-bold mb-6">Received Applications</h2>
         <button
-          className="bg-[#001571] text-white px-4 py-2 rounded-lg font-medium mb-6"
+          className="bg-[#001571] text-white px-8 py-2 rounded-lg font-medium mb-6"
           onClick={() => setShowApplicationForm(true)}
         >
           + Add New
@@ -23,16 +23,16 @@ export default function ReceivedApplications() {
       </div>
       <div className="flex justify-between items-center w-full">
   {/* Toggle Buttons */}
-  <div className="flex space-x-2 bg-gray-100 p-1 rounded-2xl">
+  <div className="flex space-x-2 bg-[#E6E8F1] p-1 rounded-2xl">
     <button
       onClick={() => setisAllJobPosts(true)}
       className={`px-4 py-2 flex items-center space-x-2 rounded-2xl font-medium ${
         isAllJobPosts
           ? "bg-blue-900 text-white"
-          : "bg-transparent text-blue-900"
+          : "bg-[#E6E8F1] text-blue-900"
       }`}
     >
-      <span>All Applications</span>
+      <span className="text-white">All Applications</span>
       {isAllJobPosts && (
         <Image
           src="/images/whitetick.png"
@@ -47,10 +47,10 @@ export default function ReceivedApplications() {
       className={`px-4 py-2 flex items-center space-x-2 rounded-2xl font-medium ${
         !isAllJobPosts
           ? "bg-blue-900 text-white"
-          : "bg-transparent text-gray-400"
+          : "bg-[#E6E8F1] text-gray-400"
       }`}
     >
-      <span>Categorize By Job Post</span>
+      <span className="text-white">Categorize By Job Post</span>
       {!isAllJobPosts && (
         <Image
           src="/images/graytick.png"
@@ -77,7 +77,7 @@ export default function ReceivedApplications() {
     {/* Approved Button */}
     <div className="flex items-center space-x-2 border-2 border-blue-900 rounded-2xl px-4 py-2">
       <Image
-        src="/images/CheckBox.png"
+        src="/images/checkboxblue.png"
         alt="checkbox"
         width={20}
         height={16}
@@ -88,7 +88,7 @@ export default function ReceivedApplications() {
     {/* Declined Button */}
     <div className="flex items-center space-x-2 border-2 border-blue-900 rounded-2xl px-4 py-2">
       <Image
-        src="/images/CheckBox.png"
+        src="/images/checkboxblue.png"
         alt="checkbox"
         width={20}
         height={16}
@@ -98,7 +98,7 @@ export default function ReceivedApplications() {
   </div>
 </div>
       {/* Search Bar */}
-      <div className="bg-gray-100 flex items-center rounded-xl px-6 py-4 mb-4 mt-8 shadow">
+      <div className="bg-[#E6E8F1] flex items-center rounded-xl px-6 py-4 mb-4 mt-8 shadow">
         <Image
           src="/images/search.png"
           alt="search"
@@ -109,7 +109,7 @@ export default function ReceivedApplications() {
         <input
           type="text"
           placeholder="Search By Name or Job Title..."
-          className="flex-grow text-gray-600 outline-none bg-transparent"
+          className="flex-grow text-[#8A93BE] outline-none bg-transparent"
         />
       </div>
 

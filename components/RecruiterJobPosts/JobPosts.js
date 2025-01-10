@@ -23,13 +23,13 @@ export default function RecruiterJobPosts() {
       </div>
 
       {/* Toggle Buttons */}
-      <div className="flex space-x-2 mb-4 bg-gray-200 p-1 rounded-xl w-fit">
+      <div className="flex space-x-2 mb-4 bg-[#E6E8F1] p-1 rounded-xl w-fit">
         <button
           onClick={() => setisAllJobPosts(true)}
           className={`px-4 py-2 rounded-lg font-medium ${
             isAllJobPosts
               ? "bg-blue-900 text-white"
-              : "bg-gray-100 text-blue-900"
+              : "bg-[#E6E8F1] text-[#8A93BE]"
           }`}
         >
           <div className="flex space-x-3">
@@ -47,7 +47,7 @@ export default function RecruiterJobPosts() {
           className={`px-4 py-2 rounded-lg font-medium ${
             !isAllJobPosts
               ? "bg-blue-900 text-white"
-              : "bg-gray-100 text-gray-400"
+              : "bg-[#E6E8F1] text-[#8A93BE]"
           }`}
         >
           <div className="flex space-x-3">
@@ -63,7 +63,7 @@ export default function RecruiterJobPosts() {
       </div>
 
       {/* Search Bar */}
-      <div className="bg-gray-100 flex items-center rounded-xl px-6 py-4 mb-4 shadow">
+      <div className="bg-[#E6E8F1] flex items-center rounded-xl px-6 py-4 mb-4 shadow">
         <Image
           src="/images/search.png"
           alt="search"
@@ -74,7 +74,7 @@ export default function RecruiterJobPosts() {
         <input
           type="text"
           placeholder="Search Job Posts..."
-          className="flex-grow text-gray-600 outline-none bg-transparent"
+          className="flex-grow text-[#8A93BE] outline-none bg-transparent"
         />
       </div>
 

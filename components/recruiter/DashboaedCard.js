@@ -39,7 +39,7 @@ export default function DashboardCard() {
           >
             <div className="flex items-center justify-between">
               <div className="flex flex-row space-x-2">
-                <h3 className="text-gray-500 font-semibold">{tab.title}</h3>
+                <h3 className="text-[#a1a9c8] font-semibold">{tab.title}</h3>
                 <Image
                   src="/images/arrowRight.png"
                   alt="arrow"

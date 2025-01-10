@@ -35,7 +35,7 @@ export default function PressCard({onClick}) {
       </div>
       {/* Text Content */}
       <div className="mt-4">
-        <h3 className="text-lg font-medium text-gray-800 px-5 mb-3">
+        <h3 className="text-md font-medium text-gray-800 px-5 mb-3">
           5 Essential Skills for Thriving in a Digital Workplace.
         </h3>
         <p className="text-sm text-gray-500  px-5 mb-2">24 AUG 2024</p>

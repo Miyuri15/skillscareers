@@ -64,7 +64,7 @@ export default function AllJobPosts() {
           className={`px-4 py-2 rounded-lg font-medium ${
             selectedRows.length > 0
               ? "bg-blue-900 text-white"
-              : "bg-gray-300 text-gray-500"
+              : "bg-[#E6E8F1] text-gray-500"
           }`}
           disabled={selectedRows.length === 0}
         >
